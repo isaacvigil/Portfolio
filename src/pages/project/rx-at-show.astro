@@ -37,13 +37,22 @@ const project = {
   <main>
 
     <!-- Nav -->
-    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 mix-blend-multiply">
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6">
       <a href="/" class="text-sm font-medium tracking-tight opacity-60 hover:opacity-100 transition-opacity">
         Isaac Vigil
       </a>
-      <a href="/" class="text-sm opacity-60 hover:opacity-100 transition-opacity">
-        ← Back
-      </a>
+      <div class="flex items-center gap-6">
+        <button
+          id="theme-toggle"
+          class="text-sm opacity-60 hover:opacity-100 transition-opacity w-10 h-10 flex items-center justify-center rounded-full border border-current/20 hover:border-current/40"
+          aria-label="Toggle theme"
+        >
+          <span id="theme-icon">○</span>
+        </button>
+        <a href="/" class="text-sm opacity-60 hover:opacity-100 transition-opacity">
+          ← Back
+        </a>
+      </div>
     </nav>
 
     <!-- Hero -->
@@ -67,7 +76,7 @@ const project = {
 
     <!-- Cover image placeholder -->
     <section class="px-8 mb-24">
-      <div class="w-full aspect-[16/9] bg-[#e0e0dc] rounded-2xl flex items-center justify-center overflow-hidden" id="cover-img">
+      <div class="w-full aspect-[16/9] bg-[var(--muted)] rounded-2xl flex items-center justify-center overflow-hidden" id="cover-img">
         <span class="text-sm opacity-30 uppercase tracking-widest">Cover Image</span>
       </div>
     </section>
@@ -113,7 +122,7 @@ const project = {
             {section.body}
           </p>
           <!-- Image placeholder -->
-          <div class="w-full aspect-[16/8] bg-[#e0e0dc] rounded-2xl flex items-center justify-center">
+          <div class="w-full aspect-[16/8] bg-[var(--muted)] rounded-2xl flex items-center justify-center">
             <span class="text-sm opacity-30 uppercase tracking-widest">Image {i + 1}</span>
           </div>
         </div>
@@ -144,6 +153,21 @@ const project = {
     .from('#hero-title', { y: 40, opacity: 0, duration: 1 }, '-=0.5')
     .from('#hero-tags > *', { y: 20, opacity: 0, stagger: 0.08, duration: 0.6 }, '-=0.6')
     .from('#cover-img', { y: 60, opacity: 0, duration: 1 }, '-=0.3');
+
+  // Theme toggle
+  const toggle = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-icon');
+
+  function updateIcon() {
+    if (icon) icon.textContent = document.documentElement.classList.contains('dark') ? '●' : '○';
+  }
+  updateIcon();
+
+  toggle?.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    updateIcon();
+  });
 
   // Scroll reveals
   gsap.utils.toArray<HTMLElement>('.section-block').forEach((el) => {
