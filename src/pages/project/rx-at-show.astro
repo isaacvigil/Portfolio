@@ -1,0 +1,161 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const project = {
+  title: 'RX At Show Mobile App',
+  year: '2024',
+  role: 'Design Lead',
+  company: 'RX Global',
+  tags: ['UX Design', 'Design System', 'User Research', 'Mobile'],
+  overview: `RX, the world's second-largest exhibition organizer, operates over 350 events across 25 countries — including Comic Con, PGA Show, and London Book Fair. The challenge: no comprehensive companion app existed to enhance the attendee experience at these events.`,
+  sections: [
+    {
+      label: 'The Problem',
+      heading: 'Attendees were navigating massive venues with printed maps and guesswork.',
+      body: `Research conducted at FIBO in Cologne and in-cosmetics in Paris revealed a clear pattern: visitors struggled with wayfinding, resorted to photographing printed maps, and had no centralized way to manage schedules, discover exhibitors, or engage with sessions in real time.`,
+    },
+    {
+      label: 'My Role',
+      heading: 'Led design across two product designers, from research to delivery.',
+      body: `As Design Lead, I coordinated research initiatives, defined process strategy and timelines, established design libraries, and managed relationships with stakeholders across HQ, country managers, and expo organizers. I worked closely with product, front-end, back-end, and QA teams to ensure consistency from concept through handoff.`,
+    },
+    {
+      label: 'The Solution',
+      heading: 'A companion app that turns every show into a personalized experience.',
+      body: `The app brings together event schedules, speaker and exhibitor profiles, an interactive venue map, personalized recommendations, and real-time updates — all in one place. Key interactions like QR code scanning and digital badge opening were animated to feel intuitive and rewarding.`,
+    },
+    {
+      label: 'Design System',
+      heading: 'A centralized component library built for scale.',
+      body: `To support consistency across a large team and many event types, I built multiple component libraries — buttons, forms, icons, navigation — all adhering to shared visual guidelines and interaction standards. This reduced friction in handoffs and kept the product coherent as it grew.`,
+    },
+  ],
+};
+---
+
+<Layout title={project.title}>
+  <main>
+
+    <!-- Nav -->
+    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 mix-blend-multiply">
+      <a href="/" class="text-sm font-medium tracking-tight opacity-60 hover:opacity-100 transition-opacity">
+        Isaac Vigil
+      </a>
+      <a href="/" class="text-sm opacity-60 hover:opacity-100 transition-opacity">
+        ← Back
+      </a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="min-h-screen flex flex-col justify-end px-8 pb-16 pt-32" id="hero">
+      <div class="max-w-5xl">
+        <p class="text-sm uppercase tracking-widest opacity-40 mb-6" id="hero-label">
+          {project.company} · {project.year}
+        </p>
+        <h1 class="text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[1.05] tracking-tight mb-8" id="hero-title">
+          {project.title}
+        </h1>
+        <div class="flex flex-wrap gap-3" id="hero-tags">
+          {project.tags.map(tag => (
+            <span class="text-xs uppercase tracking-widest border border-[#111]/20 rounded-full px-4 py-2 opacity-60">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Cover image placeholder -->
+    <section class="px-8 mb-24">
+      <div class="w-full aspect-[16/9] bg-[#e0e0dc] rounded-2xl flex items-center justify-center overflow-hidden" id="cover-img">
+        <span class="text-sm opacity-30 uppercase tracking-widest">Cover Image</span>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="px-8 mb-32 max-w-3xl" id="overview">
+      <p class="text-xl leading-relaxed opacity-70">
+        {project.overview}
+      </p>
+    </section>
+
+    <!-- Meta strip -->
+    <section class="px-8 mb-32 border-t border-[#111]/10 pt-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl">
+        <div>
+          <p class="text-xs uppercase tracking-widest opacity-40 mb-2">Role</p>
+          <p class="text-sm font-medium">{project.role}</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest opacity-40 mb-2">Company</p>
+          <p class="text-sm font-medium">{project.company}</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest opacity-40 mb-2">Year</p>
+          <p class="text-sm font-medium">{project.year}</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest opacity-40 mb-2">Type</p>
+          <p class="text-sm font-medium">Mobile App</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content sections -->
+    {project.sections.map((section, i) => (
+      <section class="px-8 mb-32 section-block">
+        <div class="max-w-5xl">
+          <p class="text-xs uppercase tracking-widest opacity-40 mb-6">{section.label}</p>
+          <h2 class="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-tight mb-8 max-w-3xl">
+            {section.heading}
+          </h2>
+          <p class="text-base leading-relaxed opacity-60 max-w-2xl mb-16">
+            {section.body}
+          </p>
+          <!-- Image placeholder -->
+          <div class="w-full aspect-[16/8] bg-[#e0e0dc] rounded-2xl flex items-center justify-center">
+            <span class="text-sm opacity-30 uppercase tracking-widest">Image {i + 1}</span>
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <!-- Footer / Next project -->
+    <section class="px-8 py-32 border-t border-[#111]/10 flex items-center justify-between">
+      <p class="text-sm opacity-40">Next project</p>
+      <a href="/" class="group flex items-center gap-3 text-lg font-semibold hover:opacity-60 transition-opacity">
+        Coming soon
+        <span class="group-hover:translate-x-1 transition-transform inline-block">→</span>
+      </a>
+    </section>
+
+  </main>
+</Layout>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Hero entrance
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+  tl.from('#hero-label', { y: 20, opacity: 0, duration: 0.8 })
+    .from('#hero-title', { y: 40, opacity: 0, duration: 1 }, '-=0.5')
+    .from('#hero-tags > *', { y: 20, opacity: 0, stagger: 0.08, duration: 0.6 }, '-=0.6')
+    .from('#cover-img', { y: 60, opacity: 0, duration: 1 }, '-=0.3');
+
+  // Scroll reveals
+  gsap.utils.toArray<HTMLElement>('.section-block').forEach((el) => {
+    gsap.from(el, {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+      },
+    });
+  });
+</script>
