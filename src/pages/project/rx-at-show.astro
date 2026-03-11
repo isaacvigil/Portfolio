@@ -1,5 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import mapFibo1 from '../../assets/RX/map-fibo-1.jpeg';
+import mapFibo2 from '../../assets/RX/map-fibo-2.jpeg';
+import mapFibo3 from '../../assets/RX/map-fibo-3.jpeg';
+import printedList from '../../assets/RX/printed-list.jpeg';
 
 const project = {
   title: 'RX At Show Mobile App',
@@ -13,6 +18,14 @@ const project = {
       label: 'The Problem',
       heading: 'Attendees were navigating massive venues with printed maps and guesswork.',
       body: `Research conducted at FIBO in Cologne and in-cosmetics in Paris revealed a clear pattern: visitors struggled with wayfinding, resorted to photographing printed maps, and had no centralized way to manage schedules, discover exhibitors, or engage with sessions in real time.`,
+      image: mapFibo1,
+      imageAlt: 'FIBO map 1',
+      image2: mapFibo2,
+      image2Alt: 'FIBO map 2',
+      image3: mapFibo3,
+      image3Alt: 'FIBO map 3',
+      image4: printedList,
+      image4Alt: 'Printed exhibitor list',
     },
     {
       label: 'My Role',
@@ -37,27 +50,40 @@ const project = {
   <main>
 
     <!-- Nav -->
-    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6">
+    <nav class="fixed top-0 left-0 right-0 z-50 px-8 py-6">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
       <a href="/" class="text-sm font-medium tracking-tight opacity-60 hover:opacity-100 transition-opacity">
         Isaac Vigil
       </a>
       <div class="flex items-center gap-6">
         <button
           id="theme-toggle"
-          class="text-sm opacity-60 hover:opacity-100 transition-opacity w-10 h-10 flex items-center justify-center rounded-full border border-current/20 hover:border-current/40"
+          class="opacity-60 hover:opacity-100 transition-opacity w-10 h-10 flex items-center justify-center rounded-full border border-current/20 hover:border-current/40"
           aria-label="Toggle theme"
         >
-          <span id="theme-icon">○</span>
+          <!-- Sun (shown in dark mode) -->
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 3v1"/><path d="M12 20v1"/>
+            <path d="M3 12h1"/><path d="M20 12h1"/>
+            <path d="m18.364 5.636-.707.707"/><path d="m6.343 17.657-.707.707"/>
+            <path d="m5.636 5.636.707.707"/><path d="m17.657 17.657.707.707"/>
+          </svg>
+          <!-- Moon (shown in light mode) -->
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="">
+            <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/>
+          </svg>
         </button>
         <a href="/" class="text-sm opacity-60 hover:opacity-100 transition-opacity">
           ← Back
         </a>
       </div>
+      </div>
     </nav>
 
     <!-- Hero -->
-    <section class="min-h-screen flex flex-col justify-end px-8 pb-16 pt-32" id="hero">
-      <div class="max-w-5xl">
+    <section class="min-h-screen flex flex-col justify-end pb-16 pt-32" id="hero">
+      <div class="max-w-7xl mx-auto w-full px-8">
         <p class="text-sm uppercase tracking-widest opacity-40 mb-6" id="hero-label">
           {project.company} · {project.year}
         </p>
@@ -75,22 +101,27 @@ const project = {
     </section>
 
     <!-- Cover image placeholder -->
-    <section class="px-8 mb-24">
+    <section class="mb-24">
+      <div class="max-w-7xl mx-auto px-8">
       <div class="w-full aspect-[16/9] bg-[var(--muted)] rounded-2xl flex items-center justify-center overflow-hidden" id="cover-img">
         <span class="text-sm opacity-30 uppercase tracking-widest">Cover Image</span>
+      </div>
       </div>
     </section>
 
     <!-- Overview -->
-    <section class="px-8 mb-32 max-w-3xl" id="overview">
+    <section class="mb-32" id="overview">
+      <div class="max-w-7xl mx-auto px-8">
       <p class="text-xl leading-relaxed opacity-70">
         {project.overview}
       </p>
+      </div>
     </section>
 
     <!-- Meta strip -->
-    <section class="px-8 mb-32 border-t border-[#111]/10 pt-12">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl">
+    <section class="mb-32 border-t border-[#111]/10 pt-12">
+      <div class="max-w-7xl mx-auto px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
         <div>
           <p class="text-xs uppercase tracking-widest opacity-40 mb-2">Role</p>
           <p class="text-sm font-medium">{project.role}</p>
@@ -108,12 +139,13 @@ const project = {
           <p class="text-sm font-medium">Mobile App</p>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- Content sections -->
     {project.sections.map((section, i) => (
-      <section class="px-8 mb-32 section-block">
-        <div class="max-w-5xl">
+      <section class="mb-32 section-block">
+        <div class="max-w-7xl mx-auto px-8">
           <p class="text-xs uppercase tracking-widest opacity-40 mb-6">{section.label}</p>
           <h2 class="text-[clamp(1.5rem,3.5vw,3rem)] font-semibold leading-[1.1] tracking-tight mb-8 max-w-3xl">
             {section.heading}
@@ -121,21 +153,31 @@ const project = {
           <p class="text-base leading-relaxed opacity-60 max-w-2xl mb-16">
             {section.body}
           </p>
-          <!-- Image placeholder -->
-          <div class="w-full aspect-[16/8] bg-[var(--muted)] rounded-2xl flex items-center justify-center">
-            <span class="text-sm opacity-30 uppercase tracking-widest">Image {i + 1}</span>
-          </div>
+          <!-- Image -->
+          {section.image
+            ? <div class="flex gap-4">
+                <Image src={section.image} alt={section.imageAlt ?? ''} class="w-1/4 rounded-[24px] object-cover" />
+                {section.image2 && <Image src={section.image2} alt={section.image2Alt ?? ''} class="w-1/4 rounded-[24px] object-cover" />}
+                {section.image3 && <Image src={section.image3} alt={section.image3Alt ?? ''} class="w-1/4 rounded-[24px] object-cover" />}
+                {section.image4 && <Image src={section.image4} alt={section.image4Alt ?? ''} class="w-1/4 rounded-[24px] object-cover" />}
+              </div>
+            : <div class="w-full aspect-[16/8] bg-[var(--muted)] rounded-2xl flex items-center justify-center">
+                <span class="text-sm opacity-30 uppercase tracking-widest">Image {i + 1}</span>
+              </div>
+          }
         </div>
       </section>
     ))}
 
     <!-- Footer / Next project -->
-    <section class="px-8 py-32 border-t border-[#111]/10 flex items-center justify-between">
+    <section class="py-32 border-t border-[#111]/10">
+      <div class="max-w-7xl mx-auto px-8 flex items-center justify-between">
       <p class="text-sm opacity-40">Next project</p>
       <a href="/" class="group flex items-center gap-3 text-lg font-semibold hover:opacity-60 transition-opacity">
         Coming soon
         <span class="group-hover:translate-x-1 transition-transform inline-block">→</span>
       </a>
+      </div>
     </section>
 
   </main>
@@ -156,10 +198,13 @@ const project = {
 
   // Theme toggle
   const toggle = document.getElementById('theme-toggle');
-  const icon = document.getElementById('theme-icon');
+  const iconSun = document.getElementById('icon-sun');
+  const iconMoon = document.getElementById('icon-moon');
 
   function updateIcon() {
-    if (icon) icon.textContent = document.documentElement.classList.contains('dark') ? '●' : '○';
+    const isDark = document.documentElement.classList.contains('dark');
+    iconSun?.classList.toggle('hidden', !isDark);
+    iconMoon?.classList.toggle('hidden', isDark);
   }
   updateIcon();
 
