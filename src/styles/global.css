@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-sm: 420px;
+}
+
 @layer utilities {
   .dot-divider {
     height: 2px;

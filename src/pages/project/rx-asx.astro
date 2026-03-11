@@ -1,0 +1,282 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import { Image } from 'astro:assets';
+import mapFibo1 from '../../assets/RX/map-fibo-1.jpeg';
+import mapFibo2 from '../../assets/RX/map-fibo-2.jpeg';
+import mapFibo3 from '../../assets/RX/map-fibo-3.jpeg';
+import printedList from '../../assets/RX/printed-list.jpeg';
+import coverImg from '../../assets/RX/cover.jpg';
+import usabilityTestingGif from '../../assets/RX/usability-testing.gif';
+import componentsDesktop from '../../assets/RX/components-desktop.png';
+import componentsMobile from '../../assets/RX/components-mobile.png';
+import design1 from '../../assets/RX/1.1-Sponsor.jpg';
+import design2 from '../../assets/RX/1.2-My-Bag-Schedule.jpg';
+import design3 from '../../assets/RX/2.1-Map.jpg';
+import design4 from '../../assets/RX/3.3-Colleqt-QR-Scan.jpg';
+import design5 from '../../assets/RX/3.5-Colleqt-My-Badge.jpg';
+import design6 from '../../assets/RX/4.1-Whats-On-Programme.jpg';
+import design7 from '../../assets/RX/4.2-Exhibitors.jpg';
+import design8 from '../../assets/RX/4.3-Exhibitors-Products.jpg';
+import design9 from '../../assets/RX/8.2-Product.jpg';
+import design10 from '../../assets/RX/8.3-Session.jpg';
+import design11 from '../../assets/RX/8.4-Exhibitor-Profile.jpg';
+import design12 from '../../assets/RX/9.4-Speaker-Profile.jpg';
+import mapDirections from '../../assets/RX/map-directions.png';
+import placeholderHandsTable from '../../assets/RX/placeholder-hands-table.jpg';
+---
+
+<Layout title="At Show Experience">
+  <main>
+
+    <Nav backHref="/" />
+
+    <!-- Hero -->
+    <section class="flex flex-col pt-32 pb-16" id="hero">
+      <div class="max-w-7xl mx-auto w-full px-8">
+        <h1 class="text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[1.05] tracking-tight mb-12 break-words" id="hero-title">
+          At Show Experience
+        </h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="hero-meta" style="opacity:0">
+            <p class="text-base opacity-60 mb-2">Role</p>
+            <p class="text-lg font-medium">Design Lead</p>
+          </div>
+          <div class="hero-meta" style="opacity:0">
+            <p class="text-base opacity-60 mb-2">Company</p>
+            <p class="text-lg font-medium">RX Global</p>
+          </div>
+          <div class="hero-meta" style="opacity:0">
+            <p class="text-base opacity-60 mb-2">Year</p>
+            <p class="text-lg font-medium">2024 · 2025</p>
+          </div>
+          <div class="hero-meta" style="opacity:0">
+            <p class="text-base opacity-60 mb-2">Type</p>
+            <p class="text-lg font-medium">Mobile App</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cover image placeholder -->
+    <section class="mb-24 overflow-hidden md:overflow-visible">
+      <div class="max-w-7xl mx-auto md:px-8">
+        <Image src={coverImg} alt="At Show Experience cover" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" id="cover-img" />
+      </div>
+    </section>
+
+    <!-- Opportunity -->
+    <section class="mb-20 section-block" id="opportunity">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Opportunity</h2>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          RX, the world's second-largest exhibition organizer, part of RELX (formerly Reed Elsevier), operates over 350 events across 25 countries, including well known events like: Comic Con, PGA Show, and London Book Fair.
+        </p>
+        <br/>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          Despite its strong presence across diverse industries, and continents, no companion app existed to enhance the attendee experience at these events.
+        </p>
+      </div>
+    </section>
+
+    <!-- Scope -->
+    <section class="mb-20 section-block" id="overview">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">My role as Design Lead</h2>
+          <ul class="list-disc list-inside mt-4 text-lg leading-relaxed opacity-80 max-w-[960px]">
+            <li>Design & research strategy</li>
+            <li>Process & timeline management</li>
+            <li>Designs, prototypes, components creation</li>
+            <li>User Research</li>
+            <li>Design alignment across the company</li>
+            <li>Stakeholder alignment between HQ, country managers, and expo organizers</li>
+            <li>Cross-functional collaboration with product, engineering, and QA teams</li>
+          </ul>
+      </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">
+          Observations in situ
+        </h2>
+        <p class="text-lg leading-relaxed opacity-80 mb-8 max-w-[960px]">
+          Research conducted at FIBO in Cologne, and in-cosmetics in Paris revealed a clear pattern: visitors struggled with wayfinding, resorted to photographing printed maps, and had no centralized way to manage schedules, discover exhibitors, or engage with sessions in real time.
+        </p>
+        <p class="text-lg leading-relaxed opacity-80 mb-8 max-w-[960px]">
+          Below are images of attendees looking at the map, taking pics of it.
+        <br/>
+          An attendee with a printed map and exhibitor list.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <Image src={mapFibo1} alt="FIBO map 1" class="w-full rounded-[24px] object-cover" />
+          <Image src={mapFibo2} alt="FIBO map 2" class="w-full rounded-[24px] object-cover" />
+          <Image src={mapFibo3} alt="FIBO map 3" class="w-full rounded-[24px] object-cover" />
+          <Image src={printedList} alt="Printed exhibitor list" class="w-full rounded-[24px] object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Components -->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Components</h2>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          To support consistency across a large team and many event types, I built a centralized component library — buttons, forms, icons, navigation, cards — all adhering to shared visual guidelines and interaction standards. This reduced friction in handoffs and kept the product coherent as it scaled.
+        </p>
+      </div>
+      <div class="mt-8 relative left-1/2 -translate-x-1/2 w-screen flex justify-center">
+        <Image src={componentsDesktop} alt="Component library" class="rounded-2xl w-full max-w-[1111px] hidden md:block" />
+        <Image src={componentsMobile} alt="Component library" class="rounded-2xl w-[555px] max-w-none md:hidden" />
+      </div>
+    </section>
+
+    <!-- Designs -->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Designs</h2>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          To support consistency across a large team and many event types, I built a centralized component library — buttons, forms, icons, navigation, cards — all adhering to shared visual guidelines and interaction standards. This reduced friction in handoffs and kept the product coherent as it scaled.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+          <Image src={design1} alt="Sponsor screen" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+          <Image src={design2} alt="My Bag and Schedule" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+          <Image src={design3} alt="Map" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+          <Image src={design4} alt="QR Scan" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+          <Image src={design5} alt="Colleqt My Badge" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+          <Image src={design6} alt="What's On Programme" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+          <Image src={design7} alt="Exhibitors" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+          <Image src={design8} alt="Exhibitors Products" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+          <Image src={design9} alt="Product" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+          <Image src={design10} alt="Session" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+          <Image src={design11} alt="Exhibitor Profile" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+          <Image src={design12} alt="Speaker Profile" class="w-full rounded-2xl max-w-[390px] mx-auto" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Usability Testing -->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Usability Testing</h2>
+        <div class="flex flex-col md:flex-row gap-12 items-start">
+          <img src={usabilityTestingGif.src} alt="Usability testing" class="rounded-2xl w-full md:w-auto md:flex-shrink-0" />
+          <div>
+            <p class="text-lg leading-relaxed opacity-80 mb-4">I conducted usability testing of the prototype at FIBO in Cologne and in-cosmetics in Paris.</p>
+            <p class="text-lg leading-relaxed opacity-80 mb-4">These efforts provided valuable insights into how users interacted with the prototype, highlighting pain points and areas for improvement, helping us identify opportunities to enhance user engagement and satisfaction at future exhibitions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learnings -->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Final Thoughts</h2>
+        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px]">Alignment</p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          Aligning a wide range of stakeholders: HQ, country managers, and expo organizers, required constant communication and expectations understanding and setup, this required more time and effort than the design work itself.
+        </p>
+        <br/>
+  <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px]">Clear Scope</p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          To keep the project on track, I had to specify:
+        </p>
+        <ul class="list-disc list-inside mt-4 text-lg leading-relaxed opacity-80 max-w-[960px]">
+            <li>Features</li>
+            <li>Releases</li>
+            <li>Timeline</li>
+        </ul>
+        <br/>
+        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px]">Constraints</p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          Connectivity at live events was an unexpected constraint. Without reliable GPS, we couldn't pinpoint user location on the map, so I designed having an input to ask the user, it's current location, to set a starting point: scan a nearby QR code or enter a stand number.
+        </p>
+        <br/>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          Location input:
+        </p>
+        <Image src={mapDirections} alt="Map directions" class="mt-8 rounded-2xl w-full max-w-[328px] mx-auto block" />
+      </div>
+    </section>
+
+    <!-- Cover image end -->
+    <section class="mb-24 overflow-hidden md:overflow-visible">
+      <div class="max-w-7xl mx-auto px-8 mb-12">
+        <h3 class="text-xl text-center">Thanks for reading, it was a very meaningful challenge to work through.</h3>
+      </div>
+      <div class="max-w-7xl mx-auto md:px-8">
+        <Image src={placeholderHandsTable} alt="At Show Experience" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
+      </div>
+    </section>
+
+    <!-- Footer / Next project -->
+    <section class="py-32 border-t border-[#111]/10">
+      <div class="max-w-7xl mx-auto px-8 flex items-center justify-between">
+        <p class="text-sm opacity-40">Next project</p>
+        <a href="/" class="group flex items-center gap-3 text-lg font-semibold hover:opacity-60 transition-opacity">
+          Coming soon
+          <span class="group-hover:translate-x-1 transition-transform inline-block">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Letter-by-letter fade in with color transition
+  const titleEl = document.getElementById('hero-title') as HTMLElement;
+  const text = titleEl.textContent?.trim() ?? '';
+  titleEl.innerHTML = text
+    .split(' ')
+    .map(word =>
+      `<span class="inline-block whitespace-nowrap">${word.split('').map(ch => `<span style="opacity:0;color:var(--muted)">${ch}</span>`).join('')}</span>`)
+    .join(' ');
+
+  gsap.set('.hero-meta', { x: -20, opacity: 0 });
+
+  const spans = titleEl.querySelectorAll('span');
+  const tl = gsap.timeline({
+    onComplete: () => {
+      document.querySelectorAll<HTMLElement>('.hero-meta').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+    }
+  });
+  tl.to(spans, { opacity: 1, color: 'var(--text)', duration: 0.4, stagger: 0.03, ease: 'power2.out' })
+    .to('.hero-meta', { opacity: 1, x: 0, duration: 0.4, stagger: 0.08, ease: 'power2.out' })
+    .fromTo('#cover-img', { y: 60, opacity: 0, filter: 'blur(20px)' }, { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.8, ease: 'power3.out' });
+
+  // Scroll reveals
+  // Opportunity loads with the page
+  gsap.from('#opportunity', { y: 60, opacity: 0, duration: 1, delay: 0.3, ease: 'power3.out' });
+
+  gsap.utils.toArray<HTMLElement>('.section-block:not(#opportunity)').forEach((el) => {
+    gsap.from(el, {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+      },
+    });
+  });
+
+  // Fade in images when they finish loading (works with lazy-loaded images)
+  document.querySelectorAll<HTMLImageElement>('.section-block img').forEach((img) => {
+    img.style.opacity = '0';
+    const show = () => gsap.to(img, { opacity: 1, duration: 1.2, ease: 'power3.out' });
+    if (img.complete && img.naturalWidth > 0) show();
+    else img.addEventListener('load', show, { once: true });
+  });
+</script>
