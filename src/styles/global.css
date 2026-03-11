@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .dot-divider {
+    height: 2px;
+    background-image: radial-gradient(circle, var(--dot) 1px, transparent 1px);
+    background-size: 24px 2px;
+    background-repeat: repeat-x;
+    background-position: 0 center;
+  }
+
+  .text-section-heading {
+    font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+}
+
 @layer base {
   :root {
     --bg: #f5f5f3;
@@ -13,7 +30,7 @@
     --bg: #111111;
     --text: #f5f5f3;
     --muted: #1e1e1e;
-    --border: rgba(245,245,243,0.1);
+    --border: rgba(245,245,243,0.25);
     --dot: rgba(245,245,243,0.08);
   }
 
