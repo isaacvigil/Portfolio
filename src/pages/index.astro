@@ -12,7 +12,7 @@ import coverImg from '../assets/RX/cover.jpg';
     <section class="flex flex-col justify-center pt-24 pb-20">
       <div class="max-w-7xl mx-auto w-full px-8">
         <h1 class="text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[1.05] tracking-tight mb-20">
-          <span id="hero-line-1">Isaac Vigil</span> <span id="hero-line-2">Portfolio</span>
+          <span id="hero-line-1">Hi, I am Luis Isaac,</span><br /><span id="hero-line-2">a </span><span id="hero-rotating-word">Maker</span>
         </h1>
 
         <a href="/project/rx-asx" class="group block overflow-hidden md:rounded-2xl">
@@ -24,7 +24,7 @@ import coverImg from '../assets/RX/cover.jpg';
         </a>
         <div class="mt-4 flex items-center justify-between">
           <p class="text-lg font-medium">At Show Experience</p>
-          <a href="/project/rx-asx" class="text-sm opacity-40 hover:opacity-80 transition-opacity">View project →</a>
+          <a href="/project/rx-asx" class="text-base opacity-75 hover:opacity-90 transition-opacity">View project →</a>
         </div>
       </div>
     </section>
@@ -43,9 +43,31 @@ import coverImg from '../assets/RX/cover.jpg';
 
   const line1 = document.getElementById('hero-line-1') as HTMLElement;
   const line2 = document.getElementById('hero-line-2') as HTMLElement;
+  const rotatingEl = document.getElementById('hero-rotating-word') as HTMLElement;
   wrapLetters(line1);
   wrapLetters(line2);
+  wrapLetters(rotatingEl);
 
-  const spans = document.querySelectorAll('#hero-line-1 span, #hero-line-2 span');
+  const spans = document.querySelectorAll('#hero-line-1 span, #hero-line-2 span, #hero-rotating-word span');
   gsap.to(spans, { opacity: 1, color: 'var(--text)', duration: 0.4, stagger: 0.03, ease: 'power2.out' });
+
+  // Rotating word
+  const words = ['Maker', 'Designer Lead', 'Strategist', 'Mentor'];
+  let current = 0;
+
+  function cycleWord() {
+    gsap.to(rotatingEl, {
+      opacity: 0,
+      y: -10,
+      duration: 0.3,
+      ease: 'power2.in',
+      onComplete: () => {
+        current = (current + 1) % words.length;
+        rotatingEl.textContent = words[current];
+        gsap.fromTo(rotatingEl, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' });
+      }
+    });
+  }
+
+  setInterval(cycleWord, 2500);
 </script>
