@@ -27,8 +27,9 @@ import placeholderHandsTable from '../../assets/RX/placeholder-hands-table.jpg';
 import badgeAnimation from '../../assets/RX/badge-animation.mov';
 import videoAnimations from '../../assets/RX/video-animations.mp4';
 import videoAnimationsPlaceholder from '../../assets/RX/video-animations-placeholder.png';
-import londonBookFair from '../../assets/RX/london-book-fair.jpg';
-import comicCon from '../../assets/RX/comic-con.jpg';
+import expoFibo from '../../assets/RX/expo-fibo.jpg';
+import expoWtmLondon from '../../assets/RX/expo-wtm-london.jpg';
+import expoWorldHydrogen from '../../assets/RX/expo-world-hydrogen.jpg';
 ---
 
 <Layout title="At Show Experience">
@@ -100,44 +101,41 @@ import comicCon from '../../assets/RX/comic-con.jpg';
       </div>
     </section>
 
-    <!-- Cover image before User Interviews -->
+    <!-- Expo Images -->
     <section class="mb-24 overflow-hidden md:overflow-visible section-block">
       <div class="max-w-7xl mx-auto md:px-8">
         <div class="relative" id="event-img-container">
-          <Image src={londonBookFair} alt="London Book Fair" id="event-img-1" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
-          <Image src={comicCon} alt="Comic Con" id="event-img-2" class="absolute inset-0 left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover opacity-0" />
+          <Image src={expoFibo} alt="FIBO" id="event-img-1" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
+          <Image src={expoWtmLondon} alt="WTM London" id="event-img-2" class="absolute inset-0 left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover opacity-0" />
+          <Image src={expoWorldHydrogen} alt="World Hydrogen" id="event-img-3" class="absolute inset-0 left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover opacity-0" />
         </div>
-        <p class="text-sm opacity-50 mt-2 px-8 md:px-0 text-center" id="event-caption">London Book Fair</p>
+        <p class="text-sm opacity-50 mt-2 px-8 md:px-0 text-center" id="event-caption">FIBO</p>
       </div>
     </section>
 
-    <!-- The Problem -->
+    <!-- User research -->
     <section class="mb-20 section-block">
       <div class="max-w-7xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">
-          User interviews and observations in situ
+          User research
         </h2>
         <p class="text-lg leading-relaxed opacity-80 mb-8 max-w-[960px]">
-          Research conducted at FIBO in Cologne, and in-cosmetics in Paris revealed a clear pattern: visitors struggled with wayfinding, resorted to photographing printed maps, and had no centralized way to manage schedules, discover exhibitors, or engage with sessions in real time.
-        </p>
-        <p class="text-lg leading-relaxed opacity-80 mb-8 max-w-[960px]">
-          Below are images of attendees looking at the map, taking pics of it.
-        <br/>
-          An attendee with a printed map and exhibitor list.
+          I conducted user interviews at FIBO in Cologne, and in-cosmetics in Paris both with attendees and exhibitors, gathering insights that directly informed the app's design, ensuring it addressed real user needs and pain points effectively.
+          Also obersvation on situ was key. Research conducted revealed a clear pattern: visitors struggled with wayfinding, resorted to photographing printed maps, and had no centralized way to manage schedules, discover exhibitors, or engage with sessions in real time.
         </p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <Image src={mapFibo1} alt="FIBO map 1" class="w-full rounded-[16px] object-cover" />
-          <Image src={mapFibo2} alt="FIBO map 2" class="w-full rounded-[16px] object-cover" />
-          <Image src={mapFibo3} alt="FIBO map 3" class="w-full rounded-[16px] object-cover" />
-          <Image src={printedList} alt="Printed exhibitor list" class="w-full rounded-[16px] object-cover" />
+          <div><Image src={mapFibo1} alt="FIBO map 1" class="w-full rounded-[8px] object-cover" /><p class="text-sm opacity-50 mt-2 text-center">Attendees taking pics of the map</p></div>
+          <div><Image src={mapFibo2} alt="FIBO map 2" class="w-full rounded-[8px] object-cover" /><p class="text-sm opacity-50 mt-2 text-center">Attendees looking at the map</p></div>
+          <div><Image src={mapFibo3} alt="FIBO map 3" class="w-full rounded-[8px] object-cover" /><p class="text-sm opacity-50 mt-2 text-center">FIBO's hall map</p></div>
+          <div><Image src={printedList} alt="Printed exhibitor list" class="w-full rounded-[8px] object-cover" /><p class="text-sm opacity-50 mt-2 text-center">Printed map and exhibitors list</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Components -->
+    <!-- Components library-->
     <section class="mb-20 section-block">
       <div class="max-w-7xl mx-auto px-8">
-        <h2 class="text-section-heading mb-6">Components</h2>
+        <h2 class="text-section-heading mb-6">Components library</h2>
         <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
           To support consistency across a large team and many event types, I built a centralized component library — buttons, forms, icons, navigation, cards — all adhering to shared visual guidelines and interaction standards. This reduced friction in handoffs and kept the product coherent as it scaled.
         </p>
@@ -186,7 +184,7 @@ import comicCon from '../../assets/RX/comic-con.jpg';
       </div>
     </section>
 
-    <!-- Learnings -->
+    <!-- Animations -->
     <section class="mb-20 section-block">
       <div class="max-w-7xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Animations</h2>
@@ -196,11 +194,11 @@ import comicCon from '../../assets/RX/comic-con.jpg';
         <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
           These subtle yet engaging visual elements not only make the app more intuitive but also contribute to a seamless and enjoyable user journey.
         </p>
-        <video src={videoAnimations} poster={videoAnimationsPlaceholder.src} autoplay loop muted playsinline class="mt-8 rounded-[24px] w-full max-w-[328px] mx-auto block" style="clip-path: inset(0 2px 0 0 round 24px)" />
+        <video src={videoAnimations} poster={videoAnimationsPlaceholder.src} autoplay loop muted playsinline class="mt-8 rounded-[24px] w-full max-w-[388px] mx-auto block" style="clip-path: inset(0 2px 0 0 round 24px)" />
       </div>
     </section>
 
-    <!-- Final Thoughts 2 -->
+    <!-- Final Thoughts -->
     <section class="mb-20 section-block">
       <div class="max-w-7xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Final Thoughts</h2>
@@ -312,8 +310,9 @@ import comicCon from '../../assets/RX/comic-con.jpg';
 
   // Crossfade between event images
   const eventImages = [
-    { el: document.getElementById('event-img-1') as HTMLElement, label: 'London Book Fair' },
-    { el: document.getElementById('event-img-2') as HTMLElement, label: 'Comic Con' },
+    { el: document.getElementById('event-img-1') as HTMLElement, label: 'FIBO' },
+    { el: document.getElementById('event-img-2') as HTMLElement, label: 'WTM London' },
+    { el: document.getElementById('event-img-3') as HTMLElement, label: 'World Hydrogen Summit' },
   ];
   const caption = document.getElementById('event-caption') as HTMLElement;
   let eventCurrent = 0;
