@@ -5,6 +5,8 @@ import ProjectFooter from '../../components/ProjectFooter.astro';
 import { Image } from 'astro:assets';
 import coverImg from '../../assets/RX-DS/cover.jpg';
 import variablesImg from '../../assets/RX-DS/variables.jpg';
+import componentButtonProperties from '../../assets/RX-DS/component-button-properties.png';
+import componentButtonTheming from '../../assets/RX-DS/component-button-theming.png';
 import placeholderHandsTable from '../../assets/RX-ASX/placeholder-hands-table.jpg';
 ---
 
@@ -106,6 +108,10 @@ import placeholderHandsTable from '../../assets/RX-ASX/placeholder-hands-table.j
         <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
           The components I create use properties to allow adaptability and also having light and dark theme versions.
         </p>
+        <div class="flex flex-col md:flex-row gap-12 mt-8">
+          <Image src={componentButtonProperties} alt="Component button properties" class="w-full max-w-[240px]" />
+          <Image src={componentButtonTheming} alt="Component button theming" class="w-[240px] object-cover" style="height:308px" />
+        </div>
       </div>
     </section>
 
