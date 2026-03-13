@@ -2,34 +2,35 @@
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import { Image } from 'astro:assets';
-import mapFibo1 from '../../assets/RX/map-fibo-1.jpeg';
-import mapFibo2 from '../../assets/RX/map-fibo-2.jpeg';
-import mapFibo3 from '../../assets/RX/map-fibo-3.jpeg';
-import printedList from '../../assets/RX/printed-list.jpeg';
-import coverImg from '../../assets/RX/cover.jpg';
-import usabilityTestingGif from '../../assets/RX/usability-testing.gif';
-import componentsDesktop from '../../assets/RX/components-desktop.png';
-import componentsMobile from '../../assets/RX/components-mobile.png';
-import design1 from '../../assets/RX/1.1-Sponsor.jpg';
-import design2 from '../../assets/RX/1.2-My-Bag-Schedule.jpg';
-import design3 from '../../assets/RX/2.1-Map.jpg';
-import design4 from '../../assets/RX/3.3-Colleqt-QR-Scan.jpg';
-import design5 from '../../assets/RX/3.5-Colleqt-My-Badge.jpg';
-import design6 from '../../assets/RX/4.1-Whats-On-Programme.jpg';
-import design7 from '../../assets/RX/4.2-Exhibitors.jpg';
-import design8 from '../../assets/RX/4.3-Exhibitors-Products.jpg';
-import design9 from '../../assets/RX/8.2-Product.jpg';
-import design10 from '../../assets/RX/8.3-Session.jpg';
-import design11 from '../../assets/RX/8.4-Exhibitor-Profile.jpg';
-import design12 from '../../assets/RX/9.4-Speaker-Profile.jpg';
-import mapDirections from '../../assets/RX/map-directions.png';
-import placeholderHandsTable from '../../assets/RX/placeholder-hands-table.jpg';
-import badgeAnimation from '../../assets/RX/badge-animation.mov';
-import videoAnimations from '../../assets/RX/video-animations.mp4';
-import videoAnimationsPlaceholder from '../../assets/RX/video-animations-placeholder.png';
-import expoFibo from '../../assets/RX/expo-fibo.jpg';
-import expoWtmLondon from '../../assets/RX/expo-wtm-london.jpg';
-import expoWorldHydrogen from '../../assets/RX/expo-world-hydrogen.jpg';
+import mapFibo1 from '../../assets/RX-ASX/map-fibo-1.jpeg';
+import mapFibo2 from '../../assets/RX-ASX/map-fibo-2.jpeg';
+import mapFibo3 from '../../assets/RX-ASX/map-fibo-3.jpeg';
+import printedList from '../../assets/RX-ASX/printed-list.jpeg';
+import coverImg from '../../assets/RX-ASX/cover.jpg';
+import usabilityTestingGif from '../../assets/RX-ASX/usability-testing.gif';
+import componentsDesktop from '../../assets/RX-ASX/components-desktop.png';
+import componentsMobile from '../../assets/RX-ASX/components-mobile.png';
+import design1 from '../../assets/RX-ASX/1.1-Sponsor.jpg';
+import design2 from '../../assets/RX-ASX/1.2-My-Bag-Schedule.jpg';
+import design3 from '../../assets/RX-ASX/2.1-Map.jpg';
+import design4 from '../../assets/RX-ASX/3.3-Colleqt-QR-Scan.jpg';
+import design5 from '../../assets/RX-ASX/3.5-Colleqt-My-Badge.jpg';
+import design6 from '../../assets/RX-ASX/4.1-Whats-On-Programme.jpg';
+import design7 from '../../assets/RX-ASX/4.2-Exhibitors.jpg';
+import design8 from '../../assets/RX-ASX/4.3-Exhibitors-Products.jpg';
+import design9 from '../../assets/RX-ASX/8.2-Product.jpg';
+import design10 from '../../assets/RX-ASX/8.3-Session.jpg';
+import design11 from '../../assets/RX-ASX/8.4-Exhibitor-Profile.jpg';
+import design12 from '../../assets/RX-ASX/9.4-Speaker-Profile.jpg';
+import mapDirections from '../../assets/RX-ASX/map-directions.png';
+import placeholderHandsTable from '../../assets/RX-ASX/placeholder-hands-table.jpg';
+import badgeAnimation from '../../assets/RX-ASX/badge-animation.mov';
+import videoAnimations from '../../assets/RX-ASX/video-animations.mp4';
+import videoAnimationsPlaceholder from '../../assets/RX-ASX/video-animations-placeholder.png';
+import expoFibo from '../../assets/RX-ASX/expo-fibo.jpg';
+import expoWtmLondon from '../../assets/RX-ASX/expo-wtm-london.jpg';
+import expoWorldHydrogen from '../../assets/RX-ASX/expo-world-hydrogen.jpg';
+import ProjectFooter from '../../components/ProjectFooter.astro';
 ---
 
 <Layout title="At Show Experience">
@@ -41,7 +42,7 @@ import expoWorldHydrogen from '../../assets/RX/expo-world-hydrogen.jpg';
     <section class="flex flex-col pt-24 pb-16" id="hero">
       <div class="max-w-7xl mx-auto w-full px-8">
         <h1 class="text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[1.05] tracking-tight mb-12 break-words" id="hero-title">
-          At Show Experience
+          RX Global At Show Experience
         </h1>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div class="hero-meta" style="opacity:0">
@@ -54,7 +55,7 @@ import expoWorldHydrogen from '../../assets/RX/expo-world-hydrogen.jpg';
           </div>
           <div class="hero-meta" style="opacity:0">
             <p class="text-base opacity-60 mb-2">Year</p>
-            <p class="text-lg font-medium">2024 · 2025</p>
+            <p class="text-lg font-medium">2024</p>
           </div>
           <div class="hero-meta" style="opacity:0">
             <p class="text-base opacity-60 mb-2">Type</p>
@@ -78,8 +79,7 @@ import expoWorldHydrogen from '../../assets/RX/expo-world-hydrogen.jpg';
         <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
           RX, the world's second-largest exhibition organizer, part of RELX (formerly Reed Elsevier), operates over 350 events across 25 countries, including well known events like: Comic Con, PGA Show, and London Book Fair.
         </p>
-        <br/>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
           Despite its strong presence across diverse industries, and continents, no companion app existed to enhance the attendee experience at these events.
         </p>
       </div>
@@ -95,8 +95,20 @@ import expoWorldHydrogen from '../../assets/RX/expo-world-hydrogen.jpg';
             <li>Designs, prototypes, components creation</li>
             <li>User Research</li>
             <li>Design alignment across the company</li>
-            <li>Stakeholder alignment between HQ, country managers, and expo organizers</li>
-            <li>Cross-functional collaboration with product, engineering, and QA teams</li>
+            <li>Stakeholder alignment between:
+              <ul class="list-disc list-inside ml-6 mt-1">
+                <li>HQ</li>
+                <li>Country managers</li>
+                <li>Expo organizers</li>
+              </ul>
+            </li>
+            <li>Cross-functional collaboration with:
+              <ul class="list-disc list-inside ml-6 mt-1">
+                <li>Product</li>
+                <li>Engineering</li>
+                <li>QA</li>
+              </ul>
+            </li>
           </ul>
       </div>
     </section>
@@ -140,9 +152,9 @@ import expoWorldHydrogen from '../../assets/RX/expo-world-hydrogen.jpg';
           To support consistency across a large team and many event types, I built a centralized component library — buttons, forms, icons, navigation, cards — all adhering to shared visual guidelines and interaction standards. This reduced friction in handoffs and kept the product coherent as it scaled.
         </p>
       </div>
-      <div class="mt-8 relative left-1/2 -translate-x-1/2 w-screen flex justify-center">
+      <div class="mt-8 md:relative md:left-1/2 md:-translate-x-1/2 md:w-screen flex justify-center px-8 md:px-0">
         <Image src={componentsDesktop} alt="Component library" class="rounded-2xl w-full max-w-[1111px] hidden md:block" />
-        <Image src={componentsMobile} alt="Component library" class="rounded-2xl w-[555px] max-w-none md:hidden" />
+        <Image src={componentsMobile} alt="Component library" class="rounded-2xl w-full md:hidden" />
       </div>
     </section>
 
@@ -191,7 +203,7 @@ import expoWorldHydrogen from '../../assets/RX/expo-world-hydrogen.jpg';
         <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
           The app incorporates multiple animations to enhance the user experience, adding a dynamic and polished feel to interactions. For example, animations were introduced when scanning a QR code and when opening the digital badge.
         </p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
           These subtle yet engaging visual elements not only make the app more intuitive but also contribute to a seamless and enjoyable user journey.
         </p>
         <video src={videoAnimations} poster={videoAnimationsPlaceholder.src} autoplay loop muted playsinline class="mt-8 rounded-[24px] w-full max-w-[388px] mx-auto block" style="clip-path: inset(0 2px 0 0 round 24px)" />
@@ -206,9 +218,8 @@ import expoWorldHydrogen from '../../assets/RX/expo-world-hydrogen.jpg';
         <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
           Aligning a wide range of stakeholders: HQ, country managers, and expo organizers, required constant communication and expectations understanding and setup, this required more time and effort than the design work itself.
         </p>
-        <br/>
-  <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px]">Clear Scope</p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px] mt-8">Clear Scope</p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-2">
           To keep the project on track, I had to specify:
         </p>
         <ul class="list-disc list-inside mt-4 text-lg leading-relaxed opacity-80 max-w-[960px]">
@@ -216,14 +227,12 @@ import expoWorldHydrogen from '../../assets/RX/expo-world-hydrogen.jpg';
             <li>Releases</li>
             <li>Timeline</li>
         </ul>
-        <br/>
-        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px]">Constraints</p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px] mt-8">Constraints</p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-2">
           Connectivity at live events was an unexpected constraint. Without reliable GPS, we couldn't pinpoint user location on the map.
         </p>
-        <br/>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
-          I designed having an input to ask the user, it's current location, to set a starting point: scan a nearby QR code or enter a stand number.
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
+          I designed having an input to ask the user, it's current location, to set a starting point, or take a photo of the surrounding area:
         </p>
         <Image src={mapDirections} alt="Map directions" class="mt-8 rounded-2xl w-full max-w-[328px] mx-auto block" />
       </div>
@@ -232,23 +241,14 @@ import expoWorldHydrogen from '../../assets/RX/expo-world-hydrogen.jpg';
     <!-- Cover image end -->
     <section class="mb-24 overflow-hidden md:overflow-visible section-block">
       <div class="max-w-7xl mx-auto px-8 mb-12">
-        <h3 class="text-xl text-center">Thanks for reading, want to collaborate together? Contact me <a href="mailto:hi@isaavigil.com" class="underline hover:opacity-60 transition-opacity">here</a></h3>
+        <h3 class="text-xl text-center">Thanks for reading, want to collaborate together? Contact me <a href="mailto:isaacvigil@gmail.com" class="underline hover:opacity-60 transition-opacity">here</a></h3>
       </div>
       <div class="max-w-7xl mx-auto md:px-8">
         <Image src={placeholderHandsTable} alt="At Show Experience" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
       </div>
     </section>
 
-    <!-- Footer / Next project -->
-    <section class="py-32 border-t border-[#111]/10">
-      <div class="max-w-7xl mx-auto px-8 flex items-center justify-between">
-        <p class="text-sm opacity-40">Next project</p>
-        <a href="/" class="group flex items-center gap-3 text-lg font-semibold hover:opacity-60 transition-opacity">
-          Coming soon
-          <span class="group-hover:translate-x-1 transition-transform inline-block">→</span>
-        </a>
-      </div>
-    </section>
+    <ProjectFooter nextHref="/project/rx-ds" nextTitle="RX Global Design System" />
 
   </main>
 </Layout>

@@ -2,7 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import { Image } from 'astro:assets';
-import coverImg from '../assets/RX/cover.jpg';
+import coverImg from '../assets/RX-ASX/cover.jpg';
+import coverDsImg from '../assets/RX-DS/cover.jpg';
+import coverKiaImg from '../assets/Kia-Stock-Locator/cover.jpg';
 ---
 
 <Layout title="Isaac Vigil — Portfolio">
@@ -15,7 +17,7 @@ import coverImg from '../assets/RX/cover.jpg';
           <span id="hero-line-1">Hi, I am Luis Isaac,</span><br /><span id="hero-line-2">a </span><span id="hero-rotating-word">Maker</span>
         </h1>
 
-        <a href="/project/rx-asx" class="group block overflow-hidden md:rounded-2xl">
+        <a href="/project/rx-asx" class="group block overflow-hidden rounded-2xl">
           <Image
             src={coverImg}
             alt="RX At Show Experience"
@@ -23,8 +25,32 @@ import coverImg from '../assets/RX/cover.jpg';
           />
         </a>
         <div class="mt-4 flex items-center justify-between">
-          <p class="text-lg font-medium">At Show Experience</p>
+          <p class="text-lg font-medium">RX Global At Show Experience</p>
           <a href="/project/rx-asx" class="text-base opacity-75 hover:opacity-90 transition-opacity">View project →</a>
+        </div>
+
+        <a href="/project/rx-ds" class="group block overflow-hidden rounded-2xl mt-8">
+          <Image
+            src={coverDsImg}
+            alt="RX Global Design System"
+            class="w-full object-cover group-hover:scale-[1.10] transition-transform duration-500"
+          />
+        </a>
+        <div class="mt-4 flex items-center justify-between">
+          <p class="text-lg font-medium">RX Global Design System</p>
+          <a href="/project/rx-ds" class="text-base opacity-75 hover:opacity-90 transition-opacity">View project →</a>
+        </div>
+
+        <a href="https://www.isaacvigil.com/project/kia-stock-locator" target="_blank" rel="noopener" class="group block overflow-hidden rounded-2xl mt-8">
+          <Image
+            src={coverKiaImg}
+            alt="Kia Stock Locator"
+            class="w-full object-cover group-hover:scale-[1.10] transition-transform duration-500"
+          />
+        </a>
+        <div class="mt-4 flex items-center justify-between">
+          <p class="text-lg font-medium">Kia Stock Locator</p>
+          <a href="https://www.isaacvigil.com/project/kia-stock-locator" target="_blank" rel="noopener" class="text-base opacity-75 hover:opacity-90 transition-opacity flex items-center gap-1.5">View project <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
         </div>
       </div>
     </section>
@@ -52,7 +78,7 @@ import coverImg from '../assets/RX/cover.jpg';
   gsap.to(spans, { opacity: 1, color: 'var(--text)', duration: 0.4, stagger: 0.03, ease: 'power2.out' });
 
   // Rotating word
-  const words = ['Maker', 'Designer Lead', 'Strategist', 'Mentor'];
+  const words = ['Maker', 'Problem Solver', 'Designer Lead', 'Strategist', 'Mentor', 'Systems Thinker'];
   let current = 0;
 
   function cycleWord() {

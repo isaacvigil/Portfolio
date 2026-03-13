@@ -1,0 +1,262 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import ProjectFooter from '../../components/ProjectFooter.astro';
+import { Image } from 'astro:assets';
+import coverImg from '../../assets/RX-DS/cover.jpg';
+import variablesImg from '../../assets/RX-DS/variables.jpg';
+import placeholderHandsTable from '../../assets/RX-ASX/placeholder-hands-table.jpg';
+---
+
+<Layout title="RX Global Design System">
+  <main>
+
+    <Nav backHref="/" />
+
+    <!-- Hero -->
+    <section class="flex flex-col pt-24 pb-16" id="hero">
+      <div class="max-w-7xl mx-auto w-full px-8">
+        <h1 class="text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[1.05] tracking-tight mb-12 break-words" id="hero-title">
+          RX Global Design System
+        </h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="hero-meta" style="opacity:0">
+            <p class="text-base opacity-60 mb-2">Role</p>
+            <p class="text-lg font-medium">Design Lead</p>
+          </div>
+          <div class="hero-meta" style="opacity:0">
+            <p class="text-base opacity-60 mb-2">Company</p>
+            <p class="text-lg font-medium">RX Global</p>
+          </div>
+          <div class="hero-meta" style="opacity:0">
+            <p class="text-base opacity-60 mb-2">Year</p>
+            <p class="text-lg font-medium">2025</p>
+          </div>
+          <div class="hero-meta" style="opacity:0">
+            <p class="text-base opacity-60 mb-2">Type</p>
+            <p class="text-lg font-medium">Design System</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cover image placeholder -->
+    <section class="mb-24 overflow-hidden md:overflow-visible">
+      <div class="max-w-7xl mx-auto md:px-8">
+        <Image src={coverImg} alt="At Show Experience cover" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" id="cover-img" />
+      </div>
+    </section>
+
+    <!-- Opportunity -->
+    <section class="mb-20 section-block" id="opportunity">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Opportunity</h2>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          While building the <a href="/project/rx-asx" class="underline hover:opacity-60 transition-opacity">ASX project</a>, I designed a library that quickly gained traction across teams at RX. Its modern approach and improved UX raised the bar for what the product could be, and became the foundation for RX’s company-wide Design System.
+        </p>
+      </div>
+    </section>
+
+    <!-- Scope -->
+    <section class="mb-20 section-block" id="overview">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">My role as Design Lead</h2>
+          <ul class="list-disc list-inside mt-4 text-lg leading-relaxed opacity-80 max-w-[960px]">
+            <li>Process & timeline management</li>
+            <li>Alignment with different company sections</li>
+            <li>Adaptation of components for broader usage</li>
+            <li>Creation of variables and design tokens</li>
+            <li>Design documentation and maintenance</li>
+            <li>Usability testing and iteration</li>
+            <li>Governance and standardization</li>
+            <li>Cross-functional collaboration with:
+              <ul class="list-disc list-inside ml-6 mt-1">
+                <li>Product</li>
+                <li>Engineering</li>
+                <li>QA</li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+    </section>
+
+    <!-- Variables -->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">
+          Variables
+        </h2>
+        <p class="text-lg leading-relaxed opacity-80 mb-8 max-w-[960px]">
+          I started by defining the design system's core variables, including color palettes, typography scales, spacing units, and iconography guidelines. This created a shared visual language that ensured consistency across all products and platforms.
+        </p>
+        <Image src={variablesImg} alt="Design system variables" class="w-full rounded-2xl max-w-[743px]" />
+      </div>
+    </section>
+
+    <!-- Components construction-->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Components construction</h2>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          When creating components, I focus on building flexible and reusable elements that could adapt to various use cases while maintaining a cohesive design language. I collaborated closely with developers to ensure that components were not only visually appealing but also technically feasible and performant.
+        </p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4"> 
+          This involved iterating on designs based on feedback and testing, ensuring that the components met the needs of both users and developers, and could be easily integrated into different projects across the company.
+        </p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
+          The components I create use properties to allow adaptability and also having light and dark theme versions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Adaptation -->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">
+          Component adaptation
+        </h2>
+        <p class="text-lg leading-relaxed opacity-80 mb-8 max-w-[960px]">
+          The ASX components needed to be adapted to be used across different products, this required me to abstract them and make them more flexible, contemplate edge cases and different states, and create documentation to ensure they were used correctly by other teams.
+        </p>
+      </div>
+    </section>
+
+    <!-- Usability Testing -->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Usability Testing</h2>
+        <p class="text-lg leading-relaxed opacity-80 mb-4">I conducted usability testing of the prototype at FIBO in Cologne and in-cosmetics in Paris.</p>
+        <p class="text-lg leading-relaxed opacity-80 mb-4">These efforts provided valuable insights into how users interacted with the prototype, highlighting pain points and areas for improvement, helping us identify opportunities to enhance user engagement and satisfaction at future exhibitions.</p>
+      </div>
+    </section>
+
+    <!-- Animations -->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Animations</h2>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          The app incorporates multiple animations to enhance the user experience, adding a dynamic and polished feel to interactions. For example, animations were introduced when scanning a QR code and when opening the digital badge.
+        </p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
+          These subtle yet engaging visual elements not only make the app more intuitive but also contribute to a seamless and enjoyable user journey.
+        </p>
+      </div>
+    </section>
+
+    <!-- Final Thoughts -->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Final Thoughts</h2>
+        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px]">Alignment</p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
+          Aligning a wide range of stakeholders: HQ, country managers, and expo organizers, required constant communication and expectations understanding and setup, this required more time and effort than the design work itself.
+        </p>
+        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px] mt-8">Clear Scope</p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-2">
+          To keep the project on track, I had to specify:
+        </p>
+        <ul class="list-disc list-inside mt-4 text-lg leading-relaxed opacity-80 max-w-[960px]">
+            <li>Features</li>
+            <li>Releases</li>
+            <li>Timeline</li>
+        </ul>
+        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px] mt-8">Constraints</p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-2">
+          Connectivity at live events was an unexpected constraint. Without reliable GPS, we couldn't pinpoint user location on the map.
+        </p>
+        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
+          I designed having an input to ask the user, it's current location, to set a starting point, or take a photo of the surrounding area:
+        </p>
+      </div>
+    </section>
+
+    <!-- Cover image end -->
+    <section class="mb-24 overflow-hidden md:overflow-visible section-block">
+      <div class="max-w-7xl mx-auto px-8 mb-12">
+        <h3 class="text-xl text-center">Thanks for reading, want to collaborate together? Contact me <a href="mailto:hi@isaavigil.com" class="underline hover:opacity-60 transition-opacity">here</a></h3>
+      </div>
+      <div class="max-w-7xl mx-auto md:px-8">
+        <Image src={placeholderHandsTable} alt="At Show Experience" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
+      </div>
+    </section>
+
+    <ProjectFooter nextHref="/" nextTitle="Coming soon" />
+
+  </main>
+</Layout>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Letter-by-letter fade in with color transition
+  const titleEl = document.getElementById('hero-title') as HTMLElement;
+  const text = titleEl.textContent?.trim() ?? '';
+  titleEl.innerHTML = text
+    .split(' ')
+    .map(word =>
+      `<span class="inline-block whitespace-nowrap">${word.split('').map(ch => `<span style="opacity:0;color:var(--muted)">${ch}</span>`).join('')}</span>`)
+    .join(' ');
+
+  gsap.set('.hero-meta', { x: -20, opacity: 0 });
+
+  const spans = titleEl.querySelectorAll('span');
+  const tl = gsap.timeline({
+    onComplete: () => {
+      document.querySelectorAll<HTMLElement>('.hero-meta').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+    }
+  });
+  tl.to(spans, { opacity: 1, color: 'var(--text)', duration: 0.4, stagger: 0.03, ease: 'power2.out' })
+    .to('.hero-meta', { opacity: 1, x: 0, duration: 0.4, stagger: 0.08, ease: 'power2.out' })
+    .fromTo('#cover-img', { y: 60, opacity: 0, filter: 'blur(20px)' }, { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.8, ease: 'power3.out' });
+
+  // Scroll reveals
+  // Opportunity loads with the page
+  gsap.from('#opportunity', { y: 60, opacity: 0, duration: 1, delay: 0.3, ease: 'power3.out' });
+
+  gsap.utils.toArray<HTMLElement>('.section-block:not(#opportunity)').forEach((el) => {
+    gsap.from(el, {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+      },
+    });
+  });
+
+  // Fade in images when they finish loading (works with lazy-loaded images)
+  document.querySelectorAll<HTMLImageElement>('.section-block img:not(#event-img-1):not(#event-img-2)').forEach((img) => {
+    img.style.opacity = '0';
+    const show = () => gsap.to(img, { opacity: 1, duration: 1.2, ease: 'power3.out' });
+    if (img.complete && img.naturalWidth > 0) show();
+    else img.addEventListener('load', show, { once: true });
+  });
+
+  // Crossfade between event images
+  const eventImages = [
+    { el: document.getElementById('event-img-1') as HTMLElement, label: 'FIBO' },
+    { el: document.getElementById('event-img-2') as HTMLElement, label: 'WTM London' },
+    { el: document.getElementById('event-img-3') as HTMLElement, label: 'World Hydrogen Summit' },
+  ];
+  const caption = document.getElementById('event-caption') as HTMLElement;
+  let eventCurrent = 0;
+
+  setInterval(() => {
+    const next = (eventCurrent + 1) % eventImages.length;
+    gsap.to(eventImages[eventCurrent].el, { opacity: 0, duration: 0.8, ease: 'power2.inOut' });
+    gsap.to(eventImages[next].el, { opacity: 1, duration: 0.8, ease: 'power2.inOut' });
+    gsap.to(caption, { opacity: 0, duration: 0.3, onComplete: () => {
+      caption.textContent = eventImages[next].label;
+      gsap.to(caption, { opacity: 0.5, duration: 0.3 });
+    }});
+    eventCurrent = next;
+  }, 4000);
+</script>
