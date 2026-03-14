@@ -8,8 +8,7 @@ import mapFibo3 from '../../assets/RX-ASX/map-fibo-3.jpeg';
 import printedList from '../../assets/RX-ASX/printed-list.jpeg';
 import coverImg from '../../assets/RX-ASX/cover.jpg';
 import usabilityTestingGif from '../../assets/RX-ASX/usability-testing.gif';
-import componentsDesktop from '../../assets/RX-ASX/components-desktop.png';
-import componentsMobile from '../../assets/RX-ASX/components-mobile.png';
+import componentsImg from '../../assets/RX-ASX/components.png';
 import design1 from '../../assets/RX-ASX/1.1-Sponsor.jpg';
 import design2 from '../../assets/RX-ASX/1.2-My-Bag-Schedule.jpg';
 import design3 from '../../assets/RX-ASX/2.1-Map.jpg';
@@ -168,16 +167,17 @@ import Icon from '../../components/Icon.astro';
           </p>
         </div>
       </div>
-      <div class="mt-8 md:relative md:left-1/2 md:-translate-x-1/2 md:w-screen flex justify-center px-8 md:px-0 overflow-hidden md:overflow-visible">
-        <Image src={componentsDesktop} alt="Component library" class="rounded-2xl w-full max-w-[1111px] hidden md:block" />
-        <Image src={componentsMobile} alt="Component library" class="rounded-2xl w-full md:hidden" style="min-width: 539.5px" />
+      <div class="mt-8 max-w-5xl mx-auto px-8">
+        <div class="flex justify-center overflow-hidden md:block md:overflow-visible">
+          <Image src={componentsImg} alt="Component library" class="w-[1080px] max-w-none shrink-0 md:w-full" />
+        </div>
       </div>
     </section>
 
     <!-- Designs -->
     <section class="mb-20 section-block">
       <div class="max-w-5xl mx-auto px-8">
-        <h2 class="text-section-heading mb-6">Designs</h2>
+        <h2 class="text-section-heading mb-6">High fidelity  designs</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <p class="text-lg leading-relaxed opacity-80">
             To support consistency across a large team and many event types, I built a centralized component library — buttons, forms, icons, navigation, cards — all adhering to shared visual guidelines and interaction standards.

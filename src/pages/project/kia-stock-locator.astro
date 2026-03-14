@@ -3,23 +3,20 @@ import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import { Image } from 'astro:assets';
 import coverImg from '../../assets/Kia-Stock-Locator/cover.jpg';
-import handImg from '../../assets/Kia-Stock-Locator/Stock-locator-hand-1.png';
 import benchPorsche from '../../assets/Kia-Stock-Locator/stock-locator-porsche.png';
 import benchRivian from '../../assets/Kia-Stock-Locator/stock-locator-rivian.png';
 import benchTesla from '../../assets/Kia-Stock-Locator/stock-locator-tesla.jpg';
 import benchRenault from '../../assets/Kia-Stock-Locator/stock-locator-renault.png';
 import wireframeImg from '../../assets/Kia-Stock-Locator/wireframe.jpg';
-import cardsDesktop from '../../assets/Kia-Stock-Locator/card-desktop.jpg';
-import cardsMobile from '../../assets/Kia-Stock-Locator/card-mobile.jpg';
-import homeDesktop from '../../assets/Kia-Stock-Locator/Stock-Locator-Home-scaled.jpg';
-import homeModelsDesktop from '../../assets/Kia-Stock-Locator/Home-Models-Desktop.jpg';
-import resultsDesktop from '../../assets/Kia-Stock-Locator/Stock-Locator-Results-scaled.jpg';
-import resultsDesktop2 from '../../assets/Kia-Stock-Locator/Results-Desktop-scaled.jpg';
-import filtersDesktop from '../../assets/Kia-Stock-Locator/Filters-Desktop-scaled.jpg';
-import detailsDesktop from '../../assets/Kia-Stock-Locator/Stock-Locator-Details-scaled.jpg';
-import detailsPreownedTop from '../../assets/Kia-Stock-Locator/Details-Pre-owned-Top-scaled.jpg';
-import detailsPreownedBottom from '../../assets/Kia-Stock-Locator/Details-Pre-owned-Bottom-scaled.jpg';
-import detailsImages from '../../assets/Kia-Stock-Locator/Details-Images-scaled.jpg';
+import componentsImg from '../../assets/Kia-Stock-Locator/components.png';
+import homeDesktop from '../../assets/Kia-Stock-Locator/desktop/old-stock-locator-home.jpg';
+import resultsDesktop from '../../assets/Kia-Stock-Locator/desktop/old-stock-locator-results.jpg';
+import detailsDesktop from '../../assets/Kia-Stock-Locator/desktop/old-stock-locator-details.jpg';
+import newHome from '../../assets/Kia-Stock-Locator/desktop/new-stock-locator-home.jpg';
+import newHomeType from '../../assets/Kia-Stock-Locator/desktop/new-stock-locator-home-type.jpg';
+import newResults from '../../assets/Kia-Stock-Locator/desktop/new-stock-locator-results.jpg';
+import newFilters from '../../assets/Kia-Stock-Locator/desktop/new-stock-locator-filters.jpg';
+import newDetails from '../../assets/Kia-Stock-Locator/desktop/new-stock-locator-details.jpg';
 import homeModelsMobile from '../../assets/Kia-Stock-Locator/Home-Models-Mobile-scaled.jpg';
 import homeTypeMobile from '../../assets/Kia-Stock-Locator/Home-Type-Mobile-scaled.jpg';
 import resultsMobile from '../../assets/Kia-Stock-Locator/Results-Mobile-scaled.jpg';
@@ -234,7 +231,7 @@ import '../../styles/global.css';
           <Image src={benchTesla} alt="Tesla stock locator" id="bench-img-3" class="absolute inset-0 w-[810px] max-w-none md:w-full md:rounded-2xl object-cover opacity-0" />
           <Image src={benchRenault} alt="Renault stock locator" id="bench-img-4" class="absolute inset-0 w-[810px] max-w-none md:w-full md:rounded-2xl object-cover opacity-0" />
         </div>
-        <p class="text-sm opacity-50 mt-2 px-8 md:px-0 text-center" id="bench-caption">Porsche stock locator</p>
+        <p class="text-sm opacity-60 mt-2 px-8 md:px-0 text-center" id="bench-caption">Porsche stock locator</p>
       </div>
     </section>
 
@@ -266,47 +263,47 @@ import '../../styles/global.css';
           </p>
         </div>
       </div>
-      <div class="max-w-5xl mx-auto md:px-8">
-        <div class="flex flex-col gap-12">
+      <div class="flex flex-col gap-12">
           <div>
-            <div class="px-8 md:px-0 mb-4">
-              <p class="text-xl font-semibold leading-relaxed">Home</p>
-            </div>
-            <Image src={homeDesktop} alt="Current website — Home" class="w-full md:rounded-2xl mb-4" />
-            <div class="px-8 md:px-0">
+            <div class="max-w-5xl mx-auto px-8 mb-4">
+              <p class="text-xl font-semibold leading-relaxed mb-2">Home</p>
               <p class="text-lg leading-relaxed opacity-80">The homepage presented too many options upfront — model filters, body types, and categories all at once — leaving users uncertain where to start.</p>
             </div>
+            <div class="max-w-5xl mx-auto px-8">
+              <Image src={homeDesktop} alt="Current website — Home" class="w-full md:rounded-2xl" />
+            </div>
           </div>
           <div>
-            <div class="px-8 md:px-0 mb-4">
-              <p class="text-xl font-semibold leading-relaxed">Results</p>
-            </div>
-            <Image src={resultsDesktop} alt="Current website — Results" class="w-full md:rounded-2xl mb-4" />
-            <div class="px-8 md:px-0">
+            <div class="max-w-5xl mx-auto px-8 mb-4">
+              <p class="text-xl font-semibold leading-relaxed mb-2">Results</p>
               <p class="text-lg leading-relaxed opacity-80">Results pages were information-dense with no clear visual hierarchy, making it difficult to compare vehicles or identify the most relevant details at a glance.</p>
             </div>
+            <div class="max-w-5xl mx-auto px-8">
+              <Image src={resultsDesktop} alt="Current website — Results" class="w-full md:rounded-2xl" />
+            </div>
           </div>
           <div>
-            <div class="px-8 md:px-0 mb-4">
-              <p class="text-xl font-semibold leading-relaxed">Vehicle details</p>
-            </div>
-            <Image src={detailsDesktop} alt="Current website — Details" class="w-full md:rounded-2xl mb-4" />
-            <div class="px-8 md:px-0">
+            <div class="max-w-5xl mx-auto px-8 mb-4">
+              <p class="text-xl font-semibold leading-relaxed mb-2">Vehicle details</p>
               <p class="text-lg leading-relaxed opacity-80">The detail page buried key specs and CTAs beneath excessive content, requiring users to scroll extensively before reaching the actions they needed.</p>
+            </div>
+            <div class="max-w-5xl mx-auto px-8">
+              <Image src={detailsDesktop} alt="Current website — Details" class="w-full md:rounded-2xl" />
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- Wireframes -->
     <section class="mb-20 section-block">
-      <div class="max-w-5xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8 mb-8">
         <h2 class="text-section-heading mb-6">Wireframes</h2>
-        <p class="text-lg leading-relaxed opacity-80 mb-8">
+        <p class="text-lg leading-relaxed opacity-80">
           Using FigJam, we explored the information architecture and layout before moving into high-fidelity designs.
         </p>
-        <Image src={wireframeImg} alt="Wireframes" class="w-full mx-auto block rounded-2xl" style="max-width:1360px" />
+      </div>
+      <div class="max-w-5xl mx-auto md:px-8">
+        <Image src={wireframeImg} alt="Wireframes" class="w-full mx-auto block md:rounded-2xl" />
       </div>
     </section>
 
@@ -317,46 +314,44 @@ import '../../styles/global.css';
         <p class="text-lg leading-relaxed opacity-80 mb-8">
           We designed distinct card types to support new vehicles, pre-owned, and Kia Flex leasing offerings — each visually differentiated and scannable.
         </p>
-        <div style="max-width:940px" class="mx-auto">
-          <Image src={cardsDesktop} alt="Card components — desktop" class="w-full hidden md:block rounded-[16px]" />
-          <Image src={cardsMobile} alt="Card components — mobile" class="md:hidden rounded-[16px] mx-auto" style="max-width:328px;width:100%" />
+      </div>
+      <div class="max-w-5xl mx-auto px-8">
+        <div class="flex justify-center overflow-hidden md:block md:overflow-visible">
+          <Image src={componentsImg} alt="Card components" class="w-[1080px] max-w-none shrink-0 md:w-full" />
         </div>
       </div>
     </section>
 
     <!-- Designs — Desktop -->
-    <section class="mb-20 section-block hidden">
-      <div class="max-w-5xl mx-auto px-8">
-        <h2 class="text-section-heading mb-6">Designs</h2>
-        <p class="text-xl font-semibold leading-relaxed opacity-80 mb-4">Desktop</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div><Image src={homeDesktop} alt="Home" class="w-full rounded-2xl" /><p class="text-sm opacity-50 mt-2 text-center">Home</p></div>
-          <div><Image src={homeModelsDesktop} alt="Home ⋅ Models" class="w-full rounded-2xl" /><p class="text-sm opacity-50 mt-2 text-center">Home ⋅ Models</p></div>
-          <div><Image src={resultsDesktop} alt="Results" class="w-full rounded-2xl" /><p class="text-sm opacity-50 mt-2 text-center">Results</p></div>
-          <div><Image src={resultsDesktop2} alt="Results — Desktop" class="w-full rounded-2xl" /><p class="text-sm opacity-50 mt-2 text-center">Results ⋅ Full</p></div>
-          <div><Image src={filtersDesktop} alt="Filters" class="w-full rounded-2xl" /><p class="text-sm opacity-50 mt-2 text-center">Filters</p></div>
-          <div><Image src={detailsDesktop} alt="Details" class="w-full rounded-2xl" /><p class="text-sm opacity-50 mt-2 text-center">Details</p></div>
-          <div><Image src={detailsPreownedTop} alt="Details ⋅ Pre-owned top" class="w-full rounded-2xl" /><p class="text-sm opacity-50 mt-2 text-center">Details ⋅ Pre-owned</p></div>
-          <div><Image src={detailsPreownedBottom} alt="Details ⋅ Pre-owned bottom" class="w-full rounded-2xl" /><p class="text-sm opacity-50 mt-2 text-center">Details ⋅ Pre-owned cont.</p></div>
-          <div class="md:col-span-2"><Image src={detailsImages} alt="Details ⋅ Images" class="w-full rounded-2xl" /><p class="text-sm opacity-50 mt-2 text-center">Details ⋅ Images</p></div>
-        </div>
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8 mb-8">
+        <h2 class="text-section-heading mb-6">High fidelity designs</h2>
+        <p class="text-xl font-semibold leading-relaxed opacity-80">Desktop</p>
+      </div>
+      <div class="max-w-5xl mx-auto flex flex-col gap-8 md:px-8">
+        <div><Image src={newHome} alt="Home desktop" class="w-full md:rounded-2xl" /><p class="text-sm opacity-60 mt-2 px-8 md:px-0 text-center">Home</p></div>
+        <div><Image src={newHomeType} alt="Home ⋅ Type desktop" class="w-full md:rounded-2xl" /><p class="text-sm opacity-60 mt-2 px-8 md:px-0 text-center">Home ⋅ Type</p></div>
+        <div><Image src={newResults} alt="Results desktop" class="w-full md:rounded-2xl" /><p class="text-sm opacity-60 mt-2 px-8 md:px-0 text-center">Results</p></div>
+        <div><Image src={newFilters} alt="Filters desktop" class="w-full md:rounded-2xl" /><p class="text-sm opacity-60 mt-2 px-8 md:px-0 text-center">Filters</p></div>
+        <div><Image src={newDetails} alt="Vehicle details desktop" class="w-full md:rounded-2xl" /><p class="text-sm opacity-60 mt-2 px-8 md:px-0 text-center">Vehicle details</p></div>
       </div>
     </section>
 
     <!-- Designs — Mobile -->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
-        <h2 class="text-section-heading mb-6">Designs</h2>
+      <div class="max-w-5xl mx-auto px-8">
         <p class="text-xl font-semibold leading-relaxed opacity-80 mb-4">Mobile</p>
+      </div>
+      <div class="max-w-7xl mx-auto px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div><Image src={homeModelsMobile} alt="Home ⋅ Models mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Home ⋅ models</p></div>
-          <div><Image src={homeTypeMobile} alt="Home ⋅ Type mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Home ⋅ type</p></div>
-          <div><Image src={resultsMobile} alt="Results mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Results</p></div>
-          <div><Image src={filtersMobile} alt="Filters mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Filters</p></div>
-          <div><Image src={detailsPreownedMobile} alt="Details ⋅ Pre-owned mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Vehcicle details</p></div>
-          <div><Image src={detailsImagesMobile} alt="Details ⋅ Images mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Vehicle images</p></div>
-          <div><Image src={dealerFormMobile} alt="Dealer form mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Dealer form</p></div>
-          <div><Image src={dealerPhoneMobile} alt="Dealer phone and map mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Dealer ⋅ phone & Map</p></div>
+          <div><Image src={homeModelsMobile} alt="Home ⋅ Models mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Home ⋅ models</p></div>
+          <div><Image src={homeTypeMobile} alt="Home ⋅ Type mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Home ⋅ type</p></div>
+          <div><Image src={resultsMobile} alt="Results mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Results</p></div>
+          <div><Image src={filtersMobile} alt="Filters mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Filters</p></div>
+          <div><Image src={detailsPreownedMobile} alt="Details ⋅ Pre-owned mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Vehcicle details</p></div>
+          <div><Image src={detailsImagesMobile} alt="Details ⋅ Images mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Vehicle images</p></div>
+          <div><Image src={dealerFormMobile} alt="Dealer form mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Dealer form</p></div>
+          <div><Image src={dealerPhoneMobile} alt="Dealer phone and map mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Dealer ⋅ phone & Map</p></div>
         </div>
       </div>
     </section>
