@@ -8,7 +8,7 @@ import benchPorsche from '../../assets/Kia-Stock-Locator/stock-locator-porsche.p
 import benchRivian from '../../assets/Kia-Stock-Locator/stock-locator-rivian.png';
 import benchTesla from '../../assets/Kia-Stock-Locator/stock-locator-tesla.jpg';
 import benchRenault from '../../assets/Kia-Stock-Locator/stock-locator-renault.png';
-import wireframeImg from '../../assets/Kia-Stock-Locator/Kia-Stock-Locator-Wireframe.png';
+import wireframeImg from '../../assets/Kia-Stock-Locator/wireframe.jpg';
 import cardsDesktop from '../../assets/Kia-Stock-Locator/card-desktop.jpg';
 import cardsMobile from '../../assets/Kia-Stock-Locator/card-mobile.jpg';
 import homeDesktop from '../../assets/Kia-Stock-Locator/Stock-Locator-Home-scaled.jpg';
@@ -44,7 +44,7 @@ import '../../styles/global.css';
     <section class="flex flex-col pt-24 pb-16" id="hero">
       <div class="max-w-7xl mx-auto w-full px-8">
         <h1 class="text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[1.05] tracking-tight mb-12 break-words" id="hero-title">
-          Kia - Stock Locator
+          Kia Stock Locator
         </h1>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div class="hero-meta" style="opacity:0">
@@ -92,7 +92,7 @@ import '../../styles/global.css';
               The idea emerged: what if customers could find a similar or identical vehicle already in stock at a nearby dealer?
             </p>
             <p class="text-lg leading-relaxed opacity-80">
-              Facing an increasingly competitive automotive landscape online, Kia decided to invest in improving their Stock Locator experience — helping customers find the right car now, rather than wait.
+              Facing an increasingly competitive automotive landscape online, Kia decided to invest in improving their Stock Locator experience, helping customers find the right car now, rather than wait.
             </p>
           </div>
         </div>
@@ -130,11 +130,36 @@ import '../../styles/global.css';
       <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Timeline</h2>
         <p class="text-xl font-semibold leading-relaxed opacity-80 mb-4">4 weeks</p>
-        <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
-          <li><span class="opacity-40">1 week</span> ⋅ Workshops and landscape analysis</li>
-          <li><span class="opacity-40">2 weeks</span> ⋅ Solution design</li>
-          <li><span class="opacity-40">1 week</span> ⋅ Usability testing</li>
-        </ul>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
+              <li>Discovery<span class="opacity-60"> ⋅ 1 week</span></li>
+                <ul class="list-disc list-outside pl-5 mt-1 mb-2">
+                  <li>Competitive benchmark</li>
+                  <li>Stakeholder workshops</li>
+                  <li>Data analysis</li>
+                </ul>
+              <li>Solution design<span class="opacity-60"> ⋅ 2 weeks</span></li>
+                <ul class="list-disc list-outside pl-5 mt-1">
+                  <li>User flows</li>
+                  <li>Wireframes</li>
+                  <li>High-fidelity designs</li>
+                  <li>Prototypes</li>
+                </ul>
+            </ul>
+          </div>
+          <div>
+            <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
+              <li>Usability testing<span class="opacity-60"> ⋅ 1 week</span></li>
+                <ul class="list-disc list-outside pl-5 mt-1">
+                  <li>Scenario and tasks setup</li>
+                  <li>Tests</li>
+                  <li>Findings analysis</li>
+                  <li>Documentation and reporting</li>
+                </ul>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -164,27 +189,24 @@ import '../../styles/global.css';
     <section class="mb-20 section-block">
       <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">My role as Lead Designer</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 mx-auto">
-          <ul class="list-disc list-outside pl-5 mr-4 text-lg leading-relaxed opacity-80">
+        <div class="grid grid-cols-1 md:grid-cols-2 mx-auto gap-8">
+          <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
             <li>Design & research strategy</li>
             <li>Process & timeline management</li>
-            <li>Designs, prototypes, components creation</li>
-            <li>User Research</li>
+            <li>Task assignment & team coordination</li>
+            <li>Competitive benchmark & data analysis</li>
+            <li>Stakeholder workshops facilitation</li>
+            <li>User flows, wireframes & prototypes</li>
+            <li>High-fidelity designs</li>
           </ul>
           <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
-            <li>Design alignment across the company</li>
-            <li>Stakeholder alignment between:
+            <li>Usability testing coordination with UX researcher</li>
+            <li>Findings analysis & reporting</li>
+            <li>Stakeholder alignment with:
               <ul class="list-disc list-outside pl-5 ml-1 mt-1">
-                <li>HQ</li>
-                <li>Country managers</li>
-                <li>Expo organizers</li>
-              </ul>
-            </li>
-            <li>Cross-functional collaboration with:
-              <ul class="list-disc list-outside pl-5 ml-1 mt-1">
-                <li>Product</li>
-                <li>Engineering</li>
-                <li>QA</li>
+                <li>Kia's CX Manager</li>
+                <li>Italian market managers</li>
+                <li>Kia's Product team</li>
               </ul>
             </li>
           </ul>
@@ -201,18 +223,79 @@ import '../../styles/global.css';
             Conducted a thorough analysis of the competitive landscape, studying how leading automotive brands approach their stock locator and vehicle discovery experiences.
           </p>
           <p class="text-lg leading-relaxed opacity-80">
-            Brands analyzed: Porsche, VW, Mercedes, Audi, BMW, and Renault.
+            Brands analyzed: Porsche, Volkswagen, Tesla, Rivian and Renault.
           </p>
         </div>
       </div>
-      <div class="max-w-7xl mx-auto md:px-8">
+      <div class="max-w-7xl mx-auto md:px-8 overflow-hidden md:overflow-visible">
         <div class="relative" id="bench-img-container">
-          <Image src={benchPorsche} alt="Porsche stock locator" id="bench-img-1" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
-          <Image src={benchRivian} alt="Rivian stock locator" id="bench-img-2" class="absolute inset-0 left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover opacity-0" />
-          <Image src={benchTesla} alt="Tesla stock locator" id="bench-img-3" class="absolute inset-0 left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover opacity-0" />
-          <Image src={benchRenault} alt="Renault stock locator" id="bench-img-4" class="absolute inset-0 left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover opacity-0" />
+          <Image src={benchPorsche} alt="Porsche stock locator" id="bench-img-1" class="w-[810px] max-w-none md:w-full md:rounded-2xl object-cover" />
+          <Image src={benchRivian} alt="Rivian stock locator" id="bench-img-2" class="absolute inset-0 w-[810px] max-w-none md:w-full md:rounded-2xl object-cover opacity-0" />
+          <Image src={benchTesla} alt="Tesla stock locator" id="bench-img-3" class="absolute inset-0 w-[810px] max-w-none md:w-full md:rounded-2xl object-cover opacity-0" />
+          <Image src={benchRenault} alt="Renault stock locator" id="bench-img-4" class="absolute inset-0 w-[810px] max-w-none md:w-full md:rounded-2xl object-cover opacity-0" />
         </div>
         <p class="text-sm opacity-50 mt-2 px-8 md:px-0 text-center" id="bench-caption">Porsche stock locator</p>
+      </div>
+    </section>
+
+    <!-- Stakeholder workshops -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Stakeholder workshops</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            I facilitated workshops with Kia's stakeholders to align on user needs, business priorities, and key pain points before moving into solution design.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            These sessions helped surface insights from the frontline, dealership feedback, customer behaviour patterns, and market-specific constraints that shaped our design direction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current website -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8 mb-16">
+        <h2 class="text-section-heading mb-6">Current website</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            Before designing the new experience, we audited the existing stock locator to understand where users were struggling and why drop-off rates were high.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            The audit revealed recurring patterns: an overwhelming number of filter options, dense information that was hard to scan, and a multi-step flow that required too much effort before users could see relevant results.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-5xl mx-auto md:px-8">
+        <div class="flex flex-col gap-12">
+          <div>
+            <div class="px-8 md:px-0 mb-4">
+              <p class="text-xl font-semibold leading-relaxed">Home</p>
+            </div>
+            <Image src={homeDesktop} alt="Current website — Home" class="w-full md:rounded-2xl mb-4" />
+            <div class="px-8 md:px-0">
+              <p class="text-lg leading-relaxed opacity-80">The homepage presented too many options upfront — model filters, body types, and categories all at once — leaving users uncertain where to start.</p>
+            </div>
+          </div>
+          <div>
+            <div class="px-8 md:px-0 mb-4">
+              <p class="text-xl font-semibold leading-relaxed">Results</p>
+            </div>
+            <Image src={resultsDesktop} alt="Current website — Results" class="w-full md:rounded-2xl mb-4" />
+            <div class="px-8 md:px-0">
+              <p class="text-lg leading-relaxed opacity-80">Results pages were information-dense with no clear visual hierarchy, making it difficult to compare vehicles or identify the most relevant details at a glance.</p>
+            </div>
+          </div>
+          <div>
+            <div class="px-8 md:px-0 mb-4">
+              <p class="text-xl font-semibold leading-relaxed">Vehicle details</p>
+            </div>
+            <Image src={detailsDesktop} alt="Current website — Details" class="w-full md:rounded-2xl mb-4" />
+            <div class="px-8 md:px-0">
+              <p class="text-lg leading-relaxed opacity-80">The detail page buried key specs and CTAs beneath excessive content, requiring users to scroll extensively before reaching the actions they needed.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -223,7 +306,7 @@ import '../../styles/global.css';
         <p class="text-lg leading-relaxed opacity-80 mb-8">
           Using FigJam, we explored the information architecture and layout before moving into high-fidelity designs.
         </p>
-        <Image src={wireframeImg} alt="Wireframes" class="w-full" />
+        <Image src={wireframeImg} alt="Wireframes" class="w-full mx-auto block rounded-2xl" style="max-width:1360px" />
       </div>
     </section>
 
@@ -236,7 +319,7 @@ import '../../styles/global.css';
         </p>
         <div style="max-width:940px" class="mx-auto">
           <Image src={cardsDesktop} alt="Card components — desktop" class="w-full hidden md:block rounded-[16px]" />
-          <Image src={cardsMobile} alt="Card components — mobile" class="w-full md:hidden rounded-[16px]" />
+          <Image src={cardsMobile} alt="Card components — mobile" class="md:hidden rounded-[16px] mx-auto" style="max-width:328px;width:100%" />
         </div>
       </div>
     </section>
@@ -265,15 +348,15 @@ import '../../styles/global.css';
       <div class="max-w-7xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Designs</h2>
         <p class="text-xl font-semibold leading-relaxed opacity-80 mb-4">Mobile</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div><Image src={homeModelsMobile} alt="Home ⋅ Models mobile" class="w-full rounded-[16px]" /><p class="text-sm opacity-50 mt-2 text-center">Home ⋅ Models</p></div>
-          <div><Image src={homeTypeMobile} alt="Home ⋅ Type mobile" class="w-full rounded-[16px]" /><p class="text-sm opacity-50 mt-2 text-center">Home ⋅ Type</p></div>
-          <div><Image src={resultsMobile} alt="Results mobile" class="w-full rounded-[16px]" /><p class="text-sm opacity-50 mt-2 text-center">Results</p></div>
-          <div><Image src={filtersMobile} alt="Filters mobile" class="w-full rounded-[16px]" /><p class="text-sm opacity-50 mt-2 text-center">Filters</p></div>
-          <div><Image src={detailsPreownedMobile} alt="Details ⋅ Pre-owned mobile" class="w-full rounded-[16px]" /><p class="text-sm opacity-50 mt-2 text-center">Details ⋅ Pre-owned</p></div>
-          <div><Image src={detailsImagesMobile} alt="Details ⋅ Images mobile" class="w-full rounded-[16px]" /><p class="text-sm opacity-50 mt-2 text-center">Details ⋅ Images</p></div>
-          <div><Image src={dealerFormMobile} alt="Dealer form mobile" class="w-full rounded-[16px]" /><p class="text-sm opacity-50 mt-2 text-center">Dealer Form</p></div>
-          <div><Image src={dealerPhoneMobile} alt="Dealer phone and map mobile" class="w-full rounded-[16px]" /><p class="text-sm opacity-50 mt-2 text-center">Dealer ⋅ Phone & Map</p></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div><Image src={homeModelsMobile} alt="Home ⋅ Models mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Home ⋅ models</p></div>
+          <div><Image src={homeTypeMobile} alt="Home ⋅ Type mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Home ⋅ type</p></div>
+          <div><Image src={resultsMobile} alt="Results mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Results</p></div>
+          <div><Image src={filtersMobile} alt="Filters mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Filters</p></div>
+          <div><Image src={detailsPreownedMobile} alt="Details ⋅ Pre-owned mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Vehcicle details</p></div>
+          <div><Image src={detailsImagesMobile} alt="Details ⋅ Images mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Vehicle images</p></div>
+          <div><Image src={dealerFormMobile} alt="Dealer form mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Dealer form</p></div>
+          <div><Image src={dealerPhoneMobile} alt="Dealer phone and map mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-50 mt-2 text-center">Dealer ⋅ phone & Map</p></div>
         </div>
       </div>
     </section>
@@ -288,17 +371,17 @@ import '../../styles/global.css';
       </div>
     </section>
 
-    <!-- Person using app -->
-    <section class="mb-24 overflow-hidden md:overflow-visible section-block">
-      <div class="max-w-7xl mx-auto md:px-8">
-        <Image src={personUsingApp} alt="Person using the Kia Stock Locator" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
-      </div>
-    </section>
-
     <!-- End CTA -->
     <section class="mb-16 overflow-hidden md:overflow-visible section-block">
       <div class="max-w-7xl mx-auto px-8 mb-12">
         <h3 class="text-xl text-center">Thanks for reading, want to collaborate together? Contact me <a href="mailto:isaacvigil@gmail.com" class="underline hover:opacity-60 transition-opacity">here</a></h3>
+      </div>
+    </section>
+
+    <!-- Person using app -->
+    <section class="mb-24 overflow-hidden md:overflow-visible section-block">
+      <div class="max-w-7xl mx-auto md:px-8">
+        <Image src={personUsingApp} alt="Person using the Kia Stock Locator" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
       </div>
     </section>
 
