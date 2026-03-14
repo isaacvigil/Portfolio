@@ -2,12 +2,19 @@
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import ProjectFooter from '../../components/ProjectFooter.astro';
+import Icon from '../../components/Icon.astro';
 import { Image } from 'astro:assets';
 import coverImg from '../../assets/RX-DS/cover.jpg';
 import variablesImg from '../../assets/RX-DS/variables.jpg';
 import componentButtonProperties from '../../assets/RX-DS/component-button-properties.png';
 import componentButtonTheming from '../../assets/RX-DS/component-button-theming.png';
-import placeholderHandsTable from '../../assets/RX-ASX/placeholder-hands-table.jpg';
+import navBarAsx from '../../assets/RX-DS/nav-bar-asx.png';
+import navBarDs from '../../assets/RX-DS/nav-bar-ds.png';
+import cardAsx from '../../assets/RX-DS/card-asx.jpg';
+import cardRx from '../../assets/RX-DS/card-rx.jpg';
+import iPadImg from '../../assets/RX-DS/iPad.jpg';
+import governanceImg from '../../assets/RX-DS/governance.png';
+import cardInfoImg from '../../assets/RX-DS/card-info.png';
 ---
 
 <Layout title="RX Global Design System">
@@ -21,7 +28,7 @@ import placeholderHandsTable from '../../assets/RX-ASX/placeholder-hands-table.j
         <h1 class="text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[1.05] tracking-tight mb-12 break-words" id="hero-title">
           RX Global Design System
         </h1>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div class="hero-meta" style="opacity:0">
             <p class="text-base opacity-60 mb-2">Role</p>
             <p class="text-lg font-medium">Design Lead</p>
@@ -51,64 +58,72 @@ import placeholderHandsTable from '../../assets/RX-ASX/placeholder-hands-table.j
 
     <!-- Opportunity -->
     <section class="mb-20 section-block" id="opportunity">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Opportunity</h2>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
-          While building the <a href="/project/rx-asx" class="underline hover:opacity-60 transition-opacity">ASX project</a>, I designed a library that quickly gained traction across teams at RX. Its modern approach and improved UX raised the bar for what the product could be, and became the foundation for RX’s company-wide Design System.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
+          <p class="text-lg leading-relaxed opacity-80">
+            While building the <a href="/project/rx-asx" class="underline hover:opacity-60 transition-opacity">ASX project</a>, I designed a library that quickly gained traction across teams at RX.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            Its modern approach and improved UX raised the bar for what the product could be, and became the foundation for RX’s company-wide Design System.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Scope -->
     <section class="mb-20 section-block" id="overview">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">My role as Design Lead</h2>
-          <ul class="list-disc list-inside mt-4 text-lg leading-relaxed opacity-80 max-w-[960px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 mx-auto">
+          <ul class="list-disc list-outside pl-5 mr-4 text-lg leading-relaxed opacity-80">
             <li>Process & timeline management</li>
             <li>Alignment with different company sections</li>
             <li>Adaptation of components for broader usage</li>
             <li>Creation of variables and design tokens</li>
+          </ul>
+          <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
             <li>Design documentation and maintenance</li>
             <li>Usability testing and iteration</li>
             <li>Governance and standardization</li>
-            <li>Cross-functional collaboration with:
-              <ul class="list-disc list-inside ml-6 mt-1">
-                <li>Product</li>
-                <li>Engineering</li>
-                <li>QA</li>
-              </ul>
-            </li>
+            <li>Cross-functional collaboration with engineering, product and QA</li>
           </ul>
+        </div>
       </div>
     </section>
-
     <!-- Variables -->
-    <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
+    <section class="mb-20 section-block overflow-hidden md:overflow-visible">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">
           Variables
         </h2>
-        <p class="text-lg leading-relaxed opacity-80 mb-8 max-w-[960px]">
-          I started by defining the design system's core variables, including color palettes, typography scales, spacing units, and iconography guidelines. This created a shared visual language that ensured consistency across all products and platforms.
-        </p>
-        <Image src={variablesImg} alt="Design system variables" class="w-full rounded-2xl max-w-[743px]" />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            I started by defining the design system's core variables, including color palettes, typography scales, spacing units, and iconography guidelines.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            This created a shared visual language that ensured consistency across all products and platforms.
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center max-w-7xl mx-auto md:px-8">
+        <Image src={variablesImg} alt="Design system variables" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-[743px] md:translate-x-0 md:left-0 md:rounded-2xl" />
       </div>
     </section>
 
     <!-- Components construction-->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Components construction</h2>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
-          When creating components, I focus on building flexible and reusable elements that could adapt to various use cases while maintaining a cohesive design language. I collaborated closely with developers to ensure that components were not only visually appealing but also technically feasible and performant.
-        </p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4"> 
-          This involved iterating on designs based on feedback and testing, ensuring that the components met the needs of both users and developers, and could be easily integrated into different projects across the company.
-        </p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
-          The components I create use properties to allow adaptability and also having light and dark theme versions.
-        </p>
-        <div class="flex flex-col md:flex-row gap-12 mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto mb-4">
+          <p class="text-lg leading-relaxed opacity-80">
+            Each component was built to be flexible and reusable, adapting to a wide range of use cases while maintaining a cohesive design language. I worked closely with engineers to ensure components were visually refined, technically feasible, and performant.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            This meant iterating based on feedback and testing until each component met the needs of both users and developers, and could be seamlessly integrated across different products. Components are built with properties for adaptability and ship with both light and dark theme support.
+          </p>
+        </div>
+        <div class="flex flex-col items-center md:flex-row md:justify-center md:items-start gap-12 mt-8">
           <Image src={componentButtonProperties} alt="Component button properties" class="w-full max-w-[240px]" />
           <Image src={componentButtonTheming} alt="Component button theming" class="w-[240px] object-cover" style="height:308px" />
         </div>
@@ -117,76 +132,180 @@ import placeholderHandsTable from '../../assets/RX-ASX/placeholder-hands-table.j
 
     <!-- Adaptation -->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">
           Component adaptation
         </h2>
-        <p class="text-lg leading-relaxed opacity-80 mb-8 max-w-[960px]">
-          The ASX components needed to be adapted to be used across different products, this required me to abstract them and make them more flexible, contemplate edge cases and different states, and create documentation to ensure they were used correctly by other teams.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            I adapted the ASX components for broader use, requiring adaptation to account for edge cases and varied states.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            And I also produced documentation to ensure consistent adoption across teams.
+          </p>
+        </div>
+        <h3 class="text-lg font-semibold mb-4">Navigation bar</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            Updated to Material Design 3 navigation bar, as their accessibility improved the experience and was an easier implementation for engineering.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            Also migrated to Material Design icons from the previous icon library, as it was a broader library with more icons.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 mb-12">
+          <Image src={navBarAsx} alt="Navigation bar ASX" class="w-full rounded-2xl" />
+          <Image src={navBarDs} alt="Navigation bar Design System" class="w-full rounded-2xl" />
+        </div>
+
+        <h3 class="text-lg font-semibold mb-4">Exhibitor Card</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            ASX exhibitor card was focused on a specific usage: the ASX mobile app. RX exhibitor card evolved to be used in different scenarios and edge cases, like when exhibitors have multiple stands or the stand is shared.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+           Designs were polished, and made more accessible, Like the button text wouldn’t use the theme colour, but black text. No available features were removed.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <Image src={cardAsx} alt="Exhibitor card ASX" class="w-full rounded-2xl" />
+          <Image src={cardRx} alt="Exhibitor card RX" class="w-full rounded-2xl" />
+        </div>
       </div>
     </section>
 
     <!-- Usability Testing -->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Usability Testing</h2>
-        <p class="text-lg leading-relaxed opacity-80 mb-4">I conducted usability testing of the prototype at FIBO in Cologne and in-cosmetics in Paris.</p>
-        <p class="text-lg leading-relaxed opacity-80 mb-4">These efforts provided valuable insights into how users interacted with the prototype, highlighting pain points and areas for improvement, helping us identify opportunities to enhance user engagement and satisfaction at future exhibitions.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto">
+          <p class="text-lg leading-relaxed opacity-80">I conducted usability testing at FIBO in Cologne and in-cosmetics in Paris.</p>
+          <p class="text-lg leading-relaxed opacity-80">These sessions surfaced key pain points and areas for improvement, giving us actionable insights to refine the experience and better serve users at future exhibitions.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Animations -->
+    <!-- Files naming and structure -->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
-        <h2 class="text-section-heading mb-6">Animations</h2>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
-          The app incorporates multiple animations to enhance the user experience, adding a dynamic and polished feel to interactions. For example, animations were introduced when scanning a QR code and when opening the digital badge.
-        </p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
-          These subtle yet engaging visual elements not only make the app more intuitive but also contribute to a seamless and enjoyable user journey.
-        </p>
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Files naming and structure</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          <p class="text-lg leading-relaxed opacity-80">To keep the system scalable and easy to navigate, I established a clear file structure and naming convention in Figma.</p>
+          <p class="text-lg leading-relaxed opacity-80">Files were split by type: Foundation Styles and Components, each with a defined status to track progress across the team.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <p class="text-xl font-semibold mb-6">Files structure</p>
+            <p class="text-lg mb-3">Foundation Styles</p>
+            <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80 mb-8">
+              <li>Colours</li>
+              <li>Typography</li>
+              <li>Spacing</li>
+              <li>Layout grids</li>
+              <li>Shadows (with elevation)</li>
+            </ul>
+            <p class="text-lg mb-3">Components</p>
+            <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
+              <li>Buttons</li>
+              <li>Cards</li>
+              <li>Navigation</li>
+              <li>Chips</li>
+              <li>Many others</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xl font-semibold mb-6">Files tasks status</p>
+            <ul class="text-lg leading-relaxed opacity-80 mb-6">
+              <li>🗒️ To Do</li>
+              <li>🟡 In Progress</li>
+              <li>🟣 Ready for Review</li>
+              <li>💎 Specification Added</li>
+              <li>✅ Done (Signed off &amp; Spec'ed)</li>
+            </ul>
+            <p class="text-lg leading-relaxed opacity-80">We also tracked everything in Jira, where we also assigned tasks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documentation -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Documentation</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto mb-12">
+          <p class="text-lg leading-relaxed opacity-80">I conducted usability testing at FIBO in Cologne and in-cosmetics in Paris.</p>
+          <p class="text-lg leading-relaxed opacity-80">These sessions surfaced key pain points and areas for improvement, giving us actionable insights to refine the experience and better serve users at future exhibitions.</p>
+        </div>
+        <div class="flex flex-col md:flex-row gap-12 items-start justify-center">
+          <Image src={cardInfoImg} alt="Card info documentation" class="w-full rounded-2xl" style="max-width: 489.75px" />
+          <ol class="list-decimal list-outside pl-5 text-lg leading-relaxed space-y-2 shrink-0">
+            <li><span class="font-medium">Priority Banner</span> <span class="opacity-60">(optional) ⋅ Customisable text</span></li>
+            <li><span class="font-medium">Cover Image</span> <span class="opacity-60">(optional) ⋅ Aspect ratio 4:1</span></li>
+            <li><span class="font-medium">Exhibitor Name</span> <span class="opacity-60">⋅Max 2 lines of text</span></li>
+            <li><span class="font-medium">Exhibitor Logo</span></li>
+            <li><span class="font-medium">Primary Actions</span> <span class="opacity-60">⋅ Max 2 text lines</span></li>
+            <li><span class="font-medium">Stand Number</span> <span class="opacity-60">⋅ Max 3 text lines</span></li>
+            <li><span class="font-medium">Body section</span> <span class="opacity-60">⋅ Max 3 text lines</span></li>
+            <li><span class="font-medium">Secondary Actions</span> <span class="opacity-60">(optional) ⋅ Max 2 text lines</span></li>
+            <li><span class="font-medium">Tags section</span> <span class="opacity-60">⋅ Max 2 text lines</span></li>
+            <li><span class="font-medium">Footer section</span> <span class="opacity-60">(optional) ⋅ Max 1 text line</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Governance -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Governance</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto mb-8">
+          <p class="text-lg leading-relaxed opacity-80">I conducted usability testing at FIBO in Cologne and in-cosmetics in Paris.</p>
+          <p class="text-lg leading-relaxed opacity-80">These sessions surfaced key pain points and areas for improvement, giving us actionable insights to refine the experience and better serve users at future exhibitions.</p>
+        </div>
+      </div>
+      <div class="overflow-x-auto mt-16 flex justify-start md:justify-center px-4 md:px-8">
+        <Image src={governanceImg} alt="Governance" class="w-[1200px] min-w-[1200px] object-cover" />
       </div>
     </section>
 
     <!-- Final Thoughts -->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Final Thoughts</h2>
-        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px]">Alignment</p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
-          Aligning a wide range of stakeholders: HQ, country managers, and expo organizers, required constant communication and expectations understanding and setup, this required more time and effort than the design work itself.
-        </p>
-        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px] mt-8">Clear Scope</p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-2">
-          To keep the project on track, I had to specify:
-        </p>
-        <ul class="list-disc list-inside mt-4 text-lg leading-relaxed opacity-80 max-w-[960px]">
-            <li>Features</li>
-            <li>Releases</li>
-            <li>Timeline</li>
-        </ul>
-        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px] mt-8">Constraints</p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-2">
-          Connectivity at live events was an unexpected constraint. Without reliable GPS, we couldn't pinpoint user location on the map.
-        </p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
-          I designed having an input to ask the user, it's current location, to set a starting point, or take a photo of the surrounding area:
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+          <div>
+            <p class="text-lg font-semibold mb-2">Align early and often</p>
+            <p class="text-lg leading-relaxed opacity-60">Early alignment across design, engineering, and product is crucial. It sets shared expectations, reduces rework, and keeps the system grounded in real needs.</p>
+          </div>
+          <div>
+            <p class="text-lg font-semibold mb-2">Prioritize adoption and stay open to iteration</p>
+            <p class="text-lg leading-relaxed opacity-60">They're only valuable when used, so support adoption with clear documentation, practical examples, and internal advocacy. Keep evolving components as needs, feedback, and constraints change.</p>
+          </div>
+          <div>
+            <p class="text-lg font-semibold mb-2">Support creativity, don't suppress it</p>
+            <p class="text-lg leading-relaxed opacity-60">A good system provides guidance, not rigid rules. It should empower designers to solve problems creatively within a consistent framework.</p>
+          </div>
+          <div>
+            <p class="text-lg font-semibold mb-2">Establish governance early</p>
+            <p class="text-lg leading-relaxed opacity-60">Without defined ownership and processes, systems stall. Clear governance ensures updates are intentional, feedback is heard, and the system scales sustainably.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Cover image end -->
-    <section class="mb-24 overflow-hidden md:overflow-visible section-block">
+    <section class="mb-16 overflow-hidden md:overflow-visible section-block">
       <div class="max-w-7xl mx-auto px-8 mb-12">
         <h3 class="text-xl text-center">Thanks for reading, want to collaborate together? Contact me <a href="mailto:hi@isaavigil.com" class="underline hover:opacity-60 transition-opacity">here</a></h3>
       </div>
       <div class="max-w-7xl mx-auto md:px-8">
-        <Image src={placeholderHandsTable} alt="At Show Experience" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
+        <Image src={iPadImg} alt="At Show Experience" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
       </div>
     </section>
 
-    <ProjectFooter nextHref="/" nextTitle="Coming soon" />
+    <ProjectFooter nextHref="https://www.isaacvigil.com/project/kia-stock-locator" nextTitle="Kia Stock Locator" external>
+      <Icon name="Car" size={20} />
+    </ProjectFooter>
 
   </main>
 </Layout>

@@ -31,6 +31,7 @@ import expoFibo from '../../assets/RX-ASX/expo-fibo.jpg';
 import expoWtmLondon from '../../assets/RX-ASX/expo-wtm-london.jpg';
 import expoWorldHydrogen from '../../assets/RX-ASX/expo-world-hydrogen.jpg';
 import ProjectFooter from '../../components/ProjectFooter.astro';
+import Icon from '../../components/Icon.astro';
 ---
 
 <Layout title="At Show Experience">
@@ -74,42 +75,48 @@ import ProjectFooter from '../../components/ProjectFooter.astro';
 
     <!-- Opportunity -->
     <section class="mb-20 section-block" id="opportunity">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Opportunity</h2>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
-          RX, the world's second-largest exhibition organizer, part of RELX (formerly Reed Elsevier), operates over 350 events across 25 countries, including well known events like: Comic Con, PGA Show, and London Book Fair.
-        </p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
-          Despite its strong presence across diverse industries, and continents, no companion app existed to enhance the attendee experience at these events.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            RX, the world's second-largest exhibition organizer, part of RELX (formerly Reed Elsevier), operates over 350 events across 25 countries, including well known events like: Comic Con, PGA Show, and London Book Fair.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            Despite its strong presence across diverse industries, and continents, no companion app existed to enhance the attendee experience at these events.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Scope -->
     <section class="mb-20 section-block" id="overview">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">My role as Design Lead</h2>
-          <ul class="list-disc list-inside mt-4 text-lg leading-relaxed opacity-80 max-w-[960px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 mx-auto">
+          <ul class="list-disc list-outside pl-5 mr-4 text-lg leading-relaxed opacity-80">
             <li>Design & research strategy</li>
             <li>Process & timeline management</li>
             <li>Designs, prototypes, components creation</li>
             <li>User Research</li>
+          </ul>
+          <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
             <li>Design alignment across the company</li>
             <li>Stakeholder alignment between:
-              <ul class="list-disc list-inside ml-6 mt-1">
+              <ul class="list-disc list-outside pl-5 ml-1 mt-1">
                 <li>HQ</li>
                 <li>Country managers</li>
                 <li>Expo organizers</li>
               </ul>
             </li>
             <li>Cross-functional collaboration with:
-              <ul class="list-disc list-inside ml-6 mt-1">
+              <ul class="list-disc list-outside pl-5 ml-1 mt-1">
                 <li>Product</li>
                 <li>Engineering</li>
                 <li>QA</li>
               </ul>
             </li>
           </ul>
+        </div>
       </div>
     </section>
 
@@ -127,14 +134,18 @@ import ProjectFooter from '../../components/ProjectFooter.astro';
 
     <!-- User research -->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">
-          User research
+          Discovery
         </h2>
-        <p class="text-lg leading-relaxed opacity-80 mb-8 max-w-[960px]">
-          I conducted user interviews at FIBO in Cologne, and in-cosmetics in Paris both with attendees and exhibitors, gathering insights that directly informed the app's design, ensuring it addressed real user needs and pain points effectively.
-          Also obersvation on situ was key. Research conducted revealed a clear pattern: visitors struggled with wayfinding, resorted to photographing printed maps, and had no centralized way to manage schedules, discover exhibitors, or engage with sessions in real time.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            I conducted user interviews at FIBO in Cologne, and in-cosmetics in Paris both with attendees and exhibitors, gathering insights that directly informed the app's design, ensuring it addressed real user needs and pain points effectively.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            Also observation on situ was key. Research conducted revealed a clear pattern: visitors struggled with wayfinding, resorted to photographing printed maps, and had no centralized way to manage schedules, discover exhibitors, or engage with sessions in real time.
+          </p>
+        </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div><Image src={mapFibo1} alt="FIBO map 1" class="w-full rounded-[8px] object-cover" /><p class="text-sm opacity-50 mt-2 text-center">Attendees taking pics of the map</p></div>
           <div><Image src={mapFibo2} alt="FIBO map 2" class="w-full rounded-[8px] object-cover" /><p class="text-sm opacity-50 mt-2 text-center">Attendees looking at the map</p></div>
@@ -146,11 +157,16 @@ import ProjectFooter from '../../components/ProjectFooter.astro';
 
     <!-- Components library-->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Components library</h2>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
-          To support consistency across a large team and many event types, I built a centralized component library — buttons, forms, icons, navigation, cards — all adhering to shared visual guidelines and interaction standards. This reduced friction in handoffs and kept the product coherent as it scaled.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            To support consistency across a large team and many event types, I built a centralized component library: buttons, forms, icons, navigation, cards... All adhering to shared visual guidelines and interaction standards.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            This reduced friction in handoffs and kept the product coherent as it scaled across different features, events and teams.
+          </p>
+        </div>
       </div>
       <div class="mt-8 md:relative md:left-1/2 md:-translate-x-1/2 md:w-screen flex justify-center px-8 md:px-0">
         <Image src={componentsDesktop} alt="Component library" class="rounded-2xl w-full max-w-[1111px] hidden md:block" />
@@ -160,11 +176,18 @@ import ProjectFooter from '../../components/ProjectFooter.astro';
 
     <!-- Designs -->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Designs</h2>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
-          To support consistency across a large team and many event types, I built a centralized component library — buttons, forms, icons, navigation, cards — all adhering to shared visual guidelines and interaction standards. This reduced friction in handoffs and kept the product coherent as it scaled.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            To support consistency across a large team and many event types, I built a centralized component library — buttons, forms, icons, navigation, cards — all adhering to shared visual guidelines and interaction standards.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            This reduced friction in handoffs and kept the product coherent as it scaled.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
           <div><Image src={design1} alt="Sponsor screen" class="w-full rounded-[24px] max-w-[390px] mx-auto" /><p class="text-sm opacity-50 mt-2 text-center">Sponsor screen</p></div>
           <div><Image src={design2} alt="My Bag and Schedule" class="w-full rounded-[24px] max-w-[390px] mx-auto" /><p class="text-sm opacity-50 mt-2 text-center">My Bag and Schedule</p></div>
@@ -184,12 +207,12 @@ import ProjectFooter from '../../components/ProjectFooter.astro';
 
     <!-- Usability Testing -->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Usability Testing</h2>
-        <div class="flex flex-col md:flex-row gap-12 items-start">
-          <img src={usabilityTestingGif.src} alt="Usability testing" class="rounded-2xl w-full md:w-auto md:flex-shrink-0" />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <img src={usabilityTestingGif.src} alt="Usability testing" class="rounded-2xl w-full" />
           <div>
-            <p class="text-lg leading-relaxed opacity-80 mb-4">I conducted usability testing of the prototype at FIBO in Cologne and in-cosmetics in Paris.</p>
+            <p class="text-lg leading-relaxed opacity-80 mb-4">I conducted usability testing of the prototype at FIBO in Cologne and in-cosmetics in Paris, amongst both attendees and exhibitors.</p>
             <p class="text-lg leading-relaxed opacity-80 mb-4">These efforts provided valuable insights into how users interacted with the prototype, highlighting pain points and areas for improvement, helping us identify opportunities to enhance user engagement and satisfaction at future exhibitions.</p>
           </div>
         </div>
@@ -198,48 +221,59 @@ import ProjectFooter from '../../components/ProjectFooter.astro';
 
     <!-- Animations -->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Animations</h2>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
-          The app incorporates multiple animations to enhance the user experience, adding a dynamic and polished feel to interactions. For example, animations were introduced when scanning a QR code and when opening the digital badge.
-        </p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
-          These subtle yet engaging visual elements not only make the app more intuitive but also contribute to a seamless and enjoyable user journey.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            The app incorporates multiple animations to enhance the user experience, adding a dynamic and polished feel to interactions. For example, animations were introduced when scanning a QR code and when opening the digital badge.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            These subtle yet engaging visual elements not only make the app more intuitive but also contribute to a seamless and enjoyable user journey.
+          </p>
+        </div>
         <video src={videoAnimations} poster={videoAnimationsPlaceholder.src} autoplay loop muted playsinline class="mt-8 rounded-[24px] w-full max-w-[388px] mx-auto block" style="clip-path: inset(0 2px 0 0 round 24px)" />
       </div>
     </section>
 
     <!-- Final Thoughts -->
     <section class="mb-20 section-block">
-      <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Final Thoughts</h2>
-        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px]">Alignment</p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px]">
-          Aligning a wide range of stakeholders: HQ, country managers, and expo organizers, required constant communication and expectations understanding and setup, this required more time and effort than the design work itself.
-        </p>
-        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px] mt-8">Clear Scope</p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-2">
+        <p class="text-lg font-semibold leading-relaxed opacity-80">Alignment</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2">
+          <p class="text-lg leading-relaxed opacity-80">
+            Aligning a wide range of stakeholders: HQ, country managers, and expo organizers, required constant communication and expectations understanding and setup.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            This required more time and effort than the design work itself.
+          </p>
+        </div>
+        <p class="text-lg font-semibold leading-relaxed opacity-80 mt-8">Clear Scope</p>
+        <p class="text-lg leading-relaxed opacity-80 mt-2">
           To keep the project on track, I had to specify:
         </p>
-        <ul class="list-disc list-inside mt-4 text-lg leading-relaxed opacity-80 max-w-[960px]">
-            <li>Features</li>
-            <li>Releases</li>
-            <li>Timeline</li>
+        <ul class="list-disc list-outside pl-5 mt-4 text-lg leading-relaxed opacity-80">
+          <li>Features</li>
+          <li>Releases</li>
+          <li>Timeline</li>
         </ul>
-        <p class="text-lg font-semibold leading-relaxed opacity-80 max-w-[960px] mt-8">Constraints</p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-2">
-          Connectivity at live events was an unexpected constraint. Without reliable GPS, we couldn't pinpoint user location on the map.
-        </p>
-        <p class="text-lg leading-relaxed opacity-80 max-w-[960px] mt-4">
-          I designed having an input to ask the user, it's current location, to set a starting point, or take a photo of the surrounding area:
-        </p>
-        <Image src={mapDirections} alt="Map directions" class="mt-8 rounded-2xl w-full max-w-[328px] mx-auto block" />
+        <p class="text-lg font-semibold leading-relaxed opacity-80 mt-8">Constraints</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2">
+          <p class="text-lg leading-relaxed opacity-80">
+            Connectivity at live events was an unexpected constraint. Without reliable GPS, we couldn't pinpoint user location on the map.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            I designed having an input to ask the user, it's current location, to set a starting point, or take a photo of the surrounding area:
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center mt-8 px-8">
+        <Image src={mapDirections} alt="Map directions" class="rounded-2xl max-w-[328px] w-full" />
       </div>
     </section>
 
     <!-- Cover image end -->
-    <section class="mb-24 overflow-hidden md:overflow-visible section-block">
+    <section class="mb-16 overflow-hidden md:overflow-visible section-block">
       <div class="max-w-7xl mx-auto px-8 mb-12">
         <h3 class="text-xl text-center">Thanks for reading, want to collaborate together? Contact me <a href="mailto:isaacvigil@gmail.com" class="underline hover:opacity-60 transition-opacity">here</a></h3>
       </div>
@@ -248,7 +282,9 @@ import ProjectFooter from '../../components/ProjectFooter.astro';
       </div>
     </section>
 
-    <ProjectFooter nextHref="/project/rx-ds" nextTitle="RX Global Design System" />
+    <ProjectFooter nextHref="/project/rx-ds" nextTitle="RX Global Design System">
+      <Icon name="Box" size={20} />
+    </ProjectFooter>
 
   </main>
 </Layout>
