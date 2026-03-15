@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+}
+
+const { src, alt } = Astro.props;
+---
+
+<div class="max-w-5xl mx-auto md:px-8 flex justify-center overflow-hidden md:block md:overflow-visible">
+  <Image src={src} alt={alt} class="w-[540px] max-w-none md:w-full" />
+</div>

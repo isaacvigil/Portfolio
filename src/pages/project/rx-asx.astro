@@ -31,6 +31,7 @@ import expoWtmLondon from '../../assets/RX-ASX/expo-wtm-london.jpg';
 import expoWorldHydrogen from '../../assets/RX-ASX/expo-world-hydrogen.jpg';
 import ProjectFooter from '../../components/ProjectFooter.astro';
 import Icon from '../../components/Icon.astro';
+import ComponentsImage from '../../components/ComponentsImage.astro';
 ---
 
 <Layout title="At Show Experience">
@@ -139,10 +140,10 @@ import Icon from '../../components/Icon.astro';
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <p class="text-lg leading-relaxed opacity-80">
-            I conducted user interviews at FIBO in Cologne, and in-cosmetics in Paris both with attendees and exhibitors, gathering insights that directly informed the app's design, ensuring it addressed real user needs and pain points effectively.
+            I conducted user interviews at FIBO in Cologne, and in-cosmetics in Paris, both with attendees and exhibitors, gathering insights that directly informed the app's design, ensuring it addressed real user needs and pain points effectively.
           </p>
           <p class="text-lg leading-relaxed opacity-80">
-            Also observation on situ was key. Research conducted revealed a clear pattern: visitors struggled with wayfinding, resorted to photographing printed maps, and had no centralized way to manage schedules, discover exhibitors, or engage with sessions in real time.
+            On-site observation was also key. Research conducted revealed a clear pattern: visitors struggled with wayfinding, resorted to photographing printed maps, and had no centralized way to manage schedules, discover exhibitors, or engage with sessions in real time.
           </p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -167,17 +168,15 @@ import Icon from '../../components/Icon.astro';
           </p>
         </div>
       </div>
-      <div class="mt-8 max-w-5xl mx-auto px-8">
-        <div class="flex justify-center overflow-hidden md:block md:overflow-visible">
-          <Image src={componentsImg} alt="Component library" class="w-[1080px] max-w-none shrink-0 md:w-full" />
-        </div>
+      <div class="mt-8">
+        <ComponentsImage src={componentsImg} alt="Component library" />
       </div>
     </section>
 
     <!-- Designs -->
     <section class="mb-20 section-block">
       <div class="max-w-5xl mx-auto px-8">
-        <h2 class="text-section-heading mb-6">High fidelity  designs</h2>
+        <h2 class="text-section-heading mb-6">High fidelity designs</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <p class="text-lg leading-relaxed opacity-80">
             To support consistency across a large team and many event types, I built a centralized component library — buttons, forms, icons, navigation, cards — all adhering to shared visual guidelines and interaction standards.
@@ -242,7 +241,7 @@ import Icon from '../../components/Icon.astro';
         <p class="text-xl font-semibold leading-relaxed opacity-80">Alignment</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2">
           <p class="text-lg leading-relaxed opacity-80">
-            Aligning a wide range of stakeholders: HQ, country managers, and expo organizers, required constant communication and expectations understanding and setup.
+            Aligning a wide range of stakeholders — HQ, country managers, and expo organizers — required constant communication and clear expectation setting.
           </p>
           <p class="text-lg leading-relaxed opacity-80">
             This required more time and effort than the design work itself.
@@ -263,7 +262,7 @@ import Icon from '../../components/Icon.astro';
             Connectivity at live events was an unexpected constraint. Without reliable GPS, we couldn't pinpoint user location on the map.
           </p>
           <p class="text-lg leading-relaxed opacity-80">
-            I designed having an input to ask the user, it's current location, to set a starting point, or take a photo of the surrounding area:
+            I designed having an input to ask the user their current location, to set a starting point, or take a photo of the surrounding area:
           </p>
         </div>
       </div>

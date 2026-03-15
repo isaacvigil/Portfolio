@@ -29,6 +29,7 @@ import laptopImg from '../../assets/Kia-Stock-Locator/laptop.jpg';
 import personUsingApp from '../../assets/Kia-Stock-Locator/person-using-app.jpg';
 import ProjectFooter from '../../components/ProjectFooter.astro';
 import Icon from '../../components/Icon.astro';
+import ComponentsImage from '../../components/ComponentsImage.astro';
 import '../../styles/global.css';
 ---
 
@@ -256,7 +257,7 @@ import '../../styles/global.css';
         <h2 class="text-section-heading mb-6">Current website</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <p class="text-lg leading-relaxed opacity-80">
-            Before designing the new experience, we audited the existing stock locator to understand where users were struggling and why drop-off rates were high.
+            Before designing the new experience, the existing stock locator was audited to understand where users were struggling and why drop-off rates were high.
           </p>
           <p class="text-lg leading-relaxed opacity-80">
             The audit revealed recurring patterns: an overwhelming number of filter options, dense information that was hard to scan, and a multi-step flow that required too much effort before users could see relevant results.
@@ -266,29 +267,71 @@ import '../../styles/global.css';
       <div class="flex flex-col gap-12">
           <div>
             <div class="max-w-5xl mx-auto px-8 mb-4">
-              <p class="text-xl font-semibold leading-relaxed mb-2">Home</p>
-              <p class="text-lg leading-relaxed opacity-80">The homepage presented too many options upfront — model filters, body types, and categories all at once — leaving users uncertain where to start.</p>
+              <p class="text-xl font-semibold leading-relaxed mb-4">Home</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <p class="text-lg leading-relaxed opacity-80">A large marketing banner dominated the top of the page, pushing the search experience below the fold.</p>
+                <p class="text-lg leading-relaxed opacity-80">Model filters, body types, and categories were all presented at once, making it unclear where users should begin.</p>
+              </div>
             </div>
-            <div class="max-w-5xl mx-auto px-8">
-              <Image src={homeDesktop} alt="Current website — Home" class="w-full md:rounded-2xl" />
+            <div class="max-w-5xl mx-auto md:px-8">
+              <div class="mb-3 px-8 md:px-0">
+                <span class="inline-flex items-center gap-x-1.5 rounded-full px-3 py-1 text-sm font-medium text-[var(--text)] ring-1 ring-inset ring-[var(--border)]">
+                  <Icon name="Info" size={14} />
+                  <span class="hidden md:inline">Click the image to reveal the new design</span>
+                  <span class="md:hidden">Tap the image to reveal the new design</span>
+                </span>
+              </div>
+              <div class="image-toggle relative cursor-pointer select-none" data-state="before">
+                <Image src={homeDesktop} alt="Current website — Home" class="w-full md:rounded-2xl toggle-before" />
+                <Image src={newHome} alt="New design — Home" class="w-full md:rounded-2xl toggle-after hidden" />
+                <div class="toggle-badge absolute pointer-events-none opacity-0 transition-opacity duration-300 rounded-full bg-black/65 text-white text-sm font-medium tracking-wide px-4 py-1 backdrop-blur-sm">Before</div>
+              </div>
             </div>
           </div>
           <div>
             <div class="max-w-5xl mx-auto px-8 mb-4">
-              <p class="text-xl font-semibold leading-relaxed mb-2">Results</p>
-              <p class="text-lg leading-relaxed opacity-80">Results pages were information-dense with no clear visual hierarchy, making it difficult to compare vehicles or identify the most relevant details at a glance.</p>
+              <p class="text-xl font-semibold leading-relaxed mb-4">Results</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <p class="text-lg leading-relaxed opacity-80">The results page was dense and lacked visual hierarchy, making it hard to compare vehicles or quickly spot the most relevant details.</p>
+                <p class="text-lg leading-relaxed opacity-80">Car images were small and thumbnail-like, failing to give users a proper sense of the vehicle.</p>
+              </div>
             </div>
-            <div class="max-w-5xl mx-auto px-8">
-              <Image src={resultsDesktop} alt="Current website — Results" class="w-full md:rounded-2xl" />
+            <div class="max-w-5xl mx-auto md:px-8">
+              <div class="mb-3 px-8 md:px-0">
+                <span class="inline-flex items-center gap-x-1.5 rounded-full px-3 py-1 text-sm font-medium text-[var(--text)] ring-1 ring-inset ring-[var(--border)]">
+                  <Icon name="Info" size={14} />
+                  <span class="hidden md:inline">Click the image to reveal the new design</span>
+                  <span class="md:hidden">Tap the image to reveal the new design</span>
+                </span>
+              </div>
+              <div class="image-toggle relative cursor-pointer select-none" data-state="before">
+                <Image src={resultsDesktop} alt="Current website — Results" class="w-full md:rounded-2xl toggle-before" />
+                <Image src={newResults} alt="New design — Results" class="w-full md:rounded-2xl toggle-after hidden" />
+                <div class="toggle-badge absolute pointer-events-none opacity-0 transition-opacity duration-300 rounded-full bg-black/65 text-white text-sm font-medium tracking-wide px-4 py-1 backdrop-blur-sm">Before</div>
+              </div>
             </div>
           </div>
           <div>
             <div class="max-w-5xl mx-auto px-8 mb-4">
-              <p class="text-xl font-semibold leading-relaxed mb-2">Vehicle details</p>
-              <p class="text-lg leading-relaxed opacity-80">The detail page buried key specs and CTAs beneath excessive content, requiring users to scroll extensively before reaching the actions they needed.</p>
+              <p class="text-xl font-semibold leading-relaxed mb-4">Vehicle details</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <p class="text-lg leading-relaxed opacity-80">Key specs and calls to action were buried under excessive content with no clear structure.</p>
+                <p class="text-lg leading-relaxed opacity-80">Users had to scroll through most of the page before reaching the actions they actually needed.</p>
+              </div>
             </div>
-            <div class="max-w-5xl mx-auto px-8">
-              <Image src={detailsDesktop} alt="Current website — Details" class="w-full md:rounded-2xl" />
+            <div class="max-w-5xl mx-auto md:px-8">
+              <div class="mb-3 px-8 md:px-0">
+                <span class="inline-flex items-center gap-x-1.5 rounded-full px-3 py-1 text-sm font-medium text-[var(--text)] ring-1 ring-inset ring-[var(--border)]">
+                  <Icon name="Info" size={14} />
+                  <span class="hidden md:inline">Click the image to reveal the new design</span>
+                  <span class="md:hidden">Tap the image to reveal the new design</span>
+                </span>
+              </div>
+              <div class="image-toggle relative cursor-pointer select-none" data-state="before">
+                <Image src={detailsDesktop} alt="Current website — Details" class="w-full md:rounded-2xl toggle-before" />
+                <Image src={newDetails} alt="New design — Details" class="w-full md:rounded-2xl toggle-after hidden" />
+                <div class="toggle-badge absolute pointer-events-none opacity-0 transition-opacity duration-300 rounded-full bg-black/65 text-white text-sm font-medium tracking-wide px-4 py-1 backdrop-blur-sm">Before</div>
+              </div>
             </div>
           </div>
         </div>
@@ -315,11 +358,7 @@ import '../../styles/global.css';
           We designed distinct card types to support new vehicles, pre-owned, and Kia Flex leasing offerings — each visually differentiated and scannable.
         </p>
       </div>
-      <div class="max-w-5xl mx-auto px-8">
-        <div class="flex justify-center overflow-hidden md:block md:overflow-visible">
-          <Image src={componentsImg} alt="Card components" class="w-[1080px] max-w-none shrink-0 md:w-full" />
-        </div>
-      </div>
+      <ComponentsImage src={componentsImg} alt="Card components" />
     </section>
 
     <!-- Designs — Desktop -->
@@ -348,7 +387,7 @@ import '../../styles/global.css';
           <div><Image src={homeTypeMobile} alt="Home ⋅ Type mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Home ⋅ type</p></div>
           <div><Image src={resultsMobile} alt="Results mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Results</p></div>
           <div><Image src={filtersMobile} alt="Filters mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Filters</p></div>
-          <div><Image src={detailsPreownedMobile} alt="Details ⋅ Pre-owned mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Vehcicle details</p></div>
+          <div><Image src={detailsPreownedMobile} alt="Details ⋅ Pre-owned mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Vehicle details</p></div>
           <div><Image src={detailsImagesMobile} alt="Details ⋅ Images mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Vehicle images</p></div>
           <div><Image src={dealerFormMobile} alt="Dealer form mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Dealer form</p></div>
           <div><Image src={dealerPhoneMobile} alt="Dealer phone and map mobile" class="w-full rounded-[16px] mx-auto block" style="max-width:360px" /><p class="text-sm opacity-60 mt-2 text-center">Dealer ⋅ phone & Map</p></div>
@@ -461,4 +500,36 @@ import '../../styles/global.css';
     }});
     benchCurrent = next;
   }, 4000);
+</script>
+
+
+<script>
+  document.querySelectorAll('.image-toggle').forEach((toggle) => {
+    const badge = toggle.querySelector('.toggle-badge') as HTMLElement;
+
+    toggle.addEventListener('click', (e) => {
+      const before = toggle.querySelector('.toggle-before') as HTMLElement;
+      const after = toggle.querySelector('.toggle-after') as HTMLElement;
+      const isShowingBefore = toggle.getAttribute('data-state') === 'before';
+
+      before.classList.toggle('hidden', isShowingBefore);
+      after.classList.toggle('hidden', !isShowingBefore);
+      badge.textContent = isShowingBefore ? 'After' : 'Before';
+      toggle.setAttribute('data-state', isShowingBefore ? 'after' : 'before');
+
+      const rect = (toggle as HTMLElement).getBoundingClientRect();
+      badge.style.left = `${e.clientX - rect.left}px`;
+      badge.style.top = `${e.clientY - rect.top}px`;
+      badge.style.transform = 'translate(-50%, -50%)';
+      badge.style.bottom = 'auto';
+      const el = toggle as HTMLElement;
+      badge.classList.remove('opacity-0');
+      badge.classList.add('opacity-100');
+      clearTimeout((el as any)._badgeTimer);
+      (el as any)._badgeTimer = setTimeout(() => {
+        badge.classList.remove('opacity-100');
+        badge.classList.add('opacity-0');
+      }, 3000);
+    });
+  });
 </script>
