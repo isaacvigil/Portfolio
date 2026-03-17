@@ -317,11 +317,8 @@ import ComponentsImage from '../../components/ComponentsImage.astro';
   });
   tl.to(spans, { opacity: 1, color: 'var(--text)', duration: 0.4, stagger: 0.03, ease: 'power2.out' })
     .to('.hero-meta', { opacity: 1, x: 0, duration: 0.4, stagger: 0.08, ease: 'power2.out' })
-    .fromTo('#cover-img', { y: 60, opacity: 0, filter: 'blur(20px)' }, { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.8, ease: 'power3.out' });
-
-  // Scroll reveals
-  // Opportunity loads with the page
-  gsap.from('#opportunity', { y: 60, opacity: 0, duration: 1, delay: 0.3, ease: 'power3.out' });
+    .fromTo('#cover-img', { y: 60, opacity: 0, filter: 'blur(20px)' }, { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.8, ease: 'power3.out' })
+    .from('#opportunity', { y: 60, opacity: 0, duration: 1, ease: 'power3.out' });
 
   gsap.utils.toArray<HTMLElement>('.section-block:not(#opportunity)').forEach((el) => {
     gsap.from(el, {
