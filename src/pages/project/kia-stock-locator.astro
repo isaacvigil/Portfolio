@@ -30,6 +30,7 @@ import personUsingApp from '../../assets/Kia-Stock-Locator/person-using-app.jpg'
 import ProjectFooter from '../../components/ProjectFooter.astro';
 import Icon from '../../components/Icon.astro';
 import ComponentsImage from '../../components/ComponentsImage.astro';
+import ProjectHero from '../../components/ProjectHero.astro';
 import '../../styles/global.css';
 ---
 
@@ -38,39 +39,17 @@ import '../../styles/global.css';
 
     <Nav backHref="/" />
 
-    <!-- Hero -->
-    <section class="flex flex-col pt-24 pb-16" id="hero">
-      <div class="max-w-7xl mx-auto w-full px-8">
-        <h1 class="text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[1.05] tracking-tight mb-12 break-words" id="hero-title" style="opacity:0">
-          Kia Stock Locator
-        </h1>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div class="hero-meta" style="opacity:0">
-            <p class="text-base opacity-60 mb-2">Role</p>
-            <p class="text-lg font-medium">Lead Designer</p>
-          </div>
-          <div class="hero-meta" style="opacity:0">
-            <p class="text-base opacity-60 mb-2">Company</p>
-            <p class="text-lg font-medium">Kia</p>
-          </div>
-          <div class="hero-meta" style="opacity:0">
-            <p class="text-base opacity-60 mb-2">Year</p>
-            <p class="text-lg font-medium">2023</p>
-          </div>
-          <div class="hero-meta" style="opacity:0">
-            <p class="text-base opacity-60 mb-2">Type</p>
-            <p class="text-lg font-medium">Web responsive</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cover image -->
-    <section class="mb-24 overflow-hidden md:overflow-visible">
-      <div class="max-w-7xl mx-auto md:px-8">
-        <Image src={coverImg} alt="Kia Stock Locator cover" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" id="cover-img" style="opacity:0" />
-      </div>
-    </section>
+    <ProjectHero
+      title="Kia Stock Locator"
+      meta={[
+        { label: 'Role', value: 'Lead Designer' },
+        { label: 'Company', value: 'Kia' },
+        { label: 'Year', value: '2023' },
+        { label: 'Type', value: 'Web responsive' },
+      ]}
+      coverImg={coverImg}
+      coverAlt="Kia Stock Locator cover"
+    />
 
     <!-- Opportunity -->
     <section class="mb-20 section-block" id="opportunity">
