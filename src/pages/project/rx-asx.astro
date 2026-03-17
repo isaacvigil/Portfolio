@@ -297,6 +297,7 @@ import ComponentsImage from '../../components/ComponentsImage.astro';
   // Letter-by-letter fade in with color transition
   const titleEl = document.getElementById('hero-title') as HTMLElement;
   const text = titleEl.textContent?.trim() ?? '';
+  titleEl.style.opacity = '1';
   titleEl.innerHTML = text
     .split(' ')
     .map(word =>
