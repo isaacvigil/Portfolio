@@ -1,0 +1,90 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import coverImg from '../../assets/Volvo-Search/cover.jpg';
+import ProjectHero from '../../components/ProjectHero.astro';
+import '../../styles/global.css';
+---
+
+<Layout>
+  <main>
+
+    <Nav backHref="/" />
+
+    <ProjectHero
+      title="Volvo Search"
+      meta={[
+        { label: 'Role', value: 'Design Lead' },
+        { label: 'Company', value: 'Volvo Trucks' },
+        { label: 'Year', value: '2023' },
+        { label: 'Type', value: 'Web Search' },
+      ]}
+      coverImg={coverImg}
+      coverAlt="Volvo Search cover"
+    />
+
+    <!-- Opportunity -->
+    <section class="mb-20 section-block" id="opportunity">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Opportunity</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <p class="text-lg leading-relaxed opacity-80 mb-4">
+              This project came off the back of my work on Kia's car configurator, a previous engagement that went so well Kia came back with a new challenge.
+            </p>
+            <p class="text-lg leading-relaxed opacity-80">
+              During that period, a global chip shortage was causing significant delays in car delivery timelines, pushing customers to wait months for their configured vehicle.
+            </p>
+          </div>
+          <div>
+            <p class="text-lg leading-relaxed opacity-80 mb-4">
+              The idea emerged: what if customers could find a similar or identical vehicle already in stock at a nearby dealer?
+            </p>
+            <p class="text-lg leading-relaxed opacity-80">
+              Facing an increasingly competitive automotive landscape online, Kia decided to invest in improving their Stock Locator experience, helping customers find the right car now, rather than wait.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const titleEl = document.getElementById('hero-title') as HTMLElement;
+  const text = titleEl.textContent?.trim() ?? '';
+  titleEl.style.opacity = '1';
+  titleEl.innerHTML = text
+    .split(' ')
+    .map(word =>
+      `<span class="inline-block whitespace-nowrap">${word.split('').map(ch => `<span style="opacity:0;color:var(--muted)">${ch}</span>`).join('')}</span>`)
+    .join(' ');
+
+  gsap.set('.hero-meta', { x: -20, opacity: 0 });
+
+  const spans = titleEl.querySelectorAll('span');
+  const tl = gsap.timeline();
+  tl.to(spans, { opacity: 1, color: 'var(--text)', duration: 0.4, stagger: 0.03, ease: 'power2.out' })
+    .to('.hero-meta', { opacity: 1, x: 0, duration: 0.4, stagger: 0.08, ease: 'power2.out' })
+    .fromTo('#cover-img', { y: 60, opacity: 0, filter: 'blur(20px)' }, { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.2, ease: 'power3.out' })
+    .from('#opportunity', { y: 60, opacity: 0, duration: 1, ease: 'power3.out' }, '-=0.5');
+
+  gsap.utils.toArray<HTMLElement>('.section-block:not(#opportunity)').forEach((el) => {
+    gsap.from(el, {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+      },
+    });
+  });
+</script>

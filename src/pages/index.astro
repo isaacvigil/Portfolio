@@ -6,6 +6,7 @@ import { Image } from 'astro:assets';
 import coverImg from '../assets/RX-ASX/cover.jpg';
 import coverDsImg from '../assets/RX-DS/cover.jpg';
 import coverKiaImg from '../assets/Kia-Stock-Locator/cover.jpg';
+import coverVolvoImg from '../assets/Volvo-Search/cover.jpg';
 ---
 
 <Layout>
@@ -37,6 +38,13 @@ import coverKiaImg from '../assets/Kia-Stock-Locator/cover.jpg';
             <Image src={coverKiaImg} alt="Kia Stock Locator" class="w-full object-cover group-hover:scale-[1.10] transition-transform duration-500" />
           </div>
           <div class="mt-4 inline-flex items-center gap-2 text-lg font-medium"><Icon name="Car" size={16} />Kia Stock Locator<span class="group-hover:translate-x-1 transition-transform inline-block">→</span></div>
+        </a>
+
+        <a href="/project/volvo-search" class="group block mt-8">
+          <div class="overflow-hidden rounded-2xl">
+            <Image src={coverVolvoImg} alt="Volvo Search" class="w-full object-cover group-hover:scale-[1.10] transition-transform duration-500" />
+          </div>
+          <div class="mt-4 inline-flex items-center gap-2 text-lg font-medium"><Icon name="Truck" size={16} />Volvo Search<span class="group-hover:translate-x-1 transition-transform inline-block">→</span></div>
         </a>
       </div>
     </section>
