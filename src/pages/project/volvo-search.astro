@@ -2,7 +2,20 @@
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import coverImg from '../../assets/Volvo-Search/cover.jpg';
+import design1 from '../../assets/Volvo-Search/M.1.1 - Search.jpg';
+import design2 from '../../assets/Volvo-Search/M.1.2 - Search.jpg';
+import design3 from '../../assets/Volvo-Search/M.1.3 - Search.jpg';
+import design4 from '../../assets/Volvo-Search/M.2.4.A - Form (Images).jpg';
+import iconSearch from '../../assets/Volvo-Search/Icons/image.jpg';
+import iconDocuments from '../../assets/Volvo-Search/icons/documents.jpg';
+import iconEvent from '../../assets/Volvo-Search/icons/event.jpg';
+import iconGeneric from '../../assets/Volvo-Search/icons/generic.jpg';
+import iconJobs from '../../assets/Volvo-Search/icons/jobs.jpg';
+import iconNews from '../../assets/Volvo-Search/icons/news.jpg';
+import iconPressRelease from '../../assets/Volvo-Search/icons/press-release.jpg';
+import iconProducts from '../../assets/Volvo-Search/icons/products.jpg';
 import ProjectHero from '../../components/ProjectHero.astro';
+import { Image } from 'astro:assets';
 import '../../styles/global.css';
 ---
 
@@ -17,7 +30,7 @@ import '../../styles/global.css';
         { label: 'Role', value: 'Design Lead' },
         { label: 'Company', value: 'Volvo Trucks' },
         { label: 'Year', value: '2023' },
-        { label: 'Type', value: 'Web Search' },
+        { label: 'Type', value: 'Web' },
       ]}
       coverImg={coverImg}
       coverAlt="Volvo Search cover"
@@ -44,6 +57,57 @@ import '../../styles/global.css';
               Facing an increasingly competitive automotive landscape online, Kia decided to invest in improving their Stock Locator experience, helping customers find the right car now, rather than wait.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- High fidelity designs -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">High fidelity designs</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            To support consistency across a large team and many event types, I built a centralized component library — buttons, forms, icons, navigation, cards — all adhering to shared visual guidelines and interaction standards.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            This reduced friction in handoffs and kept the product coherent as it scaled.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+          <div><Image src={design1} alt="Search" class="w-full rounded-[24px] max-w-[390px] mx-auto" /><p class="text-sm opacity-50 mt-2 text-center">Volvo Insights page</p></div>
+          <div><Image src={design2} alt="Search results" class="w-full rounded-[24px] max-w-[390px] mx-auto" /><p class="text-sm opacity-50 mt-2 text-center">Search modal, featured</p></div>
+          <div><Image src={design3} alt="Search filters" class="w-full rounded-[24px] max-w-[390px] mx-auto" /><p class="text-sm opacity-50 mt-2 text-center">Search modal, results</p></div>
+          <div><Image src={design4} alt="Form with images" class="w-full rounded-[24px] max-w-[390px] mx-auto" /><p class="text-sm opacity-50 mt-2 text-center">Result page</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Icons -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-4">Icons</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p class="text-lg leading-relaxed opacity-80">In case there was no image available for a certain search result, an icon would be shown as a fallback. Each content type in the search experience is represented by a distinct icon.</p>
+          <p class="text-lg leading-relaxed opacity-80">This approach helps users quickly identify and differentiate results at a glance. Also a category text label is displayed on top of each result.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { img: iconGeneric, label: 'Generic' },
+            { img: iconSearch, label: 'Image' },
+            { img: iconDocuments, label: 'Documents' },
+            { img: iconEvent, label: 'Event' },
+            { img: iconJobs, label: 'Jobs' },
+            { img: iconNews, label: 'News' },
+            { img: iconPressRelease, label: 'Press Release' },
+            { img: iconProducts, label: 'Products' },
+          ].map(({ img, label }) => (
+            <div class="flex items-center gap-4">
+              <Image src={img} alt={label} class="w-16 h-16 rounded-xl object-cover flex-shrink-0" />
+              <p class="text-lg font-medium">{label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
