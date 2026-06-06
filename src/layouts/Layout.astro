@@ -22,6 +22,13 @@ import Footer from '../components/Footer.astro'
     <slot />
     <Footer />
     <script is:inline>
+      // Swap name based on domain
+      if (window.location.hostname.includes('isaacvigil.com')) {
+        document.querySelectorAll('#footer-name, #hero-name').forEach(el => el.textContent = 'Isaac Vigil');
+        document.title = 'Isaac Vigil Portfolio';
+      }
+    </script>
+    <script is:inline>
       // Apply saved theme before paint to avoid flash
       const saved = localStorage.getItem('theme');
       if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
