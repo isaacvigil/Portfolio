@@ -7,6 +7,7 @@ import ComponentsImage from '../../components/ComponentsImage.astro';
 import ProjectFooter from '../../components/ProjectFooter.astro';
 
 import coverImg from '../../assets/Ford-CCP/cover.jpg';
+import vanConversion from '../../assets/Ford-CCP/van-conversion.jpg';
 import personaEmily from '../../assets/Ford-CCP/Persona-Emily-1-scaled.jpg';
 import personaTony from '../../assets/Ford-CCP/Persona-Tony-scaled.jpg';
 import personaNick from '../../assets/Ford-CCP/Persona-Nick-1-scaled.jpg';
@@ -47,7 +48,7 @@ import reviewSubmit from '../../assets/Ford-CCP/1.1.08-Customer-New-Request-Revi
         <h2 class="text-section-heading mb-6">Opportunity</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <p class="text-lg leading-relaxed opacity-80">
-            Commercial vehicles represent Ford's primary European revenue source. Many require specialized conversions — refrigerated units, racking, lifting equipment.
+            Commercial vehicles represent Ford's primary European revenue source. Many require specialized conversions: refrigerated units, racking, lifting equipment.
           </p>
           <p class="text-lg leading-relaxed opacity-80">
             The conversions specifications were captured by Ford dealers through phone and email, then shared with the converters, making it difficult for everyone to keep track.
@@ -87,6 +88,10 @@ import reviewSubmit from '../../assets/Ford-CCP/1.1.08-Customer-New-Request-Revi
           </div>
         </div>
       </div>
+      <div class="max-w-5xl mx-auto px-8 mt-8">
+        <Image src={vanConversion} alt="Ford van conversion" class="w-full rounded-2xl object-cover" />
+        <p class="text-sm opacity-50 mt-2 text-center">One of the van conversions offered: racking system</p>
+      </div>
     </section>
 
     <!-- User Types & Personas -->
@@ -112,6 +117,14 @@ import reviewSubmit from '../../assets/Ford-CCP/1.1.08-Customer-New-Request-Revi
           <button id="persona-next" aria-label="Next persona" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg)] border border-[var(--border)] hover:opacity-70 transition-opacity shadow-sm">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
+
+          <!-- Pause/Play button -->
+          <button id="persona-pause" aria-label="Pause autoplay" class="absolute right-4 bottom-4 w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg)] border border-[var(--border)] hover:opacity-70 transition-opacity shadow-sm">
+            <!-- Pause icon -->
+            <svg id="persona-pause-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="4" y="3" width="3" height="10" rx="1" fill="currentColor"/><rect x="9" y="3" width="3" height="10" rx="1" fill="currentColor"/></svg>
+            <!-- Play icon (hidden by default) -->
+            <svg id="persona-play-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" class="hidden"><path d="M5 3.5l8 4.5-8 4.5V3.5z" fill="currentColor"/></svg>
+          </button>
         </div>
         <p class="text-sm opacity-50 mt-2 text-center" id="persona-caption">Emily ⋅ Customer</p>
       </div>
@@ -132,7 +145,7 @@ import reviewSubmit from '../../assets/Ford-CCP/1.1.08-Customer-New-Request-Revi
                 From those workshops, we defined the necessary features for each user type, the steps from request creation until delivery, and the overall process.
               </p>
             </div>
-            <Image src={keyFindings} alt="Notes from workshops" class="w-full rounded-2xl object-cover" />
+            <Image src={keyFindings} alt="Notes from workshops" class="w-full object-cover" />
             <p class="text-sm opacity-50 mt-2 text-center">Notes from workshops</p>
           </div>
           <div>
@@ -146,7 +159,7 @@ import reviewSubmit from '../../assets/Ford-CCP/1.1.08-Customer-New-Request-Revi
         </div>
       </div>
       <div class="max-w-7xl mx-auto px-8 mb-12">
-        <Image src={customerFlow} alt="One of the user flows created" class="w-full rounded-2xl object-cover" />
+        <Image src={customerFlow} alt="One of the user flows created" class="w-full object-cover" />
       </div>
       <div class="max-w-5xl mx-auto px-8">
         <div class="flex flex-col gap-12">
@@ -339,7 +352,28 @@ import reviewSubmit from '../../assets/Ford-CCP/1.1.08-Customer-New-Request-Revi
     goToPersona((personaCurrent + 1) % personas.length);
   });
 
-  setInterval(() => {
+  let personaInterval: ReturnType<typeof setInterval> | null = setInterval(() => {
     goToPersona((personaCurrent + 1) % personas.length);
-  }, 4000);
+  }, 8000);
+
+  const pauseBtn = document.getElementById('persona-pause') as HTMLButtonElement;
+  const pauseIcon = document.getElementById('persona-pause-icon') as HTMLElement;
+  const playIcon = document.getElementById('persona-play-icon') as HTMLElement;
+
+  pauseBtn.addEventListener('click', () => {
+    if (personaInterval) {
+      clearInterval(personaInterval);
+      personaInterval = null;
+      pauseIcon.classList.add('hidden');
+      playIcon.classList.remove('hidden');
+      pauseBtn.setAttribute('aria-label', 'Play autoplay');
+    } else {
+      personaInterval = setInterval(() => {
+        goToPersona((personaCurrent + 1) % personas.length);
+      }, 8000);
+      pauseIcon.classList.remove('hidden');
+      playIcon.classList.add('hidden');
+      pauseBtn.setAttribute('aria-label', 'Pause autoplay');
+    }
+  });
 </script>
