@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import { Image } from 'astro:assets';
-import coverImg from '../assets/About/cover.jpg';
 import asKidImg from '../assets/About/as-kid.jpg';
+import atAMGImg from '../assets/About/at-amg.jpg';
 ---
 
 <Layout>
@@ -20,14 +20,19 @@ import asKidImg from '../assets/About/as-kid.jpg';
       </div>
     </section>
 
-    <!-- Cover image carousel -->
-    <section class="mb-20 overflow-hidden md:overflow-visible section-block">
-      <div class="max-w-7xl mx-auto md:px-8">
-        <div class="relative">
-          <Image src={coverImg} alt="At the Mercedes AMG HQ" id="about-img-0" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
-          <Image src={asKidImg} alt="As a kid" id="about-img-1" class="absolute inset-0 left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover opacity-0" />
+    <!-- Cover images -->
+    <section class="mb-20 section-block">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <Image src={atAMGImg} alt="At the Mercedes AMG HQ" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">At the Mercedes AMG HQ ⋅ 2022</p>
+          </div>
+          <div>
+            <Image src={asKidImg} alt="As a kid" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Dreaming of becoming a helicopter pilot ⋅ 1984</p>
+          </div>
         </div>
-        <p class="text-sm opacity-50 mt-2 px-8 md:px-0 text-center" id="about-caption">At the Mercedes AMG HQ ⋅ 2022</p>
       </div>
     </section>
 
@@ -205,25 +210,6 @@ import asKidImg from '../assets/About/as-kid.jpg';
 
   const titleEl = document.getElementById('hero-title') as HTMLElement;
   gsap.to(titleEl, { opacity: 1, duration: 0.6, ease: 'power2.out' });
-
-  // Cover image crossfade
-  const aboutImages = [
-    { el: document.getElementById('about-img-0') as HTMLElement, label: 'At the Mercedes AMG HQ ⋅ 2022' },
-    { el: document.getElementById('about-img-1') as HTMLElement, label: 'As a kid ⋅ 1984' },
-  ];
-  const aboutCaption = document.getElementById('about-caption') as HTMLElement;
-  let aboutCurrent = 0;
-
-  setInterval(() => {
-    const next = (aboutCurrent + 1) % aboutImages.length;
-    gsap.to(aboutImages[aboutCurrent].el, { opacity: 0, duration: 0.8, ease: 'power2.inOut' });
-    gsap.to(aboutImages[next].el, { opacity: 1, duration: 0.8, ease: 'power2.inOut' });
-    gsap.to(aboutCaption, { opacity: 0, duration: 0.3, onComplete: () => {
-      aboutCaption.textContent = aboutImages[next].label;
-      gsap.to(aboutCaption, { opacity: 0.5, duration: 0.3 });
-    }});
-    aboutCurrent = next;
-  }, 5000);
 
   gsap.utils.toArray<HTMLElement>('.section-block:not(#hero)').forEach((el) => {
     gsap.from(el, {
