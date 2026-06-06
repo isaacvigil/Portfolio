@@ -1,0 +1,329 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import { Image } from 'astro:assets';
+import ProjectHero from '../../components/ProjectHero.astro';
+import ProjectFooter from '../../components/ProjectFooter.astro';
+
+import coverImg from '../../assets/FAB-Dubai-First/dubai-first-scaled.jpg';
+import oldApp1 from '../../assets/FAB-Dubai-First/Dubai-First-Old-App-1.jpeg';
+import oldApp2 from '../../assets/FAB-Dubai-First/Dubai-First-Old-App-2.jpeg';
+import oldApp3 from '../../assets/FAB-Dubai-First/Dubai-First-Old-App-3.jpeg';
+import oldApp4 from '../../assets/FAB-Dubai-First/Dubai-First-Old-App-4.jpeg';
+import dsButtons from '../../assets/FAB-Dubai-First/Buttons-scaled.jpg';
+import dsForms from '../../assets/FAB-Dubai-First/Forms-scaled.jpg';
+import dsCards from '../../assets/FAB-Dubai-First/Credit-Cards-scaled.jpg';
+import designHome from '../../assets/FAB-Dubai-First/Home.jpg';
+import designHomeScroll from '../../assets/FAB-Dubai-First/Home-Scroll-up.jpg';
+import designCards from '../../assets/FAB-Dubai-First/Cards.jpg';
+import designCategories from '../../assets/FAB-Dubai-First/Categories-Dialog.png';
+import designSplitBill from '../../assets/FAB-Dubai-First/Split-Bill-Selected.jpg';
+import designFilters from '../../assets/FAB-Dubai-First/Home-Filters.jpg';
+import designHelp from '../../assets/FAB-Dubai-First/More-Help.jpg';
+import designProfile from '../../assets/FAB-Dubai-First/Profile.png';
+import illuAddress from '../../assets/FAB-Dubai-First/Illustration-Address-changed.png';
+import illuSplit from '../../assets/FAB-Dubai-First/Illustration-Split-reminder-sent.png';
+import illuEmpty from '../../assets/FAB-Dubai-First/Illustration-Nothing-here-yet.png';
+import illuDelivery from '../../assets/FAB-Dubai-First/Illustration-Card-delivery.png';
+---
+
+<Layout>
+  <main>
+
+    <Nav backHref="/" />
+
+    <ProjectHero
+      title="First Abu Dhabi Bank ⋅ Dubai First"
+      meta={[
+        { label: 'Role', value: 'UX Design Director' },
+        { label: 'Company', value: 'First Abu Dhabi Bank' },
+        { label: 'Year', value: '2019' },
+        { label: 'Type', value: 'Mobile App' },
+      ]}
+      coverImg={coverImg}
+      coverAlt="Dubai First app"
+      coverClass="max-h-[56vw] md:max-h-[700px] object-top"
+    />
+
+    <!-- Opportunity -->
+    <section class="mb-20 section-block" id="opportunity">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Opportunity</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            Dubai First (DF) is a credit card and consumer finance company that was acquired by First Abu Dhabi Bank (FAB).
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            The acquisition opened the door to reimagine the Dubai First mobile app, bringing new features, better performance, and a significantly improved user experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Goals -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Goals</h2>
+        <p class="text-lg leading-relaxed opacity-80 max-w-2xl">
+          Create a new experience for Dubai First customers with new features, better performance, and a redesigned mobile app.
+        </p>
+      </div>
+    </section>
+
+    <!-- My Role -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">My role as UX Design Director</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
+            <li>Led experience strategy and product roadmap</li>
+            <li>Defined design direction for the redesigned app</li>
+            <li>Established the design system</li>
+          </ul>
+          <div>
+            <p class="text-lg leading-relaxed opacity-80 mb-4">Team composition:</p>
+            <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
+              <li>3 Product Designers</li>
+              <li>FAB stakeholders</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Previous App -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">The previous Dubai First app</h2>
+        <p class="text-lg leading-relaxed opacity-80 mb-8">
+          Understanding the existing product was the starting point, identifying what worked, what frustrated users, and what needed to be left behind entirely.
+        </p>
+      </div>
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div>
+            <Image src={oldApp1} alt="Previous Dubai First app screen 1" class="w-full rounded-[24px] object-cover" />
+          </div>
+          <div>
+            <Image src={oldApp2} alt="Previous Dubai First app screen 2" class="w-full rounded-[24px] object-cover" />
+          </div>
+          <div>
+            <Image src={oldApp3} alt="Previous Dubai First app screen 3" class="w-full rounded-[24px] object-cover" />
+          </div>
+          <div>
+            <Image src={oldApp4} alt="Previous Dubai First app screen 4" class="w-full rounded-[24px] object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Research</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            User interviews were conducted to assess feature prioritization through a willingness-to-pay methodology.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            This helped us understand which features mattered most to customers, and how to balance user expectations with business priorities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design System -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Design system</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            I established a reusable component library to ensure consistency across the app and enable cross-product implementation throughout FAB.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            The system covered buttons, forms, cards, navigation, and more, giving the team a shared language and reducing friction in handoffs.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 gap-4">
+          <div>
+            <Image src={dsButtons} alt="Design system buttons" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Buttons</p>
+          </div>
+          <div>
+            <Image src={dsForms} alt="Design system forms" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Forms</p>
+          </div>
+          <div>
+            <Image src={dsCards} alt="Design system credit cards" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Credit cards</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Designs -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Designs</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            User research informed feature prioritization while maintaining business alignment.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            The redesign covered the full customer journey, from home and cards to transactions, split bills, filters, and profile management.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div>
+            <Image src={designHome} alt="Home screen" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Home</p>
+          </div>
+          <div>
+            <Image src={designHomeScroll} alt="Home scrolled up" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Home ⋅ scrolled</p>
+          </div>
+          <div>
+            <Image src={designCards} alt="Cards screen" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Cards</p>
+          </div>
+          <div>
+            <Image src={designCategories} alt="Categories dialog" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Categories</p>
+          </div>
+          <div>
+            <Image src={designSplitBill} alt="Split bill selected" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Split bill</p>
+          </div>
+          <div>
+            <Image src={designFilters} alt="Home filters" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Filters</p>
+          </div>
+          <div>
+            <Image src={designHelp} alt="More help screen" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Help</p>
+          </div>
+          <div>
+            <Image src={designProfile} alt="Profile screen" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Profile</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Illustrations -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Illustrations</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            A custom illustration style was developed and integrated into the Dubai First brand language.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            These illustrations were used to communicate key moments in the user journey, empty states, confirmations, and delivery updates.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div>
+            <Image src={illuAddress} alt="Address changed illustration" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Address changed</p>
+          </div>
+          <div>
+            <Image src={illuSplit} alt="Split reminder sent illustration" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Split reminder sent</p>
+          </div>
+          <div>
+            <Image src={illuEmpty} alt="Nothing here yet illustration" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Empty state</p>
+          </div>
+          <div>
+            <Image src={illuDelivery} alt="Card delivery illustration" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Card delivery</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Thoughts -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Final Thoughts</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            The most challenging part wasn't designing the product itself, it was aligning all the different departments, as they were working in silos.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            Breaking down those silos and creating shared ownership across teams turned out to be as important as the design work itself.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mb-16 section-block">
+      <div class="max-w-7xl mx-auto px-8 mb-12">
+        <h3 class="text-xl text-center">Thanks for reading, want to collaborate together? Contact me <a href="mailto:hi@luisisaac.com" class="underline">here</a></h3>
+      </div>
+    </section>
+
+    <ProjectFooter nextHref="/project/ford-conversion-platform" nextTitle="Ford Conversion Platform" />
+
+  </main>
+</Layout>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const titleEl = document.getElementById('hero-title') as HTMLElement;
+  const text = titleEl.textContent?.trim() ?? '';
+  titleEl.style.opacity = '1';
+  titleEl.innerHTML = text
+    .split(' ')
+    .map(word =>
+      `<span class="inline-block whitespace-nowrap">${word.split('').map(ch => `<span style="opacity:0;color:var(--muted)">${ch}</span>`).join('')}</span>`)
+    .join(' ');
+
+  gsap.set('.hero-meta', { x: -20, opacity: 0 });
+
+  const spans = titleEl.querySelectorAll('span');
+  const tl = gsap.timeline({
+    onComplete: () => {
+      document.querySelectorAll<HTMLElement>('.hero-meta').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+    }
+  });
+  tl.to(spans, { opacity: 1, color: 'var(--text)', duration: 0.4, stagger: 0.03, ease: 'power2.out' })
+    .to('.hero-meta', { opacity: 1, x: 0, duration: 0.4, stagger: 0.08, ease: 'power2.out' })
+    .fromTo('#cover-img', { y: 60, opacity: 0, filter: 'blur(20px)' }, { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.2, ease: 'power3.out' })
+    .from('#opportunity', { y: 60, opacity: 0, duration: 1, ease: 'power3.out' }, '-=0.5');
+
+  gsap.utils.toArray<HTMLElement>('.section-block:not(#opportunity)').forEach((el) => {
+    gsap.from(el, {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+      },
+    });
+  });
+
+  document.querySelectorAll<HTMLImageElement>('.section-block img').forEach((img) => {
+    img.style.opacity = '0';
+    const show = () => gsap.to(img, { opacity: 1, duration: 1.2, ease: 'power3.out' });
+    if (img.complete && img.naturalWidth > 0) show();
+    else img.addEventListener('load', show, { once: true });
+  });
+</script>
