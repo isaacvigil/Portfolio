@@ -128,15 +128,21 @@ import asKidImg from '../assets/About/as-kid.jpg';
         <h2 class="text-section-heading mb-6">Languages</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           {[
-            { lang: 'Spanish', level: 'Native' },
-            { lang: 'Catalan', level: 'Native' },
-            { lang: 'English', level: 'Proficient' },
-            { lang: 'Japanese', level: 'Advanced' },
-            { lang: 'French', level: 'Intermediate' },
-            { lang: 'Chinese', level: 'Basic' },
-          ].map(({ lang, level }) => (
+            { lang: 'English', level: 'Proficient', flag: 'gb', catalan: false },
+            { lang: 'Spanish', level: 'Native', flag: 'es', catalan: false },
+            { lang: 'Catalan', level: 'Native', flag: 'es-ct', catalan: true },
+            { lang: 'Japanese', level: 'Advanced', flag: 'jp', catalan: false },
+            { lang: 'French', level: 'Intermediate', flag: 'fr', catalan: false },
+            { lang: 'Chinese', level: 'Basic', flag: 'cn', catalan: false },
+          ].map(({ lang, level, flag, catalan }) => (
             <div>
-              <p class="text-lg font-medium">{lang}</p>
+              <p class="text-lg font-medium flex items-center gap-2">
+                {catalan
+                  ? <span class={`fi fi-${flag} rounded-full overflow-hidden flex-shrink-0`} style="width:20px;height:20px;background-size:cover;background-position:center"></span>
+                  : <span class={`round-flag-icon round-flag-${flag} flex-shrink-0`} style="width:20px;height:20px"></span>
+                }
+                {lang}
+              </p>
               <p class="text-base opacity-50 mt-1">{level}</p>
             </div>
           ))}

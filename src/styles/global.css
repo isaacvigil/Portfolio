@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "round-flag-icons/css/round-flag-icons.min.css";
+@import "flag-icons/css/flag-icons.min.css";
 
 @theme {
   --breakpoint-sm: 420px;
