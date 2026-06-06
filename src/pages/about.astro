@@ -27,7 +27,7 @@ import asKidImg from '../assets/About/as-kid.jpg';
           <Image src={coverImg} alt="At the Mercedes AMG HQ" id="about-img-0" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
           <Image src={asKidImg} alt="As a kid" id="about-img-1" class="absolute inset-0 left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover opacity-0" />
         </div>
-        <p class="text-sm opacity-50 mt-2 px-8 md:px-0 text-center" id="about-caption">At the Mercedes AMG HQ, August 2022</p>
+        <p class="text-sm opacity-50 mt-2 px-8 md:px-0 text-center" id="about-caption">At the Mercedes AMG HQ ⋅ 2022</p>
       </div>
     </section>
 
@@ -208,8 +208,8 @@ import asKidImg from '../assets/About/as-kid.jpg';
 
   // Cover image crossfade
   const aboutImages = [
-    { el: document.getElementById('about-img-0') as HTMLElement, label: 'At the Mercedes AMG HQ, August 2022' },
-    { el: document.getElementById('about-img-1') as HTMLElement, label: 'As a kid' },
+    { el: document.getElementById('about-img-0') as HTMLElement, label: 'At the Mercedes AMG HQ ⋅ 2022' },
+    { el: document.getElementById('about-img-1') as HTMLElement, label: 'As a kid ⋅ 1984' },
   ];
   const aboutCaption = document.getElementById('about-caption') as HTMLElement;
   let aboutCurrent = 0;
