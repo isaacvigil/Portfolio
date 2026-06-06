@@ -1,0 +1,211 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import { Image } from 'astro:assets';
+import coverImg from '../assets/About/cover.jpg';
+---
+
+<Layout>
+  <main>
+
+    <Nav backHref="/" />
+
+    <!-- Hero -->
+    <section class="pt-24 pb-0 section-block" id="hero">
+      <div class="max-w-7xl mx-auto px-8">
+        <h1 class="text-[clamp(2.5rem,7vw,6rem)] font-semibold leading-[1.05] tracking-tight mb-12" id="hero-title" style="opacity:0">
+          About me
+        </h1>
+      </div>
+    </section>
+
+    <!-- Cover image -->
+    <section class="mb-20 overflow-hidden md:overflow-visible section-block">
+      <div class="max-w-7xl mx-auto md:px-8">
+        <Image src={coverImg} alt="Me at the Mercedes AMG HQ" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
+        <p class="text-sm opacity-50 mt-2 px-8 md:px-0 text-center">At the Mercedes AMG HQ, August 2022</p>
+      </div>
+    </section>
+
+    <!-- Bio -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex flex-col gap-6">
+            <p class="text-lg leading-relaxed opacity-80">
+              A design leader with strong strategic, visual, analytical, and entrepreneurial skills on a mission to build cohesive and efficient teams that deliver outstanding experiences. I am a resilient, optimistic self-starter, dedicated to making the world a better place.
+            </p>
+            <p class="text-lg leading-relaxed opacity-80">
+              I thrive in multicultural environments, collaborating with multidisciplinary teams to tackle complex challenges. My focus is to create inclusive spaces where team members feel valued and can grow. I prioritize listening, providing feedback, and aim to be a trusted leader who inspires, delegates effectively, and recognizes achievements.
+            </p>
+          </div>
+          <div class="flex flex-col gap-6">
+            <p class="text-lg leading-relaxed opacity-80">
+              Designing successful experiences involves considering both user needs and business goals. My approach emphasizes testing to minimize risks and starting with an achievable MVP to test assumptions early.
+            </p>
+            <p class="text-lg leading-relaxed opacity-80">
+              From concept to delivery, I ensure high-quality results. My ability to transition seamlessly between strategic planning and tactical execution, coupled with my excellent communication and collaboration skills, allows me to drive cohesive progress and growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Experience</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <p class="text-[clamp(1.5rem,3vw,2.5rem)] font-semibold leading-none mb-2">{new Date().getFullYear() - 2008}+</p>
+            <p class="text-lg leading-relaxed opacity-80">Years designing products</p>
+          </div>
+          <div>
+            <p class="text-[clamp(1.5rem,3vw,2.5rem)] font-semibold leading-none mb-2">{new Date().getFullYear() - 2019}+</p>
+            <p class="text-lg leading-relaxed opacity-80">Years in leadership roles</p>
+          </div>
+          <div>
+            <p class="text-[clamp(1.5rem,3vw,2.5rem)] font-semibold leading-none mb-2">4+</p>
+            <p class="text-lg leading-relaxed opacity-80">Years mentoring aspiring designers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <p class="text-lg font-semibold mb-4">Design</p>
+            <ul class="flex flex-col gap-2 text-lg leading-relaxed opacity-80">
+              <li>Product Design</li>
+              <li>User Experience</li>
+              <li>User Interface</li>
+              <li>User Research</li>
+              <li>Design Systems</li>
+              <li>Wireframing</li>
+              <li>Prototyping</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-lg font-semibold mb-4">Leadership</p>
+            <ul class="flex flex-col gap-2 text-lg leading-relaxed opacity-80">
+              <li>Team Management</li>
+              <li>Stakeholder Management</li>
+              <li>Product Strategy</li>
+              <li>Mentoring</li>
+              <li>Workshops</li>
+              <li>Roadmaps</li>
+              <li>Lean / Agile</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-lg font-semibold mb-4">Tools</p>
+            <ul class="flex flex-col gap-2 text-lg leading-relaxed opacity-80">
+              <li>Figma</li>
+              <li>Cursor</li>
+              <li>Claude Code</li>
+              <li>Figma Make</li>
+              <li>Useberry / Maze</li>
+              <li>FigJam / Miro</li>
+              <li>Google Analytics / Mixpanel</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Languages</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {[
+            { lang: 'Spanish', level: 'Native' },
+            { lang: 'Catalan', level: 'Native' },
+            { lang: 'English', level: 'Proficient' },
+            { lang: 'Japanese', level: 'Advanced' },
+            { lang: 'French', level: 'Intermediate' },
+            { lang: 'Chinese', level: 'Basic' },
+          ].map(({ lang, level }) => (
+            <div>
+              <p class="text-lg font-medium">{lang}</p>
+              <p class="text-base opacity-50 mt-1">{level}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Cities -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Cities</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {[
+            { city: 'Barcelona', note: `${new Date().getFullYear() - 1980 - 10} years` },
+            { city: 'Tokyo', note: '3 years' },
+            { city: 'Shenzhen', note: '3 years' },
+            { city: 'Hong Kong', note: '3 years' },
+            { city: 'Dubai', note: '1 year' },
+          ].map(({ city, note }) => (
+            <div>
+              <p class="text-lg font-medium">{city}</p>
+              {note && <p class="text-base opacity-50 mt-1">{note}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-10">Companies</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center">
+          <img src="/logos/Nespresso-logo.svg" alt="Nespresso" class="logo-img w-full md:px-10" />
+          <img src="/logos/Kia-logo.svg" alt="Kia" class="logo-img w-full md:px-10" />
+          <img src="/logos/Volvo-logo.svg" alt="Volvo" class="logo-img w-full md:px-10" />
+          <img src="/logos/MB-logo.svg" alt="Mercedes-Benz" class="logo-img w-full md:px-10" />
+          <img src="/logos/Ford-logo.svg" alt="Ford" class="logo-img w-full md:px-10" />
+          <img src="/logos/UBS-logo.svg" alt="UBS" class="logo-img w-full md:px-10" />
+          <img src="/logos/FAB-logo.svg" alt="First Abu Dhabi Bank" class="logo-img w-full md:px-10" />
+          <img src="/logos/eDreams-logo.svg" alt="eDreams" class="logo-img w-full md:px-10" />
+          <img src="/logos/Unicef-logo.svg" alt="UNICEF" class="logo-img w-full md:px-10" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  .logo-img { filter: brightness(0) invert(1); }
+  :root:not(.dark) .logo-img { filter: brightness(0); }
+</style>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const titleEl = document.getElementById('hero-title') as HTMLElement;
+  gsap.to(titleEl, { opacity: 1, duration: 0.6, ease: 'power2.out' });
+
+  gsap.utils.toArray<HTMLElement>('.section-block:not(#hero)').forEach((el) => {
+    gsap.from(el, {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+      },
+    });
+  });
+</script>
