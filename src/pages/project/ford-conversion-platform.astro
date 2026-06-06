@@ -1,0 +1,318 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import { Image } from 'astro:assets';
+import ProjectHero from '../../components/ProjectHero.astro';
+import ComponentsImage from '../../components/ComponentsImage.astro';
+import ProjectFooter from '../../components/ProjectFooter.astro';
+
+import coverImg from '../../assets/Ford-CCP/ford-racks.jpg';
+import personaEmily from '../../assets/Ford-CCP/Persona-Emily-1-scaled.jpg';
+import personaTony from '../../assets/Ford-CCP/Persona-Tony-scaled.jpg';
+import personaNick from '../../assets/Ford-CCP/Persona-Nick-1-scaled.jpg';
+import keyFindings from '../../assets/Ford-CCP/Key-Findings.png';
+import customerFlow from '../../assets/Ford-CCP/Ford-CCP-customer-flow-1.png';
+import macbookMockup from '../../assets/Ford-CCP/MacBook-Air-Ford-CCP.png';
+import userTestingImg from '../../assets/Ford-CCP/user-testing-nick-stubbington-scaled.jpg';
+import utInsights from '../../assets/Ford-CCP/UT-insights.png';
+import componentsImg from '../../assets/Ford-CCP/Ford-CCP-Components.png';
+import signIn from '../../assets/Ford-CCP/Sign-In.jpg';
+import dashboard from '../../assets/Ford-CCP/1.1.01-Customer-Dashboard.jpg';
+import newRequestType from '../../assets/Ford-CCP/1.1.02-Customer-New-Request-Conversion-type-scaled.jpg';
+import vehicleDetails from '../../assets/Ford-CCP/1.1.03-Customer-New-Request-Vehicle-details.jpg';
+import conversionDetails from '../../assets/Ford-CCP/1.1.06-Customer-New-Request-Conversion-Details.jpg';
+import selectDealer from '../../assets/Ford-CCP/1.1.07b-Customer-New-Request-Select-dealer.jpg';
+import reviewSubmit from '../../assets/Ford-CCP/1.1.08-Customer-New-Request-Review-and-submit-scaled.jpg';
+import vehicles from '../../assets/Ford-CCP/Vehicles.png';
+---
+
+<Layout>
+  <main>
+
+    <Nav backHref="/" />
+
+    <ProjectHero
+      title="Ford Conversion Platform"
+      meta={[
+        { label: 'Role', value: 'UX Manager' },
+        { label: 'Company', value: 'Ford' },
+        { label: 'Year', value: '2021' },
+        { label: 'Type', value: 'Web Platform' },
+      ]}
+      coverImg={coverImg}
+      coverAlt="Ford commercial vehicles"
+    />
+
+    <!-- Opportunity -->
+    <section class="mb-20 section-block" id="opportunity">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Opportunity</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            Commercial vehicles represent Ford's primary European revenue source. Many require specialized conversions — refrigerated units, racking, lifting equipment.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            The conversions specifications were captured by Ford dealers through phone and email, then shared with the converters, making it difficult for everyone to keep track.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Goals -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Goals</h2>
+        <p class="text-lg leading-relaxed opacity-80 max-w-2xl">
+          Create a commercial vehicle platform for Ford to increase sales of commercial vehicles and simplify the process to convert a vehicle.
+        </p>
+      </div>
+    </section>
+
+    <!-- My Role -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">My role as UX Manager</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
+            <li>Experience strategy and design</li>
+            <li>Balanced business goals against user needs</li>
+            <li>Research: workshops, interviews, usability testing</li>
+            <li>Quality standards across deliverables</li>
+          </ul>
+          <div>
+            <p class="text-lg leading-relaxed opacity-80 mb-4">Team composition:</p>
+            <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
+              <li>5 Product Designers (led by Isaac Vigil)</li>
+              <li>Ford UK stakeholders</li>
+              <li>Front-end, back-end, and QA teams</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- User Types & Personas -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">User Types & Personas</h2>
+        <p class="text-lg leading-relaxed opacity-80 mb-8">
+          Three distinct user types guided the design: customers requiring vehicle conversion, dealers managing orders, and converters adapting vehicles.
+        </p>
+      </div>
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <Image src={personaEmily} alt="Persona Emily" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Emily — Customer</p>
+          </div>
+          <div>
+            <Image src={personaTony} alt="Persona Tony" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Tony — Dealer</p>
+          </div>
+          <div>
+            <Image src={personaNick} alt="Persona Nick" class="w-full rounded-[24px] object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Nick — Converter</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Research</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <p class="text-xl font-semibold opacity-80 mb-2">Workshops</p>
+            <p class="text-lg leading-relaxed opacity-80">
+              Identified needs, blockers, and opportunities. Defined features by user type and conversion process steps.
+            </p>
+          </div>
+          <div>
+            <p class="text-xl font-semibold opacity-80 mb-2">Interviews & Usability Testing</p>
+            <p class="text-lg leading-relaxed opacity-80">
+              Remote sessions with all user groups revealed behaviors, preferences, and pain points that directly informed design decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <Image src={keyFindings} alt="Key research findings" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Key findings</p>
+          </div>
+          <div>
+            <Image src={customerFlow} alt="Customer user flow" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Customer user flow</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Components Library -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Components library</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            Creating those components early on ensured consistency across the project, reducing friction in handoffs between the design and engineering teams.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            The library covered all interactive patterns across customer, dealer, and converter flows.
+          </p>
+        </div>
+      </div>
+      <div class="mt-8">
+        <ComponentsImage src={componentsImg} alt="Ford CCP component library" />
+      </div>
+    </section>
+
+    <!-- High Fidelity Designs -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">High fidelity designs</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            The platform was designed for desktop and tablet initially, with mobile planned for a future phase. The customer flow covers the full conversion request journey.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            Deliverables included the sign-in screen, customer dashboard, and a 5-step new conversion request flow.
+          </p>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 gap-4 mt-8">
+          <div>
+            <Image src={macbookMockup} alt="Ford CCP on MacBook" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Platform overview</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <div>
+            <Image src={signIn} alt="Sign in screen" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Sign in</p>
+          </div>
+          <div>
+            <Image src={dashboard} alt="Customer dashboard" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Customer dashboard</p>
+          </div>
+          <div>
+            <Image src={newRequestType} alt="New request — conversion type" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">New request — conversion type</p>
+          </div>
+          <div>
+            <Image src={vehicleDetails} alt="New request — vehicle details" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">New request — vehicle details</p>
+          </div>
+          <div>
+            <Image src={conversionDetails} alt="New request — conversion details" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">New request — conversion details</p>
+          </div>
+          <div>
+            <Image src={selectDealer} alt="New request — select dealer" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">New request — select dealer</p>
+          </div>
+          <div>
+            <Image src={reviewSubmit} alt="New request — review & submit" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">New request — review & submit</p>
+          </div>
+          <div>
+            <Image src={vehicles} alt="Vehicles overview" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Vehicles overview</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usability Testing -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Usability Testing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <Image src={userTestingImg} alt="Usability testing session" class="rounded-2xl w-full" />
+          <div>
+            <p class="text-lg leading-relaxed opacity-80 mb-4">Remote usability testing sessions were conducted with all three user groups: customers, dealers, and converters.</p>
+            <p class="text-lg leading-relaxed opacity-80">These sessions revealed behaviors, preferences, and pain points, highlighting areas for improvement and informing iteration on the design.</p>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-8 mt-8">
+        <Image src={utInsights} alt="Usability testing insights" class="w-full rounded-2xl object-cover" />
+        <p class="text-sm opacity-50 mt-2 text-center">Usability testing insights</p>
+      </div>
+    </section>
+
+    <!-- Final Thoughts -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Final Thoughts</h2>
+        <p class="text-lg leading-relaxed opacity-80">
+          Although it was challenging, it was also really rewarding to see it come together in a short period, while seeing the team thrive.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mb-16 section-block">
+      <div class="max-w-7xl mx-auto px-8 mb-12">
+        <h3 class="text-xl text-center">Thanks for reading, want to collaborate together? Contact me <a href="mailto:hi@luisisaac.com" class="underline">here</a></h3>
+      </div>
+    </section>
+
+    <ProjectFooter nextHref="/project/kia-stock-locator" nextTitle="Kia Stock Locator" />
+
+  </main>
+</Layout>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const titleEl = document.getElementById('hero-title') as HTMLElement;
+  const text = titleEl.textContent?.trim() ?? '';
+  titleEl.style.opacity = '1';
+  titleEl.innerHTML = text
+    .split(' ')
+    .map(word =>
+      `<span class="inline-block whitespace-nowrap">${word.split('').map(ch => `<span style="opacity:0;color:var(--muted)">${ch}</span>`).join('')}</span>`)
+    .join(' ');
+
+  gsap.set('.hero-meta', { x: -20, opacity: 0 });
+
+  const spans = titleEl.querySelectorAll('span');
+  const tl = gsap.timeline({
+    onComplete: () => {
+      document.querySelectorAll<HTMLElement>('.hero-meta').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+    }
+  });
+  tl.to(spans, { opacity: 1, color: 'var(--text)', duration: 0.4, stagger: 0.03, ease: 'power2.out' })
+    .to('.hero-meta', { opacity: 1, x: 0, duration: 0.4, stagger: 0.08, ease: 'power2.out' })
+    .fromTo('#cover-img', { y: 60, opacity: 0, filter: 'blur(20px)' }, { y: 0, opacity: 1, filter: 'blur(0px)', duration: 1.2, ease: 'power3.out' })
+    .from('#opportunity', { y: 60, opacity: 0, duration: 1, ease: 'power3.out' }, '-=0.5');
+
+  gsap.utils.toArray<HTMLElement>('.section-block:not(#opportunity)').forEach((el) => {
+    gsap.from(el, {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+      },
+    });
+  });
+
+  document.querySelectorAll<HTMLImageElement>('.section-block img').forEach((img) => {
+    img.style.opacity = '0';
+    const show = () => gsap.to(img, { opacity: 1, duration: 1.2, ease: 'power3.out' });
+    if (img.complete && img.naturalWidth > 0) show();
+    else img.addEventListener('load', show, { once: true });
+  });
+</script>
