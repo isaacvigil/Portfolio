@@ -6,13 +6,12 @@ import ProjectHero from '../../components/ProjectHero.astro';
 import ComponentsImage from '../../components/ComponentsImage.astro';
 import ProjectFooter from '../../components/ProjectFooter.astro';
 
-import coverImg from '../../assets/Ford-CCP/ford-racks.jpg';
+import coverImg from '../../assets/Ford-CCP/cover.jpg';
 import personaEmily from '../../assets/Ford-CCP/Persona-Emily-1-scaled.jpg';
 import personaTony from '../../assets/Ford-CCP/Persona-Tony-scaled.jpg';
 import personaNick from '../../assets/Ford-CCP/Persona-Nick-1-scaled.jpg';
 import keyFindings from '../../assets/Ford-CCP/Key-Findings.png';
 import customerFlow from '../../assets/Ford-CCP/Ford-CCP-customer-flow-1.png';
-import macbookMockup from '../../assets/Ford-CCP/MacBook-Air-Ford-CCP.png';
 import userTestingImg from '../../assets/Ford-CCP/user-testing-nick-stubbington-scaled.jpg';
 import utInsights from '../../assets/Ford-CCP/UT-insights.png';
 import componentsImg from '../../assets/Ford-CCP/Ford-CCP-Components.png';
@@ -23,7 +22,6 @@ import vehicleDetails from '../../assets/Ford-CCP/1.1.03-Customer-New-Request-Ve
 import conversionDetails from '../../assets/Ford-CCP/1.1.06-Customer-New-Request-Conversion-Details.jpg';
 import selectDealer from '../../assets/Ford-CCP/1.1.07b-Customer-New-Request-Select-dealer.jpg';
 import reviewSubmit from '../../assets/Ford-CCP/1.1.08-Customer-New-Request-Review-and-submit-scaled.jpg';
-import vehicles from '../../assets/Ford-CCP/Vehicles.png';
 ---
 
 <Layout>
@@ -34,7 +32,7 @@ import vehicles from '../../assets/Ford-CCP/Vehicles.png';
     <ProjectHero
       title="Ford Conversion Platform"
       meta={[
-        { label: 'Role', value: 'UX Manager' },
+        { label: 'Role', value: 'UX Lead' },
         { label: 'Company', value: 'Ford' },
         { label: 'Year', value: '2021' },
         { label: 'Type', value: 'Web Platform' },
@@ -71,7 +69,7 @@ import vehicles from '../../assets/Ford-CCP/Vehicles.png';
     <!-- My Role -->
     <section class="mb-20 section-block">
       <div class="max-w-5xl mx-auto px-8">
-        <h2 class="text-section-heading mb-6">My role as UX Manager</h2>
+        <h2 class="text-section-heading mb-6">My role as UX Lead</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <ul class="list-disc list-outside pl-5 text-lg leading-relaxed opacity-80">
             <li>Experience strategy and design</li>
@@ -100,20 +98,22 @@ import vehicles from '../../assets/Ford-CCP/Vehicles.png';
         </p>
       </div>
       <div class="max-w-7xl mx-auto px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <Image src={personaEmily} alt="Persona Emily" class="w-full rounded-[24px] object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">Emily — Customer</p>
-          </div>
-          <div>
-            <Image src={personaTony} alt="Persona Tony" class="w-full rounded-[24px] object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">Tony — Dealer</p>
-          </div>
-          <div>
-            <Image src={personaNick} alt="Persona Nick" class="w-full rounded-[24px] object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">Nick — Converter</p>
-          </div>
+        <div class="relative">
+          <Image src={personaEmily} alt="Persona Emily" id="persona-img-0" class="w-full rounded-[24px] object-cover" />
+          <Image src={personaTony} alt="Persona Tony" id="persona-img-1" class="absolute inset-0 w-full rounded-[24px] object-cover opacity-0" />
+          <Image src={personaNick} alt="Persona Nick" id="persona-img-2" class="absolute inset-0 w-full rounded-[24px] object-cover opacity-0" />
+
+          <!-- Prev arrow -->
+          <button id="persona-prev" aria-label="Previous persona" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg)] border border-[var(--border)] hover:opacity-70 transition-opacity shadow-sm">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <!-- Next arrow -->
+          <button id="persona-next" aria-label="Next persona" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center bg-[var(--bg)] border border-[var(--border)] hover:opacity-70 transition-opacity shadow-sm">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
+        <p class="text-sm opacity-50 mt-2 text-center" id="persona-caption">Emily ⋅ Customer</p>
       </div>
     </section>
 
@@ -121,34 +121,53 @@ import vehicles from '../../assets/Ford-CCP/Vehicles.png';
     <section class="mb-20 section-block">
       <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Research</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div class="flex flex-col gap-12">
           <div>
             <p class="text-xl font-semibold opacity-80 mb-2">Workshops</p>
-            <p class="text-lg leading-relaxed opacity-80">
-              Identified needs, blockers, and opportunities. Defined features by user type and conversion process steps.
-            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+              <p class="text-lg leading-relaxed opacity-80">
+                I led the team in conducting a series of workshops with the stakeholders to identify the needs, blockers, and opportunities.
+              </p>
+              <p class="text-lg leading-relaxed opacity-80">
+                From those workshops, we defined the necessary features for each user type, the steps from request creation until delivery, and the overall process.
+              </p>
+            </div>
+            <Image src={keyFindings} alt="Notes from workshops" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Notes from workshops</p>
           </div>
           <div>
-            <p class="text-xl font-semibold opacity-80 mb-2">Interviews & Usability Testing</p>
-            <p class="text-lg leading-relaxed opacity-80">
-              Remote sessions with all user groups revealed behaviors, preferences, and pain points that directly informed design decisions.
-            </p>
+            <p class="text-xl font-semibold opacity-80 mb-2">User flows</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+              <p class="text-lg leading-relaxed opacity-80">
+                From the workshops we got the necessary information to create the different user flows when using the platform.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="max-w-7xl mx-auto px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="max-w-7xl mx-auto px-8 mb-12">
+        <Image src={customerFlow} alt="One of the user flows created" class="w-full rounded-2xl object-cover" />
+      </div>
+      <div class="max-w-5xl mx-auto px-8">
+        <div class="flex flex-col gap-12">
           <div>
-            <Image src={keyFindings} alt="Key research findings" class="w-full rounded-2xl object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">Key findings</p>
-          </div>
-          <div>
-            <Image src={customerFlow} alt="Customer user flow" class="w-full rounded-2xl object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">Customer user flow</p>
+            <p class="text-xl font-semibold opacity-80 mb-2">Interviews & Usability Testing</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+              <p class="text-lg leading-relaxed opacity-80">
+                A series of remote user interviews and usability tests were conducted, engaging customers, dealers, and converters.
+              </p>
+              <p class="text-lg leading-relaxed opacity-80">
+                These sessions provided valuable insights into user behaviors, preferences, and pain points, informing critical design decisions and aligning the final product with the expectations of its diverse audience.
+              </p>
+            </div>
+            <Image src={userTestingImg} alt="Screen capture of one of the recorded sessions" class="w-full rounded-2xl object-cover mb-4" />
+            <Image src={utInsights} alt="Comments from the interviews" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">Comments from the interviews</p>
           </div>
         </div>
       </div>
     </section>
+
 
     <!-- Components Library -->
     <section class="mb-20 section-block">
@@ -184,12 +203,6 @@ import vehicles from '../../assets/Ford-CCP/Vehicles.png';
       <div class="max-w-7xl mx-auto px-8">
         <div class="grid grid-cols-1 gap-4 mt-8">
           <div>
-            <Image src={macbookMockup} alt="Ford CCP on MacBook" class="w-full rounded-2xl object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">Platform overview</p>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          <div>
             <Image src={signIn} alt="Sign in screen" class="w-full rounded-2xl object-cover" />
             <p class="text-sm opacity-50 mt-2 text-center">Sign in</p>
           </div>
@@ -198,48 +211,26 @@ import vehicles from '../../assets/Ford-CCP/Vehicles.png';
             <p class="text-sm opacity-50 mt-2 text-center">Customer dashboard</p>
           </div>
           <div>
-            <Image src={newRequestType} alt="New request — conversion type" class="w-full rounded-2xl object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">New request — conversion type</p>
+            <Image src={newRequestType} alt="New request ⋅ conversion type" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">New request ⋅ conversion type</p>
           </div>
           <div>
-            <Image src={vehicleDetails} alt="New request — vehicle details" class="w-full rounded-2xl object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">New request — vehicle details</p>
+            <Image src={vehicleDetails} alt="New request ⋅ vehicle details" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">New request ⋅ vehicle details</p>
           </div>
           <div>
-            <Image src={conversionDetails} alt="New request — conversion details" class="w-full rounded-2xl object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">New request — conversion details</p>
+            <Image src={conversionDetails} alt="New request ⋅ conversion details" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">New request ⋅ conversion details</p>
           </div>
           <div>
-            <Image src={selectDealer} alt="New request — select dealer" class="w-full rounded-2xl object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">New request — select dealer</p>
+            <Image src={selectDealer} alt="New request ⋅ select dealer" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">New request ⋅ select dealer</p>
           </div>
           <div>
-            <Image src={reviewSubmit} alt="New request — review & submit" class="w-full rounded-2xl object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">New request — review & submit</p>
-          </div>
-          <div>
-            <Image src={vehicles} alt="Vehicles overview" class="w-full rounded-2xl object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">Vehicles overview</p>
+            <Image src={reviewSubmit} alt="New request ⋅ review & submit" class="w-full rounded-2xl object-cover" />
+            <p class="text-sm opacity-50 mt-2 text-center">New request ⋅ review & submit</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Usability Testing -->
-    <section class="mb-20 section-block">
-      <div class="max-w-5xl mx-auto px-8">
-        <h2 class="text-section-heading mb-6">Usability Testing</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          <Image src={userTestingImg} alt="Usability testing session" class="rounded-2xl w-full" />
-          <div>
-            <p class="text-lg leading-relaxed opacity-80 mb-4">Remote usability testing sessions were conducted with all three user groups: customers, dealers, and converters.</p>
-            <p class="text-lg leading-relaxed opacity-80">These sessions revealed behaviors, preferences, and pain points, highlighting areas for improvement and informing iteration on the design.</p>
-          </div>
-        </div>
-      </div>
-      <div class="max-w-7xl mx-auto px-8 mt-8">
-        <Image src={utInsights} alt="Usability testing insights" class="w-full rounded-2xl object-cover" />
-        <p class="text-sm opacity-50 mt-2 text-center">Usability testing insights</p>
       </div>
     </section>
 
@@ -247,9 +238,14 @@ import vehicles from '../../assets/Ford-CCP/Vehicles.png';
     <section class="mb-20 section-block">
       <div class="max-w-5xl mx-auto px-8">
         <h2 class="text-section-heading mb-6">Final Thoughts</h2>
-        <p class="text-lg leading-relaxed opacity-80">
-          Although it was challenging, it was also really rewarding to see it come together in a short period, while seeing the team thrive.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            Leading the design for the conversion platform was a very complex challenge;  many moving parts, three distinct user types with very different needs, and a tight timeline to hold it all together.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            What made it worthwhile was watching the team rise to it. Seeing the product come together, and seeing people do their best work under real constraints, was genuinely rewarding.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -309,10 +305,41 @@ import vehicles from '../../assets/Ford-CCP/Vehicles.png';
     });
   });
 
-  document.querySelectorAll<HTMLImageElement>('.section-block img').forEach((img) => {
+  document.querySelectorAll<HTMLImageElement>('.section-block img:not(#persona-img-1):not(#persona-img-2)').forEach((img) => {
     img.style.opacity = '0';
     const show = () => gsap.to(img, { opacity: 1, duration: 1.2, ease: 'power3.out' });
     if (img.complete && img.naturalWidth > 0) show();
     else img.addEventListener('load', show, { once: true });
   });
+
+  // Persona carousel
+  const personas = [
+    { el: document.getElementById('persona-img-0') as HTMLElement, label: 'Emily ⋅ Customer' },
+    { el: document.getElementById('persona-img-1') as HTMLElement, label: 'Tony ⋅ Dealer' },
+    { el: document.getElementById('persona-img-2') as HTMLElement, label: 'Nick ⋅ Converter' },
+  ];
+  const personaCaption = document.getElementById('persona-caption') as HTMLElement;
+  let personaCurrent = 0;
+
+  function goToPersona(next: number) {
+    gsap.to(personas[personaCurrent].el, { opacity: 0, duration: 0.4, ease: 'power2.inOut' });
+    gsap.to(personas[next].el, { opacity: 1, duration: 0.4, ease: 'power2.inOut' });
+    gsap.to(personaCaption, { opacity: 0, duration: 0.2, onComplete: () => {
+      personaCaption.textContent = personas[next].label;
+      gsap.to(personaCaption, { opacity: 0.5, duration: 0.2 });
+    }});
+    personaCurrent = next;
+  }
+
+
+  document.getElementById('persona-prev')?.addEventListener('click', () => {
+    goToPersona((personaCurrent - 1 + personas.length) % personas.length);
+  });
+  document.getElementById('persona-next')?.addEventListener('click', () => {
+    goToPersona((personaCurrent + 1) % personas.length);
+  });
+
+  setInterval(() => {
+    goToPersona((personaCurrent + 1) % personas.length);
+  }, 4000);
 </script>
