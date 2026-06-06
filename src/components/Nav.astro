@@ -4,7 +4,7 @@ interface Props {
 }
 
 const { backHref = '/' } = Astro.props;
-const path = Astro.url.pathname;
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isHome = path === '/';
 const isAbout = path === '/about';
 ---
