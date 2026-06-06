@@ -14,7 +14,12 @@ import iconJobs from '../../assets/Volvo-Search/Icons/jobs.jpg';
 import iconNews from '../../assets/Volvo-Search/Icons/news.jpg';
 import iconPressRelease from '../../assets/Volvo-Search/Icons/press-release.jpg';
 import iconProducts from '../../assets/Volvo-Search/Icons/products.jpg';
+import searchResultsImages from '../../assets/Volvo-Search/Search Results - Images.jpg';
+import searchResultsIcons from '../../assets/Volvo-Search/Search Results - Icons.jpg';
+import personUsingApp from '../../assets/Volvo-Search/person-using-app.jpg';
 import ProjectHero from '../../components/ProjectHero.astro';
+import ProjectFooter from '../../components/ProjectFooter.astro';
+import Icon from '../../components/Icon.astro';
 import { Image } from 'astro:assets';
 ---
 
@@ -66,7 +71,7 @@ import { Image } from 'astro:assets';
         <h2 class="text-section-heading mb-6">Flow</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <p class="text-lg leading-relaxed opacity-80">
-            To support consistency across a large team and many event types, I built a centralized component library — buttons, forms, icons, navigation, cards — all adhering to shared visual guidelines and interaction standards.
+            To support consistency across a large team and many event types, I built a centralized component library, buttons, forms, icons, navigation, cards, all adhering to shared visual guidelines and interaction standards.
           </p>
           <p class="text-lg leading-relaxed opacity-80">
             This reduced friction in handoffs and kept the product coherent as it scaled.
@@ -109,7 +114,79 @@ import { Image } from 'astro:assets';
           ))}
         </div>
       </div>
+      <div class="max-w-7xl mx-auto px-8 mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div></div>
+          <div>
+            <Image src={searchResultsImages} alt="Search results with images" class="w-full rounded-[24px] max-w-[390px] mx-auto" />
+            <p class="text-sm opacity-50 mt-2 text-center">Search results ⋅ images</p>
+          </div>
+          <div>
+            <Image src={searchResultsIcons} alt="Search results with icons" class="w-full rounded-[24px] max-w-[390px] mx-auto" />
+            <p class="text-sm opacity-50 mt-2 text-center">Search results ⋅ icons</p>
+          </div>
+          <div></div>
+        </div>
+      </div>
     </section>
+
+    <!-- User Research -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">User Research</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex flex-col gap-8">
+            <p class="text-lg leading-relaxed opacity-80">
+              Usability testing was conducted with 5 participants, covering a range of user profiles from casual car browsers to active buyers. Sessions were run remotely using a clickable prototype, with tasks focused on searching, filtering, and interpreting results.
+            </p>
+            <p class="text-lg leading-relaxed opacity-80">
+              The sessions revealed that users responded well to the icon fallback system, most understood the content type at a glance without needing to read the label.
+            </p>
+          </div>
+          <div class="flex flex-col gap-8">
+            <p class="text-lg leading-relaxed opacity-80">
+              However, a key insight was that participants expected image-rich results to load faster, and were more likely to engage with results that showed a vehicle photo over those showing a generic icon.
+            </p>
+            <p class="text-lg leading-relaxed opacity-80">
+              This reinforced the decision to prioritize image coverage in the data pipeline, and to make the icon fallbacks as visually distinct as possible per content type.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Thoughts -->
+    <section class="mb-20 section-block">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-section-heading mb-6">Final Thoughts</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <p class="text-lg leading-relaxed opacity-80">
+            Despite being a short engagement, this project punched above its weight. The search experience touched multiple content types, teams, and markets across Volvo, which made the collaborative process essential rather than optional.
+          </p>
+          <p class="text-lg leading-relaxed opacity-80">
+            Seeing a relatively focused design challenge have real impact at scale across the organization was a good reminder that doing the foundational work well, icon systems, fallback logic, usability validation, creates outsized value when the product reaches a global audience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mb-16 overflow-hidden md:overflow-visible section-block">
+      <div class="max-w-7xl mx-auto px-8 mb-12">
+        <h3 class="text-xl text-center">Thanks for reading, want to collaborate together? Contact me <a href="mailto:hi@luisisaac.com" class="underline">here</a></h3>
+      </div>
+    </section>
+
+    <!-- Person using app -->
+    <section class="mb-24 overflow-hidden md:overflow-visible section-block">
+      <div class="max-w-7xl mx-auto md:px-8">
+        <Image src={personUsingApp} alt="Person using the Volvo Search" class="relative left-1/2 -translate-x-1/2 w-[810px] max-w-none md:w-full md:max-w-full md:translate-x-0 md:left-0 md:rounded-2xl object-cover" />
+      </div>
+    </section>
+
+    <ProjectFooter nextHref="/project/rx-asx" nextTitle="RX Global At Show Experience">
+      <Icon name="Compass" size={20} />
+    </ProjectFooter>
 
   </main>
 </Layout>

@@ -5,6 +5,7 @@ import { Image } from 'astro:assets';
 import ProjectHero from '../../components/ProjectHero.astro';
 import ComponentsImage from '../../components/ComponentsImage.astro';
 import ProjectFooter from '../../components/ProjectFooter.astro';
+import Icon from '../../components/Icon.astro';
 
 import coverImg from '../../assets/Ford-CCP/cover.jpg';
 import vanConversion from '../../assets/Ford-CCP/van-conversion.jpg';
@@ -269,7 +270,9 @@ import reviewSubmit from '../../assets/Ford-CCP/1.1.08-Customer-New-Request-Revi
       </div>
     </section>
 
-    <ProjectFooter nextHref="/project/kia-stock-locator" nextTitle="Kia Stock Locator" />
+    <ProjectFooter nextHref="/project/fab-dubai-first" nextTitle="First Abu Dhabi Bank ⋅ Dubai First">
+      <Icon name="CreditCard" size={20} />
+    </ProjectFooter>
 
   </main>
 </Layout>

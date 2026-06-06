@@ -4,6 +4,7 @@ import Nav from '../../components/Nav.astro';
 import { Image } from 'astro:assets';
 import ProjectHero from '../../components/ProjectHero.astro';
 import ProjectFooter from '../../components/ProjectFooter.astro';
+import Icon from '../../components/Icon.astro';
 
 import coverImg from '../../assets/FAB-Dubai-First/dubai-first-scaled.jpg';
 import oldApp1 from '../../assets/FAB-Dubai-First/Dubai-First-Old-App-1.jpeg';
@@ -42,7 +43,7 @@ import illuDelivery from '../../assets/FAB-Dubai-First/Illustration-Card-deliver
       ]}
       coverImg={coverImg}
       coverAlt="Dubai First app"
-      coverClass="max-h-[56vw] md:max-h-[700px] object-top"
+      coverClass="max-h-[56vw] md:max-h-[700px] object-center"
     />
 
     <!-- Opportunity -->
@@ -177,7 +178,7 @@ import illuDelivery from '../../assets/FAB-Dubai-First/Illustration-Card-deliver
         </div>
       </div>
       <div class="max-w-7xl mx-auto px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div>
             <Image src={designHome} alt="Home screen" class="w-full rounded-[24px] object-cover" />
             <p class="text-sm opacity-50 mt-2 text-center">Home</p>
@@ -228,22 +229,18 @@ import illuDelivery from '../../assets/FAB-Dubai-First/Illustration-Card-deliver
         </div>
       </div>
       <div class="max-w-7xl mx-auto px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div>
-            <Image src={illuAddress} alt="Address changed illustration" class="w-full rounded-[24px] object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">Address changed</p>
+        <div class="bg-white rounded-2xl px-8 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="flex items-center justify-center">
+            <Image src={illuAddress} alt="Address changed illustration" class="max-h-full max-w-full object-contain" />
           </div>
-          <div>
-            <Image src={illuSplit} alt="Split reminder sent illustration" class="w-full rounded-[24px] object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">Split reminder sent</p>
+          <div class="flex items-center justify-center">
+            <Image src={illuSplit} alt="Split reminder sent illustration" class="max-h-full max-w-full object-contain" />
           </div>
-          <div>
-            <Image src={illuEmpty} alt="Nothing here yet illustration" class="w-full rounded-[24px] object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">Empty state</p>
+          <div class="flex items-center justify-center">
+            <Image src={illuEmpty} alt="Nothing here yet illustration" class="max-h-full max-w-full object-contain" />
           </div>
-          <div>
-            <Image src={illuDelivery} alt="Card delivery illustration" class="w-full rounded-[24px] object-cover" />
-            <p class="text-sm opacity-50 mt-2 text-center">Card delivery</p>
+          <div class="flex items-center justify-center">
+            <Image src={illuDelivery} alt="Card delivery illustration" class="max-h-full max-w-full object-contain" />
           </div>
         </div>
       </div>
@@ -271,7 +268,9 @@ import illuDelivery from '../../assets/FAB-Dubai-First/Illustration-Card-deliver
       </div>
     </section>
 
-    <ProjectFooter nextHref="/project/ford-conversion-platform" nextTitle="Ford Conversion Platform" />
+    <ProjectFooter nextHref="/project/rx-asx" nextTitle="RX Global At Show Experience">
+      <Icon name="Compass" size={20} />
+    </ProjectFooter>
 
   </main>
 </Layout>
